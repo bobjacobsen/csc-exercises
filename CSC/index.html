@@ -1,0 +1,209 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+	<title>Index of Tools Exercises</title>
+</head>
+<body>
+<h1>Tools exercises:</h1>
+
+Please see the notes at the bottom of this page.
+<p>
+There is no particular time expected for these. You should
+do them in order, but it's OK to spend more time on the ones that
+interest you and go quickly through others.  Generally,
+students get through the Test and Performance Issues groups in Monday's exercise period, 
+and may start the Memory Issues exercise. 
+They then start Tuesday's exercise period with finishing up 
+anything they want to from Monday, complete Memory Issues and  
+Code Management and do as much of Build and Release
+Management as they find useful. 
+<p>
+Nobody does every bit of
+every exercise, and that's OK. Quite a few groups will
+probably stop around the end CMake exercises.
+<p>
+If you run out of time and want to 
+do more on particular topics, you can come back to these topics later
+in the week or load a copy onto your own machine.
+
+<h3>Test Frameworks</h3>
+1) 
+<A HREF="ex1.html">ex1.html</a>
+Demonstration of a test framework
+<P>
+2) 
+<A HREF="ex2.html">ex2.html</a>
+Practice debugging using a test framework
+<P>
+
+D)
+<A HREF="exD.html">exD.html</a>
+Simple use of CppUnit (Requires some C++ experience)
+<P>
+
+
+<h3>Performance Profiling</h3>
+
+3) 
+<A HREF="ex3.html">ex3.html</a>
+Demonstration of profiling tools
+<P>
+
+4) 
+<A HREF="ex4.html">ex4.html</a>
+Practice tuning a small application
+<P>
+
+<h3>Memory Issues</h3>
+
+5) 
+<A HREF="ex5.html">ex5.html</a>
+Testing for C++ memory faults
+<P>
+
+<h3>Code Management</h3>
+
+C)
+<A HREF="exC.html">exC.html</a>
+Simple use of SVN
+<P>
+
+G1)
+<A HREF="exG1.html">exG1.html</a>
+Simple use of git
+<P>
+
+G2)
+<A HREF="exG2.html">exG2.html</a>
+Experience with branching
+<P>
+
+G3)
+<A HREF="exG3.html">exG3.html</a>
+Distributed development with Git
+<P>
+
+
+ 
+<h3>Build and Release Management</h3>
+
+M1)
+<A HREF="exM1.html">exM1.html</a>
+Introduction to CMake
+<P>
+
+M2)
+<A HREF="exM2.html">exM2.html</a>
+CMake as a release tool
+<P>
+
+
+7)
+<A HREF="ex7.html">ex7.html</a>
+Simple release build activities with CMT
+<P>
+
+8) 
+<A HREF="ex8.html">ex8.html</a>
+Releasing code changes with CMT
+<P>
+
+9)
+<A HREF="ex9.html">ex9.html</a>
+Managing configuration conflicts
+
+
+<!-- 
+    <h3>Optional, for people who want to know CVS</h3>
+    Only do these if you want to know about CVS or its internals
+    <p>A) <A HREF="exA.html">exA.html</a> Simple use of CVS
+    <p>B) <A HREF="exB.html">exB.html</a> More advanced CVS, showing how conflicts are handled
+    <p>
+ -->
+
+<h2>Corrections</h2>
+ 
+If there are any last-minute corrections to the instructions, 
+we will post them in the exercise room. 
+Electronic copies of these instructions and additional documentation can be found at URL:
+
+<P> 
+<A HREF="http:/server/jake/CSC/index.html">http:/server/jake/CSC/index.html</a>
+
+<h2>Files</h2>
+
+Updated PDF files are available for 
+<a href="Lecture1.pdf">lecture 1</a> and
+<a href="Lecture2.pdf">lecture 2</a>.
+<p>
+If you want to take the exercises with you, please download the
+<a href="../CSC.tar">exercise tar file<a> and the
+<a href="../cmt-dev-all.tgz">CMT install file<a>
+<u>after</u> Wednesday, which will allow us to update those tar files
+with any changes from this year.
+If you need to rebuild CMT for your local machine (which is easy!), 
+see the <a href="install_cmt.html">instructions</a>.
+
+<h2>General notes:</h2>
+
+These exercises involve some minimal Java and/or C++ programming.  
+We recommend that you arrange yourself in groups so that somebody in 
+each group has at least a little experience with Java and/or C++.
+<P> 
+Note that the instructions for these exercises are written for a Bash-type shell.  If you use a C-type shell:
+<OL>
+<LI>Replace "export SOMETHING=..." with "setenv SOMETHING ..."
+<LI>Replace "source setup.sh" with "source setup.csh"
+</OL>
+
+<p>
+Style convention:  Indented commands in <code>code font</code> are meant to 
+be cut and pasted into a command line:
+<code><pre>
+    cd
+    echo "Done!"
+</pre></code>
+When we want to show the output from a command, we'll include the command prompt:
+<code><pre>
+$date
+Thu June 15 10:37:13 PDT 2015
+</pre></code>
+That's not meant to be cut-and-pasted in its entirety, just the parts 
+after the $ or % command prompt.
+
+<h2>For more information</h2>
+For more information on Java math routines like floor(...), sqrt(...), etc
+please see the 
+<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Math.html">Math class doc page</a>.
+<p>
+For more information on the JUnit unit test classes for Java, see their
+<a href="http://junit.sourceforge.net/javadoc/">class documentation</a>.
+<p>
+For more information on the CppUnit unit test classes for C++, see their
+<a href="http://cppunit.sourceforge.net/doc/1.8.0/">web page</a>.
+<p>
+For more information on valgrind, see their
+<a href="http://valgrind.org/docs/">documentation page</a>.
+<p>
+Information on Git:
+<ul>
+<li>The <a href="https://www.kernel.org/pub/software/scm/git/docs/">detailed Git documentation</a>.
+<li>Lots of <a href="http://gitready.com">questions and answers</a> on Git usage.
+<li>A writeup on how to <a href="http://git.or.cz/course/svn.html">convert your SVN thinking</a> to Git.
+<li>The Pro Git book is available to CSC students as a <a href="ProGit.en.pdf">PDF file</a>.
+</ul>
+The web has lots of talks and tutorials on more advanced Git topics.
+<p>
+Information on CMake:
+<ul>
+<li>CMake <a href="http://www.cmake.org">main web site</a>.
+<li>Main CMake <a href="http://www.cmake.org/cmake/help/documentation.html">documentation page</a>.
+<li>CMake <a href="http://www.cmake.org/cmake/help/syntax.html">syntax summary</a>.
+<li>How 
+    <a href="http://geant4.web.cern.ch/geant4/UserDocumentation/UsersGuides/ForApplicationDeveloper/html/ch02s07.html">GEANT4 is built with CMake</a>,
+    an example.
+</ul>
+
+</body>
+</html>

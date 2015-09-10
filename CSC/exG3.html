@@ -1,0 +1,389 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+	<title>Exercise G3</title>
+</head>
+<body>
+<h1>Exercise G3: Distributed Development</h1>
+ 
+Reminder:  Look at 
+&lt;<A HREF="file:/home/jake/CSC/index.html">file:/home/jake/CSC/index.html</a>&gt; 
+for updates or corrections!
+ 
+<P>
+Goal: Gain familiarity with remote
+
+
+If you haven't done it already, you have to tell Git who you are:
+
+<code><pre>
+    git config --global user.email "you@example.com"
+    git config --global user.name "Your Name"    
+</pre></code>
+
+We're going to create a master repository, and a separate
+developer work area.  First, we create your own copy of a 
+master repository.  This is just a copy of the repository 
+build in <a href="exG2.html">exercise G2</a>.
+
+<code><pre>
+    cd
+    tar xf /home/jake/CSC/exG3MasterRepo.tar 
+</pre></code>
+
+Next, create a work area:
+
+<code><pre>
+    cd
+    mkdir exerciseG3A
+    cd exerciseG3A/
+</pre></code>
+
+You're going to be a "remote" developer called "A".
+(Later, we'll have another called "B")
+To start, 
+you clone your own copy of the repository:
+
+<code><pre>
+    git clone ../exG3MasterRepo.git .
+</pre></code>
+    
+Take a look.  You've now got a repository in .git, and Git
+has checked out that current HEAD of that repository.  Explore it
+a little with <code>git log</code> and <code>gitk --all</code> to if it looks like you expect.
+
+<p>
+To make it easier to see who is who later on, we'll change our 
+name in this repository (no --global option)
+<code><pre>
+    git config user.name "Developer A"    
+</pre></code>
+<p>
+One difference that's easily visible in gitk is that, in addition to the "master" branch, 
+you've now got a "remotes/origin/master" branch.  The first is your local repository,
+and the second came from the original repository.  That original repository is "remote", 
+is by default called "origin", and "master" is the name of the branch inside it. See
+the convention? You should also see a remotes/origin/A_dev branch and now understand what that is.
+<P>
+If you commit a change, what should happen within the repository? Do the branch flags move
+in the display?
+
+<code><pre>
+    echo 'Commit on end of local master' >> contents.txt
+    git add contents.txt
+    git commit -m'Commit on end of local master'
+</pre></code>
+
+Refresh gitk and notice that there master branch has moved on, leaving 
+that remotes/origin/master back where it was. Do a couple more just to 
+make it easy to see what's going on:
+    
+<code><pre>
+    echo 'Commit on end of local master' >> contents.txt
+    git add contents.txt
+    git commit -m'Commit on end of local master'
+
+    echo 'Commit on end of local master' >> contents.txt
+    git add contents.txt
+    git commit -m'Commit on end of local master'
+</pre></code>
+
+OK, let's say these are a useful fix.  How can we get them back into the main 
+repository so somebody else can see them?
+<p>
+The simplest way is to "push" the content to the main repository.
+This requires that you be able to write to the repository, that you're trusted
+to make decisions about what and when to update, etc. This is the way SVN and CVS repositories are
+often used, with a number of people able to make changes anywhere.
+<p>
+If the project is set up like that, you can move your repository contents
+back to the main one with:
+
+<code><pre>
+    git push 
+</pre></code>
+    
+This moved all the content.  Note that it also moved the 
+remotes/origin/master branch forward to agree with your current master branch.
+That's reflecting the change in the main repository.  You can 
+look at the main repository to see the changes:
+
+<code><pre>
+    cd ../exG3MasterRepo.git/
+    gitk --all
+</pre></code>
+
+Some projects use a model where central people "fetch" or "pull" changes
+from the individual developers.  You let them know when you have something
+ready, perhaps via email or a web form, and when they're ready they
+tell Git to copy your commits from your repository back to the central one.
+We'll talk a little bit more about the "fetch" and "pull" process below.
+
+<h3>Multiple Developers</h3>
+
+Now let's see how two developers can interact.  We'll create
+a working area for somebody else, "B":
+
+<code><pre>
+    cd
+    mkdir exerciseG3B
+    cd exerciseG3B/
+</pre></code>
+
+and get another clone of the repository
+
+<code><pre>
+    git clone ../exG3MasterRepo.git .
+</pre></code>
+
+We'll change our 
+name in this repository (no --global option) with
+
+<code><pre>
+    git config user.name "Developer B"    
+</pre></code>
+
+We'll make a couple changes and push them back:
+
+<code><pre>
+    echo 'Commit on end of B local master' >> contents.txt
+    git add contents.txt
+    git commit -m'Commit on end of B local master'
+
+    echo 'Commit on end of B local master' >> contents.txt
+    git add contents.txt
+    git commit -m'Commit on end of B local master'
+
+    git push
+</pre></code>
+    
+Look at both B's repository and the main (common) repository
+with gitk, and you'll see the new commits there.
+<p>
+If you check developer A's repository, though, you don't see them.
+
+<code><pre>
+    cd
+    cd exerciseG3A/
+    gitk --all
+</pre></code>
+    
+They won't appear until A asks for them.  To see what that involves, 
+add another change to A's work:
+
+<code><pre>
+    echo 'Commit on end of A local master' >> contents.txt
+    git add contents.txt
+    git commit -m'Commit on end of A local master'
+</pre></code>
+
+This will conflict with B's work.  That doesn't alway happen, but 
+when it does, we have to manage it.
+<p>
+While we have this situation, what happens if A tries to push
+changes back while B's are at the front of the master branch in
+the main repository?  Well, what do you think should happen?
+Once you've decided, try it:
+
+<code><pre>
+    git push
+</pre></code>
+    
+The operation is rejected, and you get a message explaining why.
+<p>
+There are (basically) two ways to get back to a consistent state 
+by bring the changes into A's repository:
+
+<ul>
+<li><code>git fetch</code> copies the commits in, but doesn't try to merge them
+yet.  You do that manually.
+<li><code>git pull</code> copies the commits in, and then does the merge as far as it
+can, leaving conflicts for you.
+</ul>
+
+In general, if you think there are no conflicts, <code>git pull</code> is easiest.  
+But it tends to be confusing where there are conflicts, so many people are in the 
+habit of always doing it in two steps:  First <code>git fetch</code>, then
+<code>git merge</code>.
+<p>
+To see this work,
+
+<code><pre>
+    git fetch
+</pre></code>
+    
+and look with <code>gitk --all</code> at what you'd got. You should see that 
+"master" and "remotes/origin/master" are on two separate sections of the tree.
+Too fix that, you merge "remotes/origin/master" onto your current work:
+
+<code><pre>
+    git merge remotes/origin/master
+</pre></code>
+    
+As expected, this declares a conflict, which you have to fix and manually commit:
+
+<code><pre>
+    (edit)
+    git add contents.txt 
+    git commit -m"fix merge with main repo"
+</pre></code>
+    
+Now you can push it back:
+
+<code><pre>
+    git push
+</pre></code>
+    
+and all is well.
+
+<p>
+There's nothing special about the main repository.  You can "push" or "pull" from
+any to any Git repository, so long as you have write access to the destination.
+Git can work with both local and remote (using several protocols) repositories, 
+so there are lots of possible ways to operate.
+<p>
+For example, if A and B are cooperating on a complicated change, they can push/pull
+commits back and forth between them until they're both happy, and only then 
+put them back into the main repository.  This is a very powerful way of making sure that 
+the main repository stays clean and useful during rapid development.
+
+
+<h3>Branches and Distributed Development</h3>
+
+When you have a lot of people working, every body working on the
+master branch at the same time can be tricky.  Contributed changes
+have to get merged back to master to be in common use, so there's a 
+lot of activity there.  That can collide with your own work as
+you try to write you own changes.
+<p>
+It's often better to use Git's cheap and fast branches for your work.
+You can put each of your current efforts into a branch of it's own,
+have other little branches for considering different approaches,
+and then only keep the one(s) that really work out.
+<p>
+For example, let's consider developer A who's working on a 
+project in the A_dev branch.  There's a bunch of changes and
+a couple things to try.  We'll boil that effort down to a script you 
+can run that makes the changes:
+<code><pre>
+    cd ~/exerciseG3A
+    /home/jake/CSC/exG3script.sh
+</pre></code>
+
+Take a look at it with gitk to see all the various bits.  He's done
+now, and just wants to publish what's on A_dev itself.
+<p>
+He tells the central maintainer, who just has to fetch that particular branch from A's 
+repository, and then merge it on to the master branch there.
+<p>
+To do that:
+<code><pre>
+    cd ~/exG3MasterRepo.git
+    git fetch ../exerciseG3A/ A_dev:New_from_A_dev
+</pre></code>
+
+The git fetch command specifies the repository (often a name or URL, but here
+it's a directory location), the name of the branch to be pulled ("A_dev") and
+what to call it here ("New_from_A_dev").  Once it's in, it can be tested, and 
+eventually merged.
+
+<h3>Telling a Story</h3>
+
+In large projects, it's very useful for the repository to 
+tell a simple story about where the code came from.  
+You might make dozens of commits and use lots of branches to try
+various options in your local repository, but when your final 
+product goes back to the main project, that's all just noise 
+and complexity.  You want to send in just one commit that
+embodies your new contributions.  Git lets you do this.
+<p>
+First, you can drop dead-end branches in your development.
+Not every idea works out!  To do this:
+
+<code><pre>
+    cd ~/exerciseG3A
+    git branch -D A_dev_dumb_idea
+    git branch -D A_dev_an_idea
+    git branch -D A_dev_another_idea
+</pre></code>
+
+The "-D", instead of the "-d" we used earlier, is because these
+branches haven't been merged in.  Deleting them will lose changes, but
+here you're sure these aren't needed.
+<p>
+Now we're just left with branches that have a lot of commits.
+<p>
+The "rebase" Git command has a lot of uses. Basically,
+it allows you to merge or move commits around in the repository
+tree.  This can get you into trouble, but it can also be 
+powerful.
+<p>
+Here, we're just going to use it to collapse a number of 
+commits into a single one.
+<p>
+Say you did 6 commits, and nobody pulled a copy of your repository
+or created a (still-existing) branch in the middle.  You could have 
+done all those changes in a single commit, right?  (If there's a 
+branch out of the middle of them, you couldn't, so that's a more complex case)
+But you didn't know at the time how many it would take until you were done, and
+you wanted to keep your code safe in the repository, so you committed early and often.
+<p>
+Git rebase lets you go back and fix that.
+The command looks like this:
+
+<code><pre> 
+    git checkout A_dev_bright_idea
+    git rebase -i HEAD~6
+</pre></code>  
+
+The first line is just to make sure we're on the right branch for the example.
+The "rebase" command has several formats, and -i says we want to use it 
+interactively.  The HEAD~6 means that we want to act on the HEAD commit of the current
+branch and the 6 commits leading up to that.  
+<p>
+Git pops an editor with a window that start with:
+
+<code><pre>
+pick 61b61d5 A_dev commit 1
+pick 95247fb A_dev commit 2
+pick 57c55d8 A_dev commit 3
+pick c942bd3 A_dev bright idea
+pick 5edb630 A_dev bright idea 2
+pick ff3b151 A_dev bright idea 3
+
+# Rebase 06e5a58..ff3b151 onto 06e5a58
+#
+# Commands:
+#  p, pick = use commit
+#  r, reword = use commit, but edit the commit message
+#  e, edit = use commit, but stop for amending
+#  s, squash = use commit, but meld into previous commit
+#  f, fixup = like "squash", but discard this commit's log message
+#  x, exec = run command (the rest of the line) using shell
+</pre></code>
+
+You see the 6 most recent commits we asked for, their ID numbers, and their comments.
+The "pick" at the front can be changed to one of the commands in the comment.
+We want to keep that first commit, but "squash" the other 5 onto it so they all look like just one 
+commit.
+So change the first few lines to look like:
+<code><pre>
+pick 61b61d5 A_dev commit 1
+squash 95247fb A_dev commit 2
+squash 57c55d8 A_dev commit 3
+squash c942bd3 A_dev bright idea
+squash 5edb630 A_dev bright idea 2
+squash ff3b151 A_dev bright idea 3
+</pre></code>
+save and exit the editor normally.  Git will pop another window with the 
+6 comments in it, so you can combine them into the single commit message that 
+will go with the combined commit.  Do that, save and exit normally.
+<p>
+Git will work for a second, and they you're done.  Take a look at the new tree
+with gitk and see how clean it looks now.  And you got to rewrite the comment to say
+exactly what your colleages need to know about all this!
+
+
+</body>
+</html>

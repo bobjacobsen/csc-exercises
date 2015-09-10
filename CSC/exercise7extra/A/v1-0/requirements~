@@ -1,0 +1,7 @@
+package A
+
+author Vincent Garonne <garonne@lal.in2p3.fr>
+
+library A A.cxx
+
+macro A_linkopts " -L$(AROOT)/$(A_tag) -lA "

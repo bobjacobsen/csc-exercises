@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+	<title>Exercise 10</title>
+</head>
+<body>
+<h1>Exercise 10: Joint Development</h1>
+ 
+<B>Note: This exercise is based on CVS, and needs to be updated to SVN/Git!</b>
+
+Reminder:  Look at 
+&lt;<A HREF="file:/home/jake/CSC/index.html">file:/home/jake/CSC/index.html</a>&gt; 
+for updates or corrections!
+ 
+<P>
+Goal: Get some experience with the issues that make joint development difficult.
+<P>
+In this exercise, we're going to have groups of 4 students
+work together to migrate a very small system to a new structure.
+
+<P>
+We don't have a lot of time to do this, but that's true in the 
+real world, too. 
+<p>
+The basic task is to take the system of exercise 9, which consists
+of Base, User1, User2 and Main packages, and move it forward to yet
+another new interface for the log() method in Base.
+
+<P>
+When you want to start this exercise, come find Bob, who will put 
+you in groups that want to start at about the same time.
+You'll need people or pairs to do four things:
+
+<UL>
+<LI>Modify the Base package to provide the new capability
+<LI>Modify User1 to use it
+<LI>Modify User2 to use it
+<LI>Do any needed updates in Main, and build the overall release
+</UL>
+
+<P>
+Allocate these roles among yourselves. To make this more realistic, nobody
+should work on more than one package. (It would be better if we could
+also put you in separate time zones....) Try to find a way to do as much
+in parallel as possible.
+
+<p>
+Next, discuss how what your strategy is.
+Who is making what changes? Who is testing what? 
+Who do you want to update the requirements files? 
+Who puts things into CVS?
+Make sure everybody knows who's doing what and when. 
+
+<p>
+Next, we'll create a central 
+CVS repository by having one student (the one logged in to handle the
+"Main" package) do:
+<code><pre>
+    cd
+    tar xf /home/jake/CSC/exercise10CVS.tar
+</pre></code>
+which will create a common CVS repository for the teams.
+You also need to make sure your permissions are set right:
+<code><pre>
+    cd
+    chmod 755 .
+    chmod -R g+w repo10
+</pre></code>
+<P>
+Then everybody should do 
+
+<code><pre>
+    cd
+    export CVSROOT=/home/<i>mainuser</i>/repo10
+    tar xf /home/jake/CSC/exercise10.tar
+    cd exercise10
+    source setup.sh
+    cvs co Base Main User1 User2
+</pre></code>
+(where <i>mainuser</i> is the login-id of the student with the CVS repository)
+<P>
+At this point each of you should have a working setup for development
+in Base, User1, User2 and Main that's connected to a single CVS repository.
+If anybody commits a change, their colleagues can get the change by doing a 
+"cvs update" in the appropriate directory.
+<P>
+The actual change we want to make is shown by comments in the
+v2-0 versions of Base.h and Base.cxx.  The team working on the 
+Base package should make the code changes suggested by those
+comments in a <u>new</u> version v3-0 of Base. The other teams should make
+the changes necessary to be able to use that new Base capability.
+<p>
+Try to get all four teams working on making their changes in parallel.
+That requires thinking about who should be doing what, and in what order.
+In order to make this a real example of distributed development, it's important
+that each person or team only work on their own part of the project.
+<P>
+For example, the User1 team should:
+<OL>
+<LI>Create the new version with:
+<code><pre>
+cmt create User1 v3-0
+</pre></code>
+<LI>Tell CVS about the directories just created:
+<code><pre>
+cvs add User1/v3-0
+cvs add User1/v3-0/cmt
+cvs add User1/v3-0/src
+</pre></code>
+<LI>Copy the earlier versions of files from v2-0/src and v2-0/cmt
+<LI>Edit them as needed, build and test
+<LI>When ready to send back to CVS, first tell cvs about them:
+<code><pre>
+cvs add cmt/requirements
+cvs add cmt/Makefile
+cvs add src/*.h
+cvs add src/*.cxx
+</pre></code>
+and them commit them
+<code><pre>
+cvs commit -m"commiting my changes back for others to use" 
+</pre></code>
+</OL>
+The collaborating groups can the pick up those changes with
+<code><pre>
+cvs -q update -d
+</pre></code>
+(The -q option makes it less verbose, so you can see what it's doing;
+-d option tells CVS to look for new directories)
+<P>
+Meanwhile, what can the Main team be doing?  What does Base need to do first?
+<p>
+When you get it done and running, take a moment to think about
+how much coordination you needed to do.  Did everything go as expected?
+</body>
+</html>

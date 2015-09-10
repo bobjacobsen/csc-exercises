@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+	<title>Exercise 8</title>
+</head>
+<body>
+<h1>Exercise 8: Releasing code as it changes</h1>
+ 
+Reminder:  Look at 
+&lt;<A HREF="file:/home/jake/CSC/index.html">file:/home/jake/CSC/index.html</a>&gt; 
+for updates or corrections!
+ 
+<P>
+Goal: Dealing with dependencies using a release tool.
+<P>
+First, create a local copy of the exercise files.
+ 
+<CODE><PRE>
+   cd
+   tar xf ~jake/CSC/exercise8.tar
+   cd exercise8
+   source setup.sh
+</PRE></code>
+
+This will create CMT directories for seven packages, named A through G.  
+Each of those will have separate versions. 
+Drop down to version 1-0 of G and check the dependencies:
+
+<CODE><PRE>
+   cd G/v1-0/cmt
+   cmt show uses
+</PRE></code>
+ 
+You'll see that G depends on version v1-0 of all of A through F (and B still depends on A, as in exercise7).
+Check the G.h and G.cxx files to see why that's true.  Then ask CMT to build everything needed:
+ 
+<CODE><PRE>
+   cmt broadcast make
+</PRE></code>
+
+Note that CMT does seven build operations:  
+It builds version v1-0 of the A through G packages, 
+but not any of the other versions, because they're not needed (yet). 
+Run the program:
+
+<CODE><PRE>
+   ../Linux-i686/main.exe
+</PRE></code>
+
+It should display a line from each of the seven libraries.  Success!
+<P>
+Now we're going to simulate the various issues that can arise as you try to "release" consistent sets of code.  
+First, note that you've got a working combination here.  The "requirements" file for G lists a set of versions that works.
+<P>
+Unfortunately, there's a problem with v1-0 of the D package; 
+it's printing the wrong thing, and you've detected that during your testing.
+The owner of the package has provided a "v1-1" version that has this fixed. 
+Make the necessary changes to your G requirements file, rebuild,
+and see if you've really fixed it.  
+(You are not to change the .h or .cxx files in this exercise; pretend they're too complicated to figure out right now)
+<P>
+You've now got a working "v1" of G and the libraries it uses, which you could bundle up and distribute.
+<P>
+Unfortunately, as the system gets bigger and bigger, having G depend on everything becomes impractical.  
+So we need to iteratively evolve this system so that G just depends on F, which does some of the work and relies on E, etc.
+<P>
+We decide to do this in a "Version 2" of the system. (One of the hardest 
+parts is getting all the changes made for a big update like this; we'll skip
+over what it takes to get the package programmers to do this...)
+
+<CODE><PRE>
+    cd ~/exercise8/G/v2-0/cmt
+</PRE></code>
+
+Look at the version v2-0 G.cxx, F.cxx, etc files to see a way that 
+the packages could be decoupled
+(there are other, more robust ways to do it, but this will serve for now).  
+Briefly, where the main program in package G used to directly invoke
+everything
+<code><pre>
+int main()
+{
+    A a;
+    B b;
+    C c;
+    D d;
+    E e;
+    F f;
+    G g;
+    
+    a.print ();
+    b.print ();
+    c.print ();
+    d.print ();
+    e.print ();
+    f.print ();
+    g.print ();
+
+    return 0;
+}
+
+void G::print ()
+{
+        F f;
+        f.print();
+        cout&lt;&lt;"Hello from G"&lt;&lt;endl;
+}
+
+</pre></code>
+now it just invokes F, which in turn will invoke E, that will invoke D, etc:
+<code><pre>
+void G::print ()
+{
+        F f;
+        f.print();
+        cout&lt;&lt;"Hello from G"&lt;&lt;endl;
+}
+</pre></code>
+The programmers have provided the updated .h and .cxx files, 
+but they've not all updated their dependencies 
+in the various requirements files.  
+If you try to build this now, it will fail because the compiler can't find
+needed pieces (you can try this if you'd like to see what it looks like)
+<P>
+Your next task will be to update those 
+requirements files so that you can build this.
+We've done G (which only depends on F), and A, B, C and D.  
+E should depend on D, 
+F should depend on E; you'll have to make those changes.
+
+<CODE><PRE>
+    (edit v2-0/cmt/requirements files as needed; see above)
+    cd ~/exercise8/G/v2-0/cmt
+    cmt broadcast make
+</PRE></code> 
+
+You may need to do the "make" several times.  If things get too messed up, you can say
+
+<CODE><PRE>
+   cmt broadcast make clean
+</PRE></code> 
+
+to clean things up. When you get it to build properly, you should be able to say
+
+<CODE><PRE>
+    ../Linux-i686/main.exe
+    cmt show uses
+</PRE></code> 
+
+to run the program and show the usage tree respectively.
+<P>
+Note two things about your solution: 
+<ol>
+<LI>Since the dependencies in the code changed, the requirements files in each package had to change too.
+It makes sense for the people who are working on the code to also maintain the requirements file!
+<LI>The G package now depends on only F, not anything else. 
+(If you have anything else in the G/v2-0/cmt/requirements file, you should remove them and try again)
+</ol>
+
+Unfortunately, the D package didn't get enough unit testing, so v2-0 of it has the same spelling problem that v1-0 had.  
+Next, you're to fix that by using the new v2-1 version of D.  (Again, don't change the code itself)
+<P>
+Which requirements file do you need to change to fix this?
+<P>
+Make the change, and confirm that the program really does produce the right output.
+Use the CMT "show uses" command to look at the new dependencies.
+ 
+</body>
+</html>

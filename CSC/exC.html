@@ -1,0 +1,468 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+	<title>Exercise C</title>
+</head>
+<body>
+<h1>Exercise C: Experiment with SVN</h1>
+ 
+Reminder:  Look at 
+&lt;<A HREF="file:/home/jake/CSC/index.html">file:/home/jake/CSC/index.html</a>&gt; 
+for updates or corrections!
+ 
+<P>
+Goal: Gain familiarity with SVN
+
+<P>
+In this exercise, we're going to create a 
+SVN repository just for your use, and then
+walk through all the common operations.
+Even if you're already using SVN, you're probably doing
+it with a collaboration repository that's full of valuable
+code. Here, we'll create one that doesn't contain anything
+valuable, so you can experiment with it and really learn how it works.
+
+<p>
+First, create a directory for the exercise and your
+own repository:
+
+<CODE><PRE>
+cd
+mkdir exerciseC
+cd exerciseC
+svnadmin create MySvnRepository
+export SVNREPO=$PWD/MySvnRepository
+</PRE></CODE>
+
+Take a look at it.  
+<CODE><PRE>
+ls $SVNREPO
+ls $SVNREPO/db
+ls $SVNREPO/db/revs
+ls $SVNREPO/db/revs/0
+</PRE></CODE>
+
+<p>
+Note that MySvnRepository/db/revprops/0, revs/0, transactions/0 all contain
+a single file called "0".
+Those directories will eventually contain all the various versions
+of the files you create, but there's no content here yet. 
+So let's create some and import it into that repository.
+
+<CODE><PRE>
+mkdir content
+cd content
+</PRE></CODE> 
+
+Take your favorite editor
+and create two files "file1" and "file2" with some text in them.
+These will form the intial content of your project.
+
+<p>
+Next, we'll import that into the 
+SVN repository to get started:
+
+<CODE><PRE>
+cd ..
+svn import content file://$SVNREPO/trunk -m"initial contents"
+</PRE></CODE> 
+
+It's not immediately obvious where SVN stores its information. We'll look at that next.
+
+<p>
+Note that MySvnRepository/db/revs/0 and MySvnRepository/db/revprops/0 now contain an "1" file.
+
+<p>
+MySvnRepository/db/revs/0/1 and
+MySvnRepository/db/revprops/0/1 
+are  binary files, but take a look at them anyway. It contains the content of your new files, along with some control information.
+
+<p>
+Now, we want to check out a set of files that we'll work with, but SVN will control:
+
+<CODE><PRE>
+svn checkout file://$SVNREPO/trunk workingdir
+</PRE></CODE> 
+
+There should now be a workingdir directory that's your new working directory:
+
+<CODE><PRE>
+cd workingdir
+</PRE></CODE> 
+
+SVN knows this is a SVN directory, and no longer needs to be told where the repository is located, etc. 
+It does this by keeping status in a dedicated directory. That directory isn't generally visible:
+
+<CODE><PRE>
+ls -a
+ls .svn
+</PRE></CODE> 
+
+The props, prop-base and text-base directories are how SVN keeps track of the files that should be present and their expected content. In particular, the files in .svn/text-base are the content that you checked out.
+
+<p>
+Now edit one of the files, and ask SVN for a status:
+
+<CODE><PRE>
+svn stat
+</PRE></CODE> 
+
+This should display 
+<CODE><PRE>
+M      file1
+</PRE></CODE> 
+
+That "M" indicates that you changed the file, and haven't merged it back into the SVN repository yet.
+
+<CODE><PRE>
+svn commit -m"After my change to file1"
+</PRE></CODE> 
+
+This should display 
+<CODE><PRE>
+Sending        file1
+Transmitting file data .
+Committed revision 2.
+</PRE></CODE> 
+
+If you go back to the repository, you'll see files with "2" as a name containing the new content.
+
+<p>
+Next, create a new file called "file3", and then ask SVN for status:
+
+<CODE><PRE>
+svn stat
+</PRE></CODE> 
+
+This should display 
+<CODE><PRE>
+?    file3
+</PRE></CODE> 
+
+SVN doesn't know anything about file3 yet, except that it exists.
+You can tell SVN to ignore it, but usually we ask SVN to start managing it:
+
+<CODE><PRE>
+svn add file3 
+</PRE></CODE> 
+
+This makes changes to the local control information in the .svn directory, but it doesn't change anything in the main repository until you commit it.
+
+<CODE><PRE>
+svn commit -m"basic content only" file3 
+</PRE></CODE> 
+
+Now, let's experiment with how SVN coordinates multiple changes.  This works fine even when different users are making changes, but here we'll just have work simultaneously in two different working directories.  You might want to do this e.g. if you're working on adding two different features in the same piece of code.
+
+<CODE><PRE>
+cd ..
+svn checkout file://$SVNREPO/trunk otherworkdir
+cd otherworkdir
+</PRE></CODE> 
+
+You've checked out the most recent content from the repository, 
+so right now your two working directories are the same.  
+Change file1 in one working directory, and file2 in the other, and then do a "svn stat" in each place.  
+At this point, only the changes in the local directory are visible, 
+because the changes in the other directory haven't been commited yet.
+
+<p>
+Commit one set of changes, go to the other directory, and check the status:
+
+<CODE><PRE>
+svn stat
+</PRE></CODE> 
+
+Where's the other change that you just committed? By itself, 
+"svn stat" is asking the status of the current directory only; 
+it's not asking the status of the repository.  
+(This is actually nice, because you can use "svn stat" even when you don't have an internet connection; 
+yes, that does happen sometimes)
+
+<p>
+To see the status of the repository:
+
+<CODE><PRE>
+svn stat -u
+</PRE></CODE> 
+
+This should display 
+<CODE><PRE>
+       *        3   file1
+M               3   file2
+Status against revision:      4
+</PRE></CODE> 
+
+There are two new things here:
+The "*" indicates there's a change in the repository,
+and the last line tells you the revision in the repository 
+that's being compared.
+That number will increment as other people check things in.
+
+<p>
+To get that change into this directory:
+
+<CODE><PRE>
+svn update
+</PRE></CODE> 
+
+And you should see the changed file.
+
+<p>
+To see how SVN handles simultaneous changes, first create a file with a number of lines in it:
+
+<CODE><PRE>
+ls /home > userlist
+svn add userlist
+svn commit -m"list of current users" userlist
+</PRE></CODE> 
+
+Go to your other working directory, and pull this new file in:
+
+<CODE><PRE>
+svn update
+</PRE></CODE> 
+
+Now, edit that file in <u>both</u> working directories. In one, add a heading at the top.
+In the other, add some commentary after your own name.  We now have two different sets of changes to the same file.  
+It's important that SVN make sure neither of them gets lost.
+
+<p>
+Commit the change in one directory:
+
+<CODE><PRE>
+svn commit -m"added heading" userlist
+</PRE></CODE> 
+
+Now go to the other one and try to commit there:
+
+<CODE><PRE>
+svn commit -m"changed one user line" userlist
+</PRE></CODE> 
+
+This should display something like:
+<CODE><PRE>
+Sending        userlist
+svn: E155011: Commit failed (details follow):
+svn: E155011: File '/home/cscuser/exerciseC/otherworkdir/userlist' is out of date
+svn: E160028: File '/trunk/userlist' is out of date
+</PRE></CODE> 
+
+What that says is that your version of the file is "out of date", 
+and needs to be updated before you can commit.  
+Before you do that, lets see what the status is:
+
+<CODE><PRE>
+svn stat
+svn stat -u
+</PRE></CODE> 
+
+This should display something like
+<CODE><PRE>
+% svn stat
+M      userlist
+% svn stat -u
+M      *        5   userlist
+Status against revision:      6
+</PRE></CODE> 
+
+The "svn stat -u" command shows that userlist is both modified 
+in your directory, and is also different in the repository's revision 6.
+
+<p>
+So what happens when you do that update?
+
+<CODE><PRE>
+svn update
+</PRE></CODE> 
+
+This should display 
+<CODE><PRE>
+G    userlist
+Updated to revision 6.
+</PRE></CODE> 
+
+There's not a lot of drama here.  Since your changes were in different parts of the file, 
+and didn't really conflict with each other, SVN just merged the changes.
+
+<p>
+Now, edit the top line in both files.  This does conflict, and SVN can't resolve it. 
+The first commit will go fine:
+
+<CODE><PRE>
+svn commit -m"changed heading" 
+</PRE></CODE> 
+
+This should display 
+<CODE><PRE>
+Sending        userlist
+Transmitting file data ..
+Committed revision 7.
+</PRE></CODE> 
+
+That looks OK.
+But when I go back to the other directory and try there, it's not so clean:
+
+<CODE><PRE>
+% svn commit -m"like this heading better" userlist 
+Sending        userlist
+svn: Commit failed (details follow):
+svn: Out of date: '/trunk/userlist' in transaction '7-1'
+% svn update
+C    userlist
+Updated to revision 7.
+Conflict discovered in file 'userlist'.
+Select: (p) postpone, (df) show diff, (e) edit file, (m) merge,
+        (mc) my side of conflict, (tc) their side of conflict,
+        (s) show all options: 
+</PRE></CODE> 
+
+SVN will give you a message about a conflict, 
+and then long menu of choices about how to handle it.  Hit "p" to postpone
+and get back to the command prompt.
+<p>
+Note that SVN seems to have been untidy:
+
+<CODE><PRE>
+% ls
+File3		file2		userlist.mine	userlist.r7
+file1		userlist	userlist.r6
+</PRE></CODE> 
+
+The "userlist.mine", "userlist.r7" and "userlist.r6" files are how SVN tells you that you have a problem. 
+SVN leaves these files around so you can easily understand the problem.
+
+<p>
+"userlist.mine" is the file you want to commit.
+
+<p>
+"userlist.r6" is the revision 6 version of the file, which is the one that you started with when you made your changes. 
+'diff' will tell you what you changed:
+
+<CODE><PRE>
+% diff userlist.r6 userlist.mine 
+1c1
+< Heading
+---
+> Heading part 1
+</PRE></CODE> 
+
+"userlist.r7" is the current file from the repository, so 'diff' can also tell you what the other developer changed:
+
+<CODE><PRE>
+% diff userlist.r6 userlist.r7
+1c1
+< Heading
+---
+> Heading directory 2
+</PRE></CODE> 
+
+Finally, you can see the conflict you have to resolve:
+
+<CODE><PRE>
+% diff userlist.r7 userlist.mine
+1c1
+< Heading directory 2
+---
+> Heading part 1
+</PRE></CODE> 
+
+This case is pretty rare, because two people usually aren't trying to change the same exact things at the same time, 
+and because if they are trying to do that, they should be talking to each other in any case.  
+When it does happen, SVN's top priority is to make sure that no changes get lost.  
+It won't let you commit this file back to the repository until you promise that you really fixed the problem.  
+
+<p>
+You fix it by editing the userlist file itself, or by copying one of the three extra files in place of it.  
+For example, if you want to give up your changes and just accept the repository:
+
+<CODE><PRE>
+cp userlist.r7 userlist
+</PRE></CODE> 
+
+but you still can't commit:
+
+<CODE><PRE>
+% svn commit -m"accept repository"
+svn: Commit failed (details follow):
+svn: Aborting commit: '/home/jake/Desktop/SvnDemo/workingdir/userlist' remains in conflict
+</PRE></CODE> 
+
+"remains in conflict" means you haven't yet promised SVN that you did the right thing:
+
+<CODE><PRE>
+% svn resolved userlist
+Resolved conflicted state of 'userlist'
+</PRE></CODE> 
+
+and then you'll be able to commit as desired.  In this case, you don't have to, because you've abandoned your changes:
+
+<CODE><PRE>
+% svn commit -m"accept repository"
+</PRE></CODE> 
+
+but there are lots of other possible changes.
+
+<p>
+The next time you hit a conflict (and you can use the same process to force another one
+now if you'd like to practice), look at that menu of choices.  It lets you
+pick "mine" or "theirs" if your certain which one you want, or other choices.
+Even if you think you know, though, it's often best to select "p" to postpone
+and take your time sorting the situation out.
+
+<p>
+Now that we've done a bunch of SVN operations, let's look at the history information we've accumulated.  
+The SVN repository itself doesn't make it easy to just see the changes in the repository, but SVN provided some tools:
+
+<CODE><PRE>
+% svn log 
+</PRE></CODE> 
+
+gives a pretty comprehensive history of changes, though it can be a little hard to read.  
+
+<p>
+If you want to know who's changed what lines in a specific file, do this:
+
+<CODE><PRE>
+% svn blame userlist
+</PRE></CODE> 
+
+Each line is listed with the revision number of when it was last changed, 
+along with the name of the user who changed it 
+(this would be more impressive if we had more than one user doing this demo, right?). 
+The "blame" command can also be invoked as "praise" and "annotate".
+
+<p>
+You can rename a file, or even a directory, with SVN. This preserves the entire revision history, etc.
+
+<CODE><PRE>
+% svn mv file1 newNameFile1
+A         newNameFile1
+D         file1
+% svn stat
+D      file1
+A  +   newNameFile1
+% svn commit -m"rename file to newNameFile1"
+Deleting       file1
+Adding         newNameFile1
+Committed revision 8.
+</PRE></CODE> 
+
+This is particularly helpful when refactoring code results in changing directory (package) names. 
+
+<p>
+SVN doesn't have the a concept of "tags".
+You can't take a set of arbitrary revisions of various files
+and give them a label  which you can later use to refer to them.
+Instead, SVN relies on its ability to make complete and quick
+duplicates of files and directories.  Instead of labelling a set of
+file contents for later reference, you put aside a copy of them.
+<u>Where</u> you put that copy is up to you, and different
+groups do it different ways.  One common convention is to have
+one main directory for development called "trunk", and a separate directory
+for the copies called "tags" (we used this at the top of the
+exercise).  Consult your local computing people for the method
+they recommend at your site.
+</body>
+</html>

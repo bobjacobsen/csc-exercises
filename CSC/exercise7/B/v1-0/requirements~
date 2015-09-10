@@ -1,0 +1,8 @@
+package B
+
+author Vincent Garonne <garonne@lal.in2p3.fr>
+
+#use A v1-0
+
+application main main.cxx B.cxx
+macro B_linkopts " -static "

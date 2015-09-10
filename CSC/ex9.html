@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+	<title>Exercise 9</title>
+</head>
+<body>
+<h1>Exercise 9: Managing configuration conflicts</h1>
+ 
+Reminder:  Look at 
+&lt;<A HREF="file:/home/jake/CSC/index.html">file:/home/jake/CSC/index.html</a>&gt; 
+for updates or corrections!
+ 
+<P>
+Goal: One of the hardest things to do in large systems is to migrate interfaces. 
+We'll practice that here, and get some experience with why it's hard.
+<P> 
+First, create a local copy of the exercise files.
+<CODE><PRE>
+   cd
+   tar xf ~jake/CSC/exercise9.tar
+   cd exercise9
+   source setup.sh
+</PRE></code> 
+ 
+This will create CMT directories for four packages:  Base, User1, User2, Main.  
+Each of those will have separate versions. Drop down to version 1-0 of Main and check the dependencies:
+<CODE><PRE>
+   cd Main/v1-0/cmt
+   cmt show uses
+</PRE></code> 
+ 
+Think of Base as some basic library to do logging.  
+In this case, that logging is just printing to the terminal, 
+but in large system controlling logging can be a key issue. 
+User1 and User2 are other libraries that use the Base library, 
+and Main as a primary executable that needs User1 and User2 to do its work.
+<P>  
+We've provided a v1-0 for all these that is ready to go.  
+Take a look at them to see how the various packages use each other. 
+Then ask CMT to build everything needed:
+<CODE><PRE>
+   cmt broadcast make
+</PRE></code> 
+ 
+Note that cmt does four build operations, ending with a link. Run the program:
+<CODE><PRE>
+   ../Linux-i686/main.exe
+</PRE></code> 
+ 
+It should display lines that each of Main, User1 and User2 have requested Base to print.  
+Success!
+<P>  
+There's also a version v2-0 of Base.  
+It provides a more complicated logging interface.  
+Unfortunately, as the version number seems to indicate, it's not backward compatible with version v1-0. 
+Even though that v2-0 of Base is present, when we ran the code above, we hadn't built it in.  
+We got a running system, but not the new features of Base.  
+(Take a look at v2-0 of Base to see how the printout would have been different)
+<p>
+The User1 team is really excited about these features, and has provided a new version v2-0 of User1 that uses them.  
+(They've even provided the requirements file!) Your job is to create a version v2-0 of Main that uses v2-0 of User1 
+and produces a working executable.  
+We've provided Main v2-0, but you'll need to (at least) update its requirements file.
+
+<CODE><PRE>
+   cd ~/exercise9/Main/v2-0/cmt
+   (edit the requirements file)
+   cmt broadcast make clean
+   cmt broadcast make
+</PRE></code> 
+
+Note that you get messages about inconsistent versions, even though the build runs to completion.
+Those messages will be more obvious if you ask CMT to show you the versions used:
+<CODE><PRE>
+   cmt show uses
+</PRE></code> 
+
+<p>
+Try running the newly-linked version, and see if does what the User1 and User2 groups expect:
+<CODE><PRE>
+   ../Linux-i686/main.exe
+</PRE></code> 
+
+<p>
+First, what do you expect to see?  Do you expect that the call by User1 to the new routine in Base will
+work or fail?  That the call by User2 to the old routine in Base will work or fail?
+
+<p>
+You should see something a little unexpected:
+
+<code><pre>
+User1 invokes the logging
+Log: logged by Base1 at severity 3 (from Base v2-0) 
+User2 invokes the logging
+Log: logged by User2 (from Base v2-0) 
+</pre></code>
+
+<u>Both</u> calls succeeded!  But somehow both also claim to be coming from the "Base v2-0" code!
+
+<p>
+Take a look at the .cxx and .h files to see if you can understand why this is happening.
+If you have questions, flag down Bob and talk to him about it.
+
+<p>
+Even though it's wrong in an unexpected way, it's still wrong.
+What do you have to do to fix this?
+<p>
+Try to think of at least two ways to correct this problem so you're building a consistent version. 
+What are they advantages and disadvantages of each approach? 
+(Bob will give you hints if you can't think of more than one approach)
+Are any of these really satisfactory?  
+What's really the underlying problem?  
+Hint: It's not just configuration management, though that's part of the solution.
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+	<title>Exercise D</title>
+</head>
+<body>
+<h1>Exercise D: Experiment with CppUnit</h1>
+ 
+Reminder:  Look at 
+&lt;<A HREF="file:/home/jake/CSC/index.html">file:/home/jake/CSC/index.html</a>&gt; 
+for updates or corrections!
+ 
+<P>
+Goal: Gain familiarity with CppUnit
+
+<p>
+CppUnit is a unit test framework for C++ code.  As such, it's typically
+integrated into the usual C++ build systems using "make" or similar.
+In this exercise, we're going to focus on writing and running simple CppUnit
+tests within an existing make structure.
+
+<p>
+Start by expanding a pre-built copy of CppUnit that we've created for use
+with the CSC machines:  (If you want to build a copy for your own machine,
+see the last section of these instructions)
+
+<CODE><PRE>
+   cd /scratch
+   tar xf /home/jake/CSC/exerciseD.tar
+   cd exerciseD
+</PRE></CODE>
+
+(We have you run this in the local /scratch disk to speed things up;
+note that if you change to a different machine you'll have to start
+this exercise over from the top).
+<p>
+We'll be working with the "simple" example that's provided with CppUnit (though
+we've made some small changes in it for the purposes of this exercise):
+<CODE><PRE>
+   cd examples/simple
+</PRE></CODE>
+
+The sample tests are in the ExampleTestCase.cpp file.  They look like this:
+
+<CODE><PRE>
+    void ExampleTestCase::example()
+    {
+      CPPUNIT_ASSERT_DOUBLES_EQUAL( 1.0, 1.1, 0.05 );
+      CPPUNIT_ASSERT( 1 == 0 );
+      CPPUNIT_ASSERT( 1 == 1 );
+    }
+</PRE></CODE>
+
+That's a single test method, which asserts three separate things:
+<ul>
+<li>1.0 and 1.1 are equal, where the comparison has a range specification that
+    says "has to be within 0.05 of each other"
+    so that floating-point numbers can be meaningfully compared.
+<li> 1 is equal to 0
+<li> 1 is equal to 1
+</ul>
+
+These aren't real tests, of course, but rather demonstrations of what can easily be tested 
+and what happens when they pass or fail. In this case, the first test will fail.
+To see that, make and run the tests:
+
+<CODE><PRE>
+    make
+    ./simple
+</PRE></CODE>
+
+The program runs all the tests, giving a brief summary of whether they passed ("assertion")
+or failed ("OK").  Then it prints a report on each failure it encountered, for example:
+
+
+<CODE><PRE>
+    ExampleTestCase.cpp:8: Assertion
+    Test name: ExampleTestCase::example
+    double equality assertion failed
+    - Expected: 1
+    - Actual  : 1.1
+    - Delta   : 0.05
+</PRE></CODE>
+
+That's enough to let you really track down the problem.
+Edit line 8 of the ExampleTestCase.cpp file so that this tests passes, and then
+rebuild the program and try again:
+
+<CODE><PRE>
+    make
+    ./simple
+</PRE></CODE>
+
+Now it fails in the next assertion in that test method.
+That test apparently wasn't run before, back when the method was asserting at the first statement.
+This is characteristic of unit testing:
+once a problem has been found in a test method, that method stops and the program proceeds to the
+next one.  The idea here is that the test has worked, a problem has been found, and it's too tricky to 
+work out whether the objects involved are still in a good state to continue testing.  Better to 
+report this result and move to the next test.
+
+<p>
+Play with these test methods until you get comfortable with how the assertions work, what they test, etc.
+Note how the setUp() routine can provide common initialization used by multiple tests.
+
+<p>
+Now we want to add another test case, called "newExample".  That's involves adding a new
+method in the ExampleTestCase.cpp file:
+
+<CODE><PRE>
+void ExampleTestCase::newExample()
+{
+  // some assertions of your choice
+}
+</PRE></CODE>
+
+Add that, and run "make".
+
+<p>
+The "make" failed because in C++ you have to declare new methods, which is (generally)
+done in header files. Open the ExampleTestCase.h file and take a look at it.
+
+<p>
+The bottom half contains the method declarations that you're used to from C++ programming.
+The top part contains the statements that tell CppUnit which methods are tests
+and how they're grouped into a test suite:
+
+<CODE><PRE>
+  CPPUNIT_TEST_SUITE( ExampleTestCase );
+  CPPUNIT_TEST( example );
+  CPPUNIT_TEST( anotherExample );
+  CPPUNIT_TEST( testAdd );
+  CPPUNIT_TEST( testSucceeds );
+  CPPUNIT_TEST( testEquals );
+  CPPUNIT_TEST_SUITE_END();
+</PRE></CODE>
+
+You'll need to add a declaration for your new method in the bottom part, and also a new
+CPPUNIT_TEST statement in this part for it.
+
+<p>
+Do that, "make", run the tests and make sure that your new code is being executed.
+
+<p>
+Finally, lets look at how the overall test system is organized. CppUnit is a very flexible
+system, which can be customized in lots of ways.  The executable that invokes the tests
+can be found in Main.cpp.  Open that and look at the comments on each step:
+<dl>
+<dt>"Create the event manager and test controller" <dd>This creates the basic infrastructure
+that's always needed.
+<dt>"Add a listener that collects test result" <dd>CppUnit is organized around listeners
+that get told when things happen.  In this case, we're installing a listener that will
+make a record of the results of each test for use later on in the program (see last point below).
+<dt>"Add a listener that prints tests names as test runs." <dd>The beauty of the listener pattern
+is that you can have lots of them, and then include just the ones you want.  Here, we're 
+also including a listener that gives us a quick summary of each test as it executes.
+<dt>"Add the top suite to the test runner" <dd>This is how CppUnit knows what tests to
+run.  Individual tests are organized into suites, which in turn can be grouped into 
+further suites, etc. Note that this doesn't explicitly refer to ExampleTestCase. 
+This line invokes a routine that scans for test suites that have been identified
+at compile-time.  This means that you don't have to change Main.cpp if you 
+add a new test class, so long as you make sure it's getting linked in.
+<dt>"Run tests" <dd>Really, this is the simplest part.  Now that it's set up, CppUnit
+can run through the tests accumulating results
+<dt>"Print test in a compiler compatible format." <dd>After the tests are done, the accumulated
+results are formatted up as desired and printed.  Doing it this way makes it easy to 
+report problems in different ways:  To the screen for interactive builds, or by email for
+nightly builds, etc.
+</dl>
+
+Try commenting out various parts, "make" and run the tests to see what happens.
+There are a number of more advanced tools that can be added to the test setup,
+see the "More Information" section for pointers.
+
+<h2>Installing CppUnit</h2>
+
+If you want to see what it takes to build your own copy of CppUnit,
+get your own copy of the installation tar file:
+
+<CODE><PRE>
+   cd
+   tar xf /home/jake/CSC/cppunit.tar
+</PRE></CODE>
+
+CppUnit works very closely with the compiler and libraries on the computer, 
+and has to be configured to match them.  This is done automatically using the
+"autoconf" program:
+
+<CODE><PRE>
+   cd cppunit
+   ./configure
+</PRE></CODE>
+
+This will run for a little while (maybe a minute or so), and then 
+end with message about "automatically generated config/ ", etc.
+(Sometimes there are warnings from rm after that as it cleans up, but
+you can ignore those)
+
+<p>
+Finally, you can build your copy:
+
+<CODE><PRE>
+   make
+</PRE></CODE>
+
+Once that's done, you can drop down to the examples/simple directory and see 
+where we started with the prebuilt version at that start of the exercise.
+
+<h2>For more information</h2>
+
+For more information on CppUnit, please see:
+<ul>
+<li>
+The 
+<a href="http://sourceforge.net/apps/mediawiki/cppunit/index.php?title=Main_Page">CppUnit home page</a>.
+
+<li>The
+"<a href="http://cppunit.sourceforge.net/doc/lastest/cppunit_cookbook.html">CppUnit cookbook</a>", the 
+tutorial on basic use.
+
+<li>The
+<a href="http://cppunit.sourceforge.net/doc/1.11.6/modules.html">modules page</a>, which
+provides an orderly introduction to what's available to do more advanced things.
+
+<li>The
+"<a href="http://sourceforge.net/apps/mediawiki/cppunit/index.php?title=QtTestRunner">QtTestRunner</a>"
+provides graphic feedback similar to JUnit's.
+
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+	<title>Exercise M1</title>
+</head>
+<body>
+<h1>Exercise M1: Simple uses of CMake</h1>
+ 
+Reminder:  Look at 
+&lt;<A HREF="file:/home/jake/CSC/index.html">file:/home/jake/CSC/index.html</a>&gt; 
+for updates or corrections!
+ 
+<P>
+Goal: Gain familiarity with basic CMake use
+
+<h3>CMake from Scratch</h3>
+
+In this section, we walk you through the very, very basics of how
+CMake builds code by adjusting to your local environment.
+<p>
+Create your workspace:
+ <CODE><PRE>
+    cd
+    tar xf ~jake/CSC/exerciseM1.tar
+    cd exerciseM1
+    source setup.sh
+ </PRE></code> 
+
+
+This provides two files:
+<ul>
+<li>HelloWorld.cxx - small hello-world C++ program
+<li>CMakeLists.txt - information for CMake
+</ul>
+
+Take a look at the CMakeLists.txt file.  It's got two things in it:
+<ul>
+<li><code>PROJECT(hello CXX)</code> - name this project, and say it's in C++
+<li><code>ADD_EXECUTABLE(hello.exe HelloWorld.cxx)</code> - The desired result 
+        is an executable named hello.exe made from the HelloWorld.cxx file.
+</ul>
+
+Tell CMake to process that file with:
+ <CODE><PRE>
+    cmake .
+ </PRE></code> 
+(Note the dot, you have to tell CMake which directory, in this case the current directory)
+<p>
+CMake hasn't built the result yet.  CMake never does build it.  Rather, it creates
+the files needed for the native build process on your machine, in this case a Makefile.
+Take a look at that, but don't worry about it.  CMake creates a lot of structure in the Makefile
+for its own purposes.
+<p>
+To do that actual build:
+
+ <CODE><PRE>
+    make
+ </PRE></code> 
+
+and then to run it:
+
+ <CODE><PRE>
+    ./hello.exe
+ </PRE></code> 
+
+OK, it's not much.  <code>g++ HelloWorld.cxx ; ./a.out</code> will produce
+the same output.  But this is laying the groundwork for being able to build
+automatically.  For example:  How did you know to run g++ vs clang vs something else
+for the compiler knew?  CMake worked that out for you.
+
+<h3>Adding Structure to Code</h3>
+
+Where CMake starts to shine is large builds.  We want to organize larger projects
+into sub-parts, with libraries, etc.  
+
+<P>
+To see this, we create and populate a new directory:
+
+ <CODE><PRE>
+   cd
+   tar xf ~jake/CSC/exerciseM1A.tar
+   cd exerciseM1A
+ </PRE></code> 
+
+This contains two subdirectories:
+<ul>
+<li>Hello - the hello world code, now to create a library for reuse
+<li>Test - source for a small executable to test the Hello class
+</ul>
+
+This is about the smallest possible structured project.  Try building the library 
+and test executable manually, then running it, to get a good feel for 
+how it's already getting complicated.  How many steps and minutes did it take
+you to get it running?
+
+<p>
+CMake processes this via a CMakeLists.txt
+in the top directory and each of the subdirectories.  Take a look at those
+and try to understand what they say.
+<UL>
+<li>The top level one just tells CMake that that are two subdirectories to 
+process.  It does this as part of single pass through the entire project;
+it doesn't spin off a new CMake process as make does, for example.
+<P>
+<li>The CMakeLists.txt in the Hello directory tells CMake to create a library
+for the Hello directory.
+<p>
+<li>The CMakeLists.txt in the Test directory is a little more complex.  It
+has to specify where to find the include (.h) file and the library for 
+Hello.  It then says that an executable is to be built, and linked
+to a library.  This sequence will become platform-specific instructions, 
+in this case a Makefile.
+</UL>
+<p>
+Note how variables like ${HELLO_SOURCE_DIR} are used to hold information
+on where things can be found.  This is a 
+general mechanism that we'll explore more below.
+<p>
+Run CMake to see what it does:
+
+ <CODE><PRE>
+    cmake .
+ </PRE></code> 
+
+Note that it creates multiple Makefiles.  Take a look at them to see how they're
+related (if you like reading Make syntax anyway)
+
+<p>
+Finally, you can do the actual build:
+ <CODE><PRE>
+    make
+ </PRE></code> 
+(you can do <code>make clean</code> if you want to go back to the start
+and repeat the <code>make</code> process)
+
+<p>
+Together, CMake and make have figured out the exact commands needed to build this
+code, and executed them with minimal intellectual effort on your part.
+<p>
+The ability to insert targeted test executables into the build process is
+very important for large projects.  
+See the <code>ENABLE_TESTING()</code> and <code>ADD_TEST()</code>
+commands in the CMake documentation for more information.
+
+<h3>A Bit on Syntax</h3>
+
+The CMakeLists.txt files use a specific syntax.  You can
+find a
+<a href="http://www.cmake.org/cmake/help/syntax.html">full description on the web</a>. 
+
+<p>
+To get a little feel for that, we'll add a little bit to the top-level
+CMakeLists.txt file.  
+ 
+<CODE><PRE>
+cd ~/exerciseM1A
+cat &lt;&lt; EOF  &gt;&gt;CMakeLists.txt
+
+# How to show a simple message
+message("saying Hello World from CMake")
+
+# doing conditional processing of variables
+if (UNIX)
+  set(CMAKE_CXX_FLAGS "\${CMAKE_CXX_FLAGS} -fexceptions -g -Wall")
+  message("Setting GCC flags" \${CMAKE_CXX_FLAGS})
+else()
+  set(CMAKE_CXX_FLAGS "\${CMAKE_CXX_FLAGS} /EHc-")
+  message("Setting non-Unix flags" \${CMAKE_CXX_FLAGS})
+endif()
+EOF
+
+</PRE></code> 
+
+Rerunning the "cmake ." command will then produce some output.
+It is possible to build architecture-specific processing
+into CMake if it's really needed, but it's generally considered 
+good practice to minimize this.
+
+
+<h3>Finding Libraries and Installed Components</h3>
+
+You've seen a bit about how CMake keeps track of the parts that it builds.
+The other thing that's needed is the ability to 
+locate and use external libraries and other components that
+have been installed on the computer independently of CMake.
+<p>
+Let's assume that we want to find and use the X11
+libraries in our code. We add a 
+
+<CODE><PRE>
+cd ~/exerciseM1A
+cat &lt;&lt; EOF  &gt;&gt;CMakeLists.txt
+
+# Locate installed X11 and get path variables
+message("X11_INCLUDE_DIR before: " \${X11_INCLUDE_DIR})
+find_package(X11 REQUIRED)
+message("X11_INCLUDE_DIR after:  " \${X11_INCLUDE_DIR})
+
+EOF
+cmake .
+</PRE></code> 
+
+You'll see that the <code>find_package()</code>
+call locates the X11 installation, and updates
+variables that can be used to reference the package.
+(Or, you might find an error message if your
+machine isn't set up with an entire X11 development
+environment, in which case you should just proceed
+anyway)
+<p>
+To get more information on a package such as use:
+<CODE><PRE>
+cmake --help-module FindX11
+</PRE></code>
+The conventions the variable names aren't 100% followed,
+so when linking to a new component library you need to do
+this to find out the right ones.
+<p>
+CMake uses "modules" as customization plug-ins.
+"Find" modules are a special case that make the 
+<code>find_package</code> system work.
+To see all the ones available on your computer, 
+do
+<CODE><PRE>
+cmake --help-module-list
+</PRE></code>
+To see another example of a module description,
+
+<CODE><PRE>
+cmake --help-module FindBoost
+</PRE></code>
+
+<p>
+So now you have the tools to get CMake
+to handle all the machine-specific aspects of building 
+your code.  You can bundle up source and a few CMakeLists.txt files
+and distribute them via your source control system.  At the destination
+computer, CMake will create the necessary parts to build, and
+the local build system will create the needed parts.
+
+<h3>Further Examples</h3>
+For a good sample tutorial on how CMake works with multiple
+independent projects, see the
+<a href="http://docs.cor-lab.de/build%20system%20essentials-tutorial/trunk/html/build-system-cpp.html">RSB tutorial page</a>.
+There are additional links to more information at the
+bottom of the 
+<a href="index.html">exercises index page</a>.
+
+
+</body>
+</html>

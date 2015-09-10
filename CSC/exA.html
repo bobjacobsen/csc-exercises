@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+	<title>Exercise A</title>
+</head>
+<body>
+<h1>Optional Exercise A: Simple CVS manipulations</h1>
+ 
+Reminder:  Look at 
+&lt;<A HREF="file:/home/jake/CSC/index.html">file:/home/jake/CSC/index.html</a>&gt; 
+for updates or corrections!
+ 
+<P>
+Goal: Learn how to manipulate an existing repository. If you're already using CVS in your collaboration, this will let you experiment with CVS without risk to your collaboration's common code.  If you're not using CVS yet, this will give you some experience.
+<P>
+To avoid interference, you'll create your own copy of a CVS repository:
+ 
+ <CODE><PRE>
+   cd
+   tar xf ~jake/CSC/exerciseA.tar
+   export CVSROOT=$PWD/repo1
+ </PRE></code> 
+  
+This has created the directory "repo1" in your home directory, and set the CVSROOT environment variable so that it can be written. Pause for a second and look at it. That repository contains two packages (modules), "CodeA" and "CodeB".
+<P> 
+First, we'll work with CodeA.  Create a temporary work directory, and check out the package
+
+ <CODE><PRE>
+  mkdir exerciseA
+  cd exerciseA
+  cvs checkout CodeA
+  cd CodeA
+ </PRE></code> 
+  
+There's now a CodeA subdirectory that you can look at.  Note that  CodeA/SampleText contains a number of paragraphs, each of which was sequentially created for this exercise.  
+<P>
+There's also a CodeA/History file that describes each of the changes, and lists a "tag" of the form "Vii-jj-kk" for each change.  Note that this History file is manually updated by people as they edit other files in the directory; CVS doesn't update it automatically. You can read it to see comments left behind as we made up the files for the exercises. 
+<P>
+The "cvs log" command allows you to also see the automatic log managed by CVS.
+<P>
+You can update the directory to any of these tags with "cvs update -r Vii-jj-kk" inside the CodeA directory.   Try various tags, looking at the History and SampleText files to see how they change. For example, look at the files now, and then after each of:
+ 
+ <CODE><PRE>
+  cvs update -r V00-02-00
+  cvs update -r V00-01-00
+ </PRE></code> 
+  
+Try comparing your current version with a tagged version using:
+ 
+ <CODE><PRE>
+   cvs diff -r V00-03-00
+ </PRE></code> 
+  
+and so on. 
+Next, lets add a new paragraph on the end of the SampleText file 
+(and don't forget to put a note in History; your collaborators will go there
+to figure out what you've done!).  
+First, get the most recent version of files in the directory:
+ 
+<CODE><PRE>
+   cvs update -A
+ </PRE></code> 
+  
+Now, use your favorite editor to add some paragraphs at the end, then commit them back to your local repository with
+ 
+ <CODE><PRE>
+  cvs commit -m"some comment for the cvs log file"
+  cvs tag V01-00-00
+ </PRE></code> 
+  
+Take a look at the repository contents, and see if you understand them. The "cvs log" command will also list the history of changes to the files.
+<P>
+A note on "Sticky tags":  If you ask CVS to update to a specific tag:
+
+ <CODE><PRE> 
+  cvs update -r V00-03-00
+ </PRE></code> 
+  
+CVS will remember that tag as "sticky".  If you request an operation without either a specific tag or the "most recent" -A flag, it will assume you want to work with the most recent sticky tag.  In this case, "cvs update" will get the most recent files in that V00-03-00 tag, if they changed, not changes to the most recent revision of files.  To update to the most recent contents, say "cvs update -A".  If you try to commit in this case, you'll get a message saying that you can't commit to a sticky tag.  That's because you normally can't change the contents of the files in a tag, you can only create a new "most recent" revision.
+<P>
+CVS also serves as a very convenient backup system.  To accidentally lose your working directory:
+
+ <CODE><PRE> 
+  cd ..
+  rm -rf CodeA
+ </PRE></code> 
+  
+If you then ask for the most recent contents, you'll get back what you just committed.  (Note that if you'd not committed them yet, you'd lose the changes when you erase the directory)
+ 
+ <CODE><PRE>
+  cvs checkout CodeA
+ </PRE></code> 
+  
+Check that it's all there.
+<P> 
+Next, lets try removing a file so it no longer shows up when the package is checked out.  The file "DeadFile" is intended for this.
+ 
+ <CODE><PRE>
+  cd CodeA
+  rm DeadFile
+  cvs rm DeadFile
+ </PRE></code> 
+  
+At this point, CVS knows that you want to delete the file (do a "cvs update" to see that), but has not yet done it.  To make it happen, do
+ 
+ <CODE><PRE>
+  cvs commit -m"a useful comment for the log file"
+ </PRE></code> 
+  
+Now look at the repository, and understand where the file went. (Hint:  There's a new directory, $CVSROOT/CodeA/Attic)
+<P>
+As always in CVS, the file is not gone, just marked as no longer interesting.  To get it back:
+
+ <CODE><PRE>
+  cvs update -r V01-00-00
+ </PRE></code> 
+  
+(the file is still present in older tags, but it won't be present in tags made from now on)
+<P>
+Adding a new file works similarly. First do a "cvs update -A" to get your directory updated to the most recent contents.  You need to do this because CVS will only allow you to change the current version of a package, not a past one.  Create your new file, then use "cvs add" to tell CVS to  get interested, then cvs commit -m"comment" to make the changes permanent.  Try this, and get it working.  You might want to do "cvs update" and/or "cvs update -r" commands often to really see what's happening.
+<P>
+Lets get a graphic example of why you should never copy files into a CVS controlled directory.  (As this is an exercise, we can mess with CVS's mind without causing any trouble; Don't do this in your collaboration's CVS repository!) You've put changes into CodeA/SampleText after we tagged that file with V00-02-00.  Look at the following sequence of commands, note where the copying happens, and try to guess what's at the HEAD of CVS when you're done:
+ 
+ <CODE><PRE>
+  cd
+  mkdir exerciseA1
+  cd exerciseA1
+  cvs checkout -r V00-01-00 CodeA
+ 
+  cd ~/exerciseA/CodeA
+  cvs update -A
+  cp ~/exerciseA1/CodeA/SampleText SampleText
+  cvs commit -m"comment"
+ 
+  cd ..
+  rm -rf CodeA
+  cvs checkout CodeA
+ </PRE></code> 
+  
+You should have discovered that your changes (that were tagged as V01-00-00 above) are no longer in the version at the HEAD, as are the ones that we had already created earlier and tagged as
+V00-02-00.  Go through the example from lecture and try to understand what went wrong.
+<P>
+Note that the changes are still in the repository.  In particular, you can still get back either V00-01-01 or your new contents in V01-00-00 with the appropriate updates:
+ 
+ <CODE><PRE>
+  cvs update -r V00-01-01
+ 
+  cvs update -r V01-00-00
+ </PRE></code> 
+  
+Try these and make sure they work.
+<P>
+Advanced topic:  How would you remove this most recent set of changes to get the HEAD of CVS back the way it should be?  In other words, what do you have to do such that
+ 
+ <CODE><PRE>
+   cvs checkout -r V01-00-00 CodeA
+ </PRE></code> 
+   
+and
+ 
+ <CODE><PRE>
+   cvs checkout CodeA
+ </PRE></code> 
+   
+produce identical contents?  One of the sections about "update" in the cvs man pages describes the -j option, which might be useful.
+<P> 
+The command
+ 
+ <CODE><PRE>
+  cvs update -jtag2 -jtag1
+ </PRE></code> 
+  
+can be used to undo all the changes in a file between tags "tag1" and "tag2".  Note that the order of these two is different! 
+ 
+ <CODE><PRE>
+  cvs update -jtag1 -jtag2
+ </PRE></code> 
+  
+will redo the effects of a "cvs -jtag1 -jtag2".
+ 
+ 
+</body>
+</html>

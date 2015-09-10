@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+	<title>Exercise 7</title>
+</head>
+<body>
+<h1>Exercise 7: Simple release activities</h1>
+ 
+Reminder:  Look at 
+&lt;<A HREF="file:/home/jake/CSC/index.html">file:/home/jake/CSC/index.html</a>&gt; 
+for updates or corrections!
+ 
+<P>
+Goal: An introduction to a release build tool
+<P>
+First, create a local copy of the exercise files.
+
+<CODE><PRE>
+   cd
+   tar xf ~jake/CSC/exercise7.tar
+   cd exercise7
+   source setup.sh
+</PRE></code>
+ 
+Now we'll create a very simple package, and explore its structure. We'll start by creating a "test" package, and version "v1-0" of it:
+ 
+<CODE><PRE>
+   cmt create test v1-0
+</PRE></code>
+ 
+This creates a "test" directory for the package, with a "v1-0" subdirectory for that version:
+ 
+<CODE><PRE>
+   ls test
+   ls test/v1-0
+   cd test/v1-0
+</PRE></code>
+ 
+To save typing, we've made some sample source files available to you. Copy them into your new project now (normally, you'd write these with an editor, etc; you may want to cut&paste the following line from the electronic version of these instructions):
+ 
+<CODE><PRE>
+   cp ~jake/CSC/exercise7/test/v1-0/*.* src/
+</PRE></code>
+ 
+You should look at these, but they're pretty straight-forward.  You also need to copy over the sample requirements file into the "cmt" control directory:
+ 
+<CODE><PRE>
+   cp ~jake/CSC/exercise7/test/v1-0/requirements cmt/
+</PRE></code>
+ 
+You should now look at that requirements file.  It contains three lines:
+
+<CODE><PRE>
+   package       test
+   author        Vincent Garonne <garonne@lal.in2p3.fr>
+   application   test main.cxx hello.cxx
+</PRE></code>
+ 
+The first one defines the name of the package; the second gives credit to the author.  It's the third line that controls the build, by telling CMT what it needs to know to build an "application" within this package.
+<P> 
+Now build and run this little program from the "cmt" directory within the version:
+
+<CODE><PRE>
+   cd cmt
+   cmt make
+   ../Linux-x86_64/test.exe
+</PRE></code>
+
+You should see "Hello world", indicating that this worked.  Take a few moments to look around the directory structure and see where things have been created. Using a "Linux-i686" directory for object and binary files allows you to use the same source directories to build for different types of machines.
+<P>
+Now, in addition to the executable, we want to create a library for the "Hello" class, but without the "main" program in the library.  CMT will again do this, we just have to tell it how by adding this line:
+ 
+<CODE><PRE>
+   library       hello   -no_share hello.cxx
+</PRE></code>
+ 
+to the requirements file.  Try that, remake the project, and check to make sure it's been built. (Where is it stored?  Why?)
+<P>
+Now we want to work with a pair of packages with a dependency. First, we create those:
+
+<CODE><PRE>
+   cd ~/exercise7
+   cmt create A v1-0
+   cmt create B v1-0
+</PRE></code>
+ 
+Next, copy in some source & requirements files (normally, you'd create these yourself):
+ 
+<CODE><PRE>
+  cp ~jake/CSC/exercise7/A/v1-0/*.* A/v1-0/src/
+  cp ~jake/CSC/exercise7/A/v1-0/requirements A/v1-0/cmt/
+  cp ~jake/CSC/exercise7/B/v1-0/*.* B/v1-0/src/
+  cp ~jake/CSC/exercise7/B/v1-0/requirements B/v1-0/cmt/
+</PRE></code>
+ 
+Look at the header *.h and main.cc files for A (in A/v1-0/src)
+and you'll see that the "A" package is complete by itself.
+<p>
+The "B" package depends on "A". Do you see where?
+If we try to build without that A being available for B, the build will fail.
+Try that:
+<CODE><PRE>
+   cd B/v1-0/cmt
+   cmt make
+</PRE></code>
+
+CMT doesn't know that B depends on A:
+
+<CODE><PRE>
+   cmt show uses
+</PRE></code>
+ 
+To make sure the right things are built and searched, CMT needs to know that B depends on A.
+There's a new line in B's requirements file to express this,
+but it's commented out.  Note that it specifies the version to use:
+
+<CODE><PRE>
+#use A v1-0
+</PRE></code>
+
+Remove the #, so the line is no longer a comment, and try again.
+
+<CODE><PRE>
+   cmt show uses
+</PRE></code>
+
+We can now ask CMT to build everything for us. 
+If will figure out that it needs to compile, across all packages, then make libraries, before linking:
+ 
+<CODE><PRE>
+  cmt broadcast make
+</PRE></code>
+ 
+The "broadcast" modifier means to "build everything".  Now run that program:
+ 
+<CODE><PRE>
+   ../Linux-x86_64/main.exe
+</PRE></code>
+
+Finally, edit the requirements file to refer to another version such as "v2-0", and remake the program. CMT will fail to find that version,  resulting in a cascade of errors.
+<P>
+(This exercise is based on an example by V. Garonne; he deserves our thanks)
+ 
+</body>
+</html>
