@@ -1,0 +1,209 @@
+/**
+ * Stats.java
+ * 
+ * Form statistical measures of an array of numbers
+ */
+
+import java.util.Vector;
+import java.util.Arrays;
+import java.lang.Math;
+
+public class Stats {
+    
+    public Stats( double val[] ) {
+        values = val;
+    }
+    
+    Stats() {};
+
+    public double mean() {
+        double sum = 0;
+        for (int i = 0; i< values.length; i++) sum += values[i];
+        return sum/values.length;
+    }
+    
+    public double median() {
+        // Without sorting, just find the selected element        
+        return findkth(values, 0, values.length-1, values.length/2);
+    }
+
+    static final double FRACTION = 0.1; 
+
+    // find the kth entry in sequence, doing as little work as possible.
+    // input sequence is in values array; 
+    // low and high are the part of the array being searched
+    // for the kth in that part (k counts from zero). Returns value, not offset
+    public double findkth(double[] values, int low, int high, int k) {
+               
+        // System.out.println("start low="+low+" high="+high+" k="+k);     
+        int size = high-low+1;
+        if (k<0 || k>size-1) {
+            System.out.println("k value makes no sense: "+k+" low="+low+" high="+high);
+            return -999.;
+        }
+        if (size == 1) return values[low];
+        if (size == 2) 
+            if (k==0) return Math.min(values[low], values[high]);
+            else return Math.max(values[low], values[high]);
+        
+        // see if we can save some size for small cases
+        //if (size < 10) {
+        //    Arrays.sort(values, low, high+1);  // high limit exclusive
+        //    return values[low+k];
+        //}
+        
+        // search for statistics to decide how to proceed    
+        double min = values[low];
+        double max = values[low];
+        double sum = 0;
+        double t;
+        for (int i = low; i<=high; i++) {
+            t = values[i];
+            if (min>t) min = t;
+            if (max<t) max = t;
+            sum += t;
+        }
+        if (min==max) return min;
+    
+        double mean = sum/size;
+        
+        // define three regions: min to p1, [p1] to [p2], p1 to max
+        double p1 = mean-FRACTION*(mean-min);
+        double p2 = mean+FRACTION*(mean-min);
+        
+        // count (1 to N) number in those regions
+        int numr1=0;
+        int numr2=0;
+        int numr3=0;
+    
+        for (int i = low; i<=high; i++) {
+            t = values[i];
+            if (t<p1) numr1++;
+            else if (t>p2) numr3++;
+            else numr2++;
+        }
+        
+        // System.out.println("p1 = "+p1+" p2 = "+p2+" n1="+numr1+" n2="+numr2+" n3="+numr3);
+    
+        // figure out where kth is and recurse
+            
+        if (k<numr1) {
+            int j = 0;
+            for (int i = low; i<high+1; i++) 
+                if (values[i]<p1) values[j++] = values[i];
+            return findkth(values, 0, j-1, k);
+        } else if (k<numr1+numr2) {
+            int j = 0;
+            for (int i = low; i<high+1; i++) 
+                if (values[i]>=p1 && values[i]<=p2) values[j++] = values[i];
+            return findkth(values, 0, j-1, k-numr1);
+        } else {
+            int j = 0;
+            for (int i = low; i<high+1; i++) 
+                if (values[i]>p2) values[j++] = values[i];
+            return findkth(values, 0, j-1, k-(numr1+numr2));
+        }
+    					  
+    }
+
+    public double[] sortHalfValues() {
+        for (int i=0; i<values.length/2+1; i++) { // stop sort early to save time!
+            for (int j=values.length-2; j>=0; j--) {
+                // check that the jth value is smaller than j+1th,
+                // else swap
+                if (values[j]>values[j+1]) {
+                    // swap
+                    double temp = values[j];
+                    values[j] = values[j+1];
+                    values[j+1] = temp;
+                }
+            }
+        }
+        return values;
+    }
+    
+    public double stddev() {
+        double sum = 0;
+	double m = mean();
+        for (int i = 0; i< values.length; i++) {
+            double v = values[i]-m;
+	    sum += v*v;
+        }
+        return Math.sqrt(sum/(values.length-1));
+    }
+    
+    // data members
+    double values[];
+    
+    
+    void test(int nRuns, int nSamples) {
+        // save results of the statistics values for each run
+        double[] median1 = new double[nRuns/2];
+        double[] median2 = new double[nRuns/2];
+
+        // create and start two workers
+        Worker w1 = new Worker(median1, nSamples);
+        w1.start();
+        Worker w2 = new Worker(median2, nSamples);
+        w2.start();
+        
+        synchronized(this) {
+            try {
+                while (w1.isAlive()) {wait(20);}
+                while (w2.isAlive()) {wait(20);}
+            } catch (InterruptedException e) {}
+        }
+        
+        Stats m = new Stats(median1);
+        
+        System.out.println("Results: stddev median = "+m.stddev());
+        System.exit(0);
+    }
+    
+    // add a main() routine to this class to use as 
+    // a small test program.  It takes two arguments:
+    //  java Stats 1000 200
+    // will create loop for 1000 times, each time
+    // calculating the statistics of 201 randomly-chosen numbers.
+    static public void main(String[] args) {
+        // main program prints the stddev of the median of a set of randoms
+        int nRuns = Integer.parseInt(args[0]);
+        int nSamples = Integer.parseInt(args[1]);
+        
+        new Stats().test(nRuns, nSamples);
+                
+    }
+    
+    static Object lock = new Object();
+
+    // internal class to do part of the job
+    class Worker extends Thread {
+        
+        double[] results;
+        double[] vals;
+        java.util.Random r = new java.util.Random();        
+        public Worker(double[] results, int size) {
+            this.results = results;
+            vals = new double[size];
+        }
+        
+        public void run() {
+            int n = results.length;
+            for (int i = 0; i< n; i++) {
+                // first, create new sample array of nSamples random values
+                //synchronized(Stats.lock) {
+                    int l = vals.length;
+                    for (int j=0; j<l; j++) {
+                        vals[j] = r.nextDouble();
+                    }
+		    //}
+                // calculate statistics from that array
+                Stats s = new Stats(vals);
+                // store the results from this run into the arrays that hold all runs
+                results[i] = s.median();
+            }
+        }
+        
+    }
+}
+

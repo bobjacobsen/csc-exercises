@@ -1,0 +1,15 @@
+These are the files for the CSC exercises
+
+See Evernote  
+    Checklist   https://www.evernote.com/shard/s33/nl/3596462/58f89ce3-72e6-4656-9add-d852c2220904/
+    Issues list https://www.evernote.com/shard/s33/nl/3596462/a1248c0f-db3e-4e06-aca9-1aa1a570bae0/
+    Note Index  https://www.evernote.com/shard/s33/nl/3596462/071de48c-f2d3-4fe2-b0aa-642e172e815b/
+
+Structure:
+    "CSC" directory is meant to be rsync'd to /home/jake
+    For development, it's also symbolic-linked from the localhost home directory as CSC
+    
+unpack cmt-dev.zip to your Mac top level directory or cmt-dev-all.tgz to Linux /home/jake (and grep -r for scripts)
+
+
+Stats.java.phase9 is the best known solution to the tuning exercise
