@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+# csc_get
+#
+# Used to pull exercise material from its location, which changes
+# from school to school.  By localizing that here, we don't have to change
+# all those instructions.
+# 
+# This version also does minor logging via getting a logging URL
+#
+
+wget -q "http://localhost/log.php?user=${USER}&file=${1}"
+
+wget -nv http://localhost/CSC/$1
