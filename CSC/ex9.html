@@ -46,7 +46,7 @@ Then ask CMT to build everything needed:
  
 Note that cmt does four build operations, ending with a link. Run the program:
 <CODE><PRE>
-   ../Linux-i686/main.exe
+   ../${CMTCONFIG}/main.exe
 </PRE></code> 
  
 It should display lines that each of Main, User1 and User2 have requested Base to print.  
@@ -71,7 +71,8 @@ We've provided Main v2-0, but you'll need to (at least) update its requirements 
    cmt broadcast make
 </PRE></code> 
 
-Note that you get messages about inconsistent versions, even though the build runs to completion.
+Note that you get messages about inconsistent versions (look for them!), 
+even though the build runs to completion.
 Those messages will be more obvious if you ask CMT to show you the versions used:
 <CODE><PRE>
    cmt show uses
@@ -80,7 +81,7 @@ Those messages will be more obvious if you ask CMT to show you the versions used
 <p>
 Try running the newly-linked version, and see if does what the User1 and User2 groups expect:
 <CODE><PRE>
-   ../Linux-i686/main.exe
+   ../${CMTCONFIG}/main.exe
 </PRE></code> 
 
 <p>
