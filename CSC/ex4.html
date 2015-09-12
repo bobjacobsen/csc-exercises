@@ -24,12 +24,14 @@ First, create a local copy of the exercise files.
     source setup.sh
 </pre></code>
 
-The directory contains a Stats class, which computes various statistical quantities from an array of integers.  For examples of how it's used, see the tests in the TestStats class.
+The directory contains a Stats class, which computes various statistical quantities from an array of integers.  
+For examples of how it's used, see the tests in the TestStats class.
 <P> 
 Our goal is to calculate the standard deviation of the median of N numbers chosen at random
 from a uniform distribution. 
 (You probably already know how to just calculate the standard deviation of the mean, 
-so instead we're asking about the properties of the median, which you probably don't know how to directly calculate)  
+so instead we're asking about the properties of the median, 
+which you probably don't know how to directly calculate)  
 <p>
 For example, if we take the median of 11 random numbers that are each between 0 and 1, 
 the median will fluctuate a little because the random numbers vary from run to run.
@@ -57,10 +59,12 @@ measure the statistical variation in the median.
 <p>
 The first argument is the number of times to repeat the median calculation
 (e.g. number of sets of set of random data to generate and find the median from) for use in calculating the standard deviation.
-In this example, we repeat the calculation 400 times.  (As you make the program faster, you may want
+In this example, we repeat the calculation 500 times.  
+(As you make the program faster, you may want
 to increase this so that you can still get good sampling of the performance) 
 <p>
-The second argument is the number of random numbers in a sample, e.g. we're calculating the median of 1001 numbers each time.  
+The second argument is the number of random numbers in a sample, 
+e.g. we're calculating the median of 1001 numbers each time.  
 <p>
 You can see how this works in the main() routine in Stats.java.
 <p>
@@ -110,16 +114,20 @@ managed to push the performance:
 <UL>
 <li>"time ./run 500 1001" with the original code should take about 22 seconds or so
 <li>"time ./run 500 100001", our goal, takes way too long to wait for with the original code
-<li>Basic profiling work should get you to about 100 seconds for the "time ./run 500 100001" goal
-<li>Under 45 seconds requires care, but is possible
-<li>Under 30 seconds has been done
+<li>Basic profiling work should get you to about 120-135 seconds for the "time ./run 500 100001" goal
+<li>Under 90 seconds requires care, but is possible
+<li>Under 40 seconds has been done
 </UL>
+
+Note that these are with the School's desktop machines! If you're using your own laptop,
+take the timing from the "time ./run 500 1001" and use ratios from that time:  "A factor of two faster!"
 
 <P>
 But for this improved performance to matter, remember that the program must still be correct!
 <OL>
 <LI>The Stats class has to still pass all the tests
-<LI>The program still has to find the correct value (within statistical fluctuations) of the variance of the median for any input values, especially including other test cases like 200 and 50001.
+<LI>The program still has to find the correct value (within statistical fluctuations) 
+of the variance of the median for any input values, especially including other test cases like 200 and 50001.
 </OL>
 And because this is a test of the algorithm's speed, improvements in e.g. the random number generators that 
 feed the test really don't count as speeding up the algorithm.
