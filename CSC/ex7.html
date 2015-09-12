@@ -98,12 +98,12 @@ Now build and run this little program from the "cmt" directory within the versio
 <CODE><PRE>
    cd cmt
    cmt make
-   ../Linux-x86_64/test.exe
+   ../${CMTCONFIG}/test.exe
 </PRE></code>
 
 You should see "Hello world", indicating that this worked.  
 Take a few moments to look around the directory structure and see where things have been created. 
-Using a "Linux-i686" directory for object and binary files allows you to use
+Using a "${CMTCONFIG}" directory for object and binary files allows you to use
 the same source directories to build for different types of machines.
 <P>
 Now, in addition to the executable, 
@@ -176,7 +176,7 @@ and then finally link any executables:
 The "broadcast" modifier means to "build everything".  Now run that program:
  
 <CODE><PRE>
-   ../Linux-x86_64/main.exe
+   ../${CMTCONFIG}/main.exe
 </PRE></code>
 
 Finally, edit B's requirements file to refer to another version such as "v2-0", and remake the program. 
