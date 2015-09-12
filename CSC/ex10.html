@@ -59,7 +59,8 @@ CVS repository by having one student (the one logged in to handle the
 "Main" package) do:
 <code><pre>
     cd
-    tar xf /home/jake/CSC/exercise10CVS.tar
+    ./csc_get exercise10CVS.tar
+    tar xf exercise10CVS.tar
 </pre></code>
 which will create a common CVS repository for the teams.
 You also need to make sure your permissions are set right:
@@ -74,7 +75,8 @@ Then everybody should do
 <code><pre>
     cd
     export CVSROOT=/home/<i>mainuser</i>/repo10
-    tar xf /home/jake/CSC/exercise10.tar
+    ./csc_get exercise10.tar
+    tar xf exercise10.tar
     cd exercise10
     source setup.sh
     cvs co Base Main User1 User2

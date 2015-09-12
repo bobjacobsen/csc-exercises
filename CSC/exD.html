@@ -26,9 +26,10 @@ with the CSC machines:  (If you want to build a copy for your own machine,
 see the last section of these instructions)
 
 <CODE><PRE>
-   cd /scratch
-   tar xf /home/jake/CSC/exerciseD.tar
-   cd exerciseD
+    cd /scratch
+    ./csc_get exerciseD.tar
+    tar xf exerciseD.tar
+    cd exerciseD
 </PRE></CODE>
 
 (We have you run this in the local /scratch disk to speed things up;
@@ -179,8 +180,9 @@ If you want to see what it takes to build your own copy of CppUnit,
 get your own copy of the installation tar file:
 
 <CODE><PRE>
-   cd
-   tar xf /home/jake/CSC/cppunit.tar
+    cd
+    ./csc_get cppunit.tar
+    tar xf cppunit.tar
 </PRE></CODE>
 
 CppUnit works very closely with the compiler and libraries on the computer, 

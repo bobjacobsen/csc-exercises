@@ -17,9 +17,10 @@ Goal: Learn how to manipulate an existing repository. If you're already using CV
 To avoid interference, you'll create your own copy of a CVS repository:
  
  <CODE><PRE>
-   cd
-   tar xf ~jake/CSC/exerciseA.tar
-   export CVSROOT=$PWD/repo1
+    cd
+    ./csc_get exerciseA.tar
+    tar xf exerciseA.tar
+    export CVSROOT=$PWD/repo1
  </PRE></code> 
   
 This has created the directory "repo1" in your home directory, and set the CVSROOT environment variable so that it can be written. Pause for a second and look at it. That repository contains two packages (modules), "CodeA" and "CodeB".

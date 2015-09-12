@@ -42,25 +42,26 @@ tar xf cmt-dev-all.tgz
 To do the exercise, start by creating a local copy of the exercise files.
 
 <CODE><PRE>
-   cd
-   tar xf ~jake/CSC/exercise7.tar
-   cd exercise7
-   source setup.sh
+    cd
+    ./csc_get exercise7.tar
+    tar xf exercise7.tar
+    cd exercise7
+    source setup.sh
 </PRE></code>
  
 Now we'll create a very simple package, and explore its structure. 
 We'll start by creating a "test" package, and version "v1-0" of it:
  
 <CODE><PRE>
-   cmt create test v1-0
+    cmt create test v1-0
 </PRE></code>
  
 This creates a "test" directory for the package, with a "v1-0" subdirectory for that version:
  
 <CODE><PRE>
-   ls test
-   ls test/v1-0
-   cd test/v1-0
+    ls test
+    ls test/v1-0
+    cd test/v1-0
 </PRE></code>
  
 To save typing, we've made some sample source files available to you. 
@@ -68,7 +69,7 @@ Copy them into your new project now (normally, you'd write these with an editor,
 you may want to cut&paste the following line):
  
 <CODE><PRE>
-   cp ~jake/CSC/exercise7/test/v1-0/*.* src/
+    cp ~jake/CSC/exercise7/test/v1-0/*.* src/
 </PRE></code>
  
 You should look at these, but they're pretty straight-forward.  

@@ -17,10 +17,11 @@ Goal: Dealing with dependencies using a release tool.
 First, create a local copy of the exercise files.
  
 <CODE><PRE>
-   cd
-   tar xf ~jake/CSC/exercise8.tar
-   cd exercise8
-   source setup.sh
+    cd
+    ./csc_get exercise8.tar
+    tar xf exercise8.tar
+    cd exercise8
+    source setup.sh
 </PRE></code>
 
 This will create CMT directories for seven packages, named A through G.  
@@ -28,15 +29,15 @@ Each of those will have separate versions.
 Drop down to version 1-0 of G and check the dependencies:
 
 <CODE><PRE>
-   cd G/v1-0/cmt
-   cmt show uses
+    cd G/v1-0/cmt
+    cmt show uses
 </PRE></code>
  
 You'll see that G depends on version v1-0 of all of A through F (and B still depends on A, as in exercise7).
 Check the G.h and G.cxx files to see why that's true.  Then ask CMT to build everything needed:
  
 <CODE><PRE>
-   cmt broadcast make
+    cmt broadcast make
 </PRE></code>
 
 Note that CMT does seven build operations:  
@@ -45,7 +46,7 @@ but not any of the other versions, because they're not needed (yet).
 Run the program:
 
 <CODE><PRE>
-   ../Linux-i686/main.exe
+    ../Linux-i686/main.exe
 </PRE></code>
 
 It should display a line from each of the seven libraries.  Success!
@@ -138,7 +139,7 @@ F should depend on E; you'll have to make those changes.
 You may need to do the "make" several times.  If things get too messed up, you can say
 
 <CODE><PRE>
-   cmt broadcast make clean
+    cmt broadcast make clean
 </PRE></code> 
 
 to clean things up. When you get it to build properly, you should be able to say
