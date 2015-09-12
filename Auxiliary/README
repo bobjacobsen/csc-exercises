@@ -6,10 +6,16 @@ See Evernote
     Note Index  https://www.evernote.com/shard/s33/nl/3596462/071de48c-f2d3-4fe2-b0aa-642e172e815b/
 
 Structure:
-    "CSC" directory is meant to be rsync'd to /home/jake
+    "CSC" directory is meant to be rsync'd to /home/jake (or checked out from git and symbolic-linked)
     For development, it's also symbolic-linked from the localhost home directory as CSC
     
-unpack cmt-dev.zip to your Mac top level directory or cmt-dev-all.tgz to Linux /home/jake (and grep -r for scripts)
+cmt-dev-all.tgz
+    Linux-i686
+    Linux-x86_64
+    Darwin-PowerMacintosh
 
+Auxiliary holds extras:
 
 Stats.java.phase9 is the best known solution to the tuning exercise
+
+log.php goes to web root to allow logging
