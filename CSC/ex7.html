@@ -33,9 +33,9 @@ machine types, but if it doesn't run on your laptop see the
 <a href="install_cmt.html">page on doing a custom install</a>.)
 <p>
 <code><pre>
-cd
-./csc_get cmt-dev-all.tgz
-tar xf cmt-dev-all.tgz
+    cd
+    ./csc_get cmt-dev-all.tgz
+    tar xf cmt-dev-all.tgz
 </pre></code>
 
 <P>
@@ -78,15 +78,15 @@ You should look at these, but they're pretty straight-forward.
 You also need to copy over the sample requirements file into the "cmt" control directory:
  
 <CODE><PRE>
-   cp ~/exercise7extras/test/v1-0/cmt/requirements cmt/
+    cp ~/exercise7extras/test/v1-0/cmt/requirements cmt/
 </PRE></code>
  
 You should now look at that requirements file.  It contains three lines:
 
 <CODE><PRE>
-   package       test
-   author        Vincent Garonne <garonne@lal.in2p3.fr>
-   application   test main.cxx hello.cxx
+    package       test
+    author        Vincent Garonne <garonne@lal.in2p3.fr>
+    application   test main.cxx hello.cxx
 </PRE></code>
  
 The first one defines the name of the package; the second gives credit to the author.  
@@ -96,9 +96,9 @@ to build an "application" within this package.
 Now build and run this little program from the "cmt" directory within the version:
 
 <CODE><PRE>
-   cd cmt
-   cmt make
-   ../${CMTCONFIG}/test.exe
+    cd cmt
+    cmt make
+    ../${CMTCONFIG}/test.exe
 </PRE></code>
 
 You should see "Hello world", indicating that this worked.  
@@ -111,7 +111,7 @@ we want to create a library for the "Hello" class, but without the "main" progra
 CMT will again do this, we just have to tell it how by adding this line:
  
 <CODE><PRE>
-   library       hello   -no_share hello.cxx
+    library       hello   -no_share hello.cxx
 </PRE></code>
  
 to the requirements file.  Try that, remake the project, and check to make sure it's been built. 
@@ -120,18 +120,18 @@ to the requirements file.  Try that, remake the project, and check to make sure 
 Now we want to work with a pair of packages with a dependency. First, we create two separate packages:
 
 <CODE><PRE>
-   cd ~/exercise7
-   cmt create A v1-0
-   cmt create B v1-0
+    cd ~/exercise7
+    cmt create A v1-0
+    cmt create B v1-0
 </PRE></code>
  
 Next, copy in some source & requirements files (normally, you'd create these yourself):
  
 <CODE><PRE>
-  cp ~/exercise7extras/A/v1-0/*.*               A/v1-0/src/
-  cp ~/exercise7extras/A/v1-0/cmt/requirements  A/v1-0/cmt/
-  cp ~/exercise7extras/B/v1-0/*.*               B/v1-0/src/
-  cp ~/exercise7extras/B/v1-0/cmt/requirements  B/v1-0/cmt/
+    cp ~/exercise7extras/A/v1-0/*.*               A/v1-0/src/
+    cp ~/exercise7extras/A/v1-0/cmt/requirements  A/v1-0/cmt/
+    cp ~/exercise7extras/B/v1-0/*.*               B/v1-0/src/
+    cp ~/exercise7extras/B/v1-0/cmt/requirements  B/v1-0/cmt/
 </PRE></code>
  
 Look at the header *.h and main.cc files for A (in A/v1-0/src)
@@ -141,14 +141,14 @@ The "B" package depends on "A". Do you see where?
 If we try to build without that A being available for B, the build will fail.
 Try that:
 <CODE><PRE>
-   cd B/v1-0/cmt
-   cmt make
+    cd B/v1-0/cmt
+    cmt make
 </PRE></code>
 
 CMT doesn't know that B depends on A:
 
 <CODE><PRE>
-   cmt show uses
+    cmt show uses
 </PRE></code>
  
 To make sure the right things are built and searched, CMT needs to know that B depends on A.
@@ -156,13 +156,13 @@ There's a new line in B's requirements file to express this,
 but it's commented out.  Note that it specifies the version to use:
 
 <CODE><PRE>
-#use A v1-0
+    #use A v1-0
 </PRE></code>
 
 Remove the #, so the line is no longer a comment, and try again.
 
 <CODE><PRE>
-   cmt show uses
+    cmt show uses
 </PRE></code>
 
 We can now ask CMT to build everything for us. 
@@ -170,13 +170,13 @@ If will figure out that it needs to compile across all packages, then make libra
 and then finally link any executables:
  
 <CODE><PRE>
-  cmt broadcast make
+    cmt broadcast make
 </PRE></code>
  
 The "broadcast" modifier means to "build everything".  Now run that program:
  
 <CODE><PRE>
-   ../${CMTCONFIG}/main.exe
+    ../${CMTCONFIG}/main.exe
 </PRE></code>
 
 Finally, edit B's requirements file to refer to another version such as "v2-0", and remake the program. 
