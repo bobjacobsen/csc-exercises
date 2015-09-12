@@ -9,6 +9,6 @@
 # This version also does minor logging via getting a logging URL
 #
 
-wget -q "http://server/log.php?user=${USER}&file=${1}"
+wget -q "http://server/jake/log.php?user=${USER}&file=${1}"
 
-wget -nv http://server/CSC/$1 -O "$1"
+wget -nv http://server/jake/CSC/$1 -O "$1"
