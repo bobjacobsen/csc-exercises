@@ -45,6 +45,8 @@ To do the exercise, start by creating a local copy of the exercise files.
     cd
     ./csc_get exercise7.tar
     tar xf exercise7.tar
+    ./csc_get exercise7extras.tar
+    tar xf exercise7extras.tar
     cd exercise7
     source setup.sh
 </PRE></code>
@@ -69,14 +71,14 @@ Copy them into your new project now (normally, you'd write these with an editor,
 you may want to cut&paste the following line):
  
 <CODE><PRE>
-    cp ~jake/CSC/exercise7/test/v1-0/*.* src/
+    cp ~/exercise7extras/test/v1-0/*.* src/
 </PRE></code>
  
 You should look at these, but they're pretty straight-forward.  
 You also need to copy over the sample requirements file into the "cmt" control directory:
  
 <CODE><PRE>
-   cp ~jake/CSC/exercise7/test/v1-0/requirements cmt/
+   cp ~/exercise7extras/test/v1-0/cmt/requirements cmt/
 </PRE></code>
  
 You should now look at that requirements file.  It contains three lines:
@@ -126,10 +128,10 @@ Now we want to work with a pair of packages with a dependency. First, we create 
 Next, copy in some source & requirements files (normally, you'd create these yourself):
  
 <CODE><PRE>
-  cp ~jake/CSC/exercise7/A/v1-0/*.*            A/v1-0/src/
-  cp ~jake/CSC/exercise7/A/v1-0/requirements   A/v1-0/cmt/
-  cp ~jake/CSC/exercise7/B/v1-0/*.*            B/v1-0/src/
-  cp ~jake/CSC/exercise7/B/v1-0/requirements   B/v1-0/cmt/
+  cp ~/exercise7extras/A/v1-0/*.*               A/v1-0/src/
+  cp ~/exercise7extras/A/v1-0/cmt/requirements  A/v1-0/cmt/
+  cp ~/exercise7extras/B/v1-0/*.*               B/v1-0/src/
+  cp ~/exercise7extras/B/v1-0/cmt/requirements  B/v1-0/cmt/
 </PRE></code>
  
 Look at the header *.h and main.cc files for A (in A/v1-0/src)
