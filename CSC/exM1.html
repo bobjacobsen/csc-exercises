@@ -46,14 +46,16 @@ Tell CMake to process that file with:
  <CODE><PRE>
     cmake .
  </PRE></code> 
-(Note the dot, you have to tell CMake which directory, in this case the current directory)
+(Note the dot: you have to tell CMake which directory to work with, in this case the current directory)
 <p>
-CMake hasn't built the result yet.  CMake never does build it.  Rather, it creates
+CMake hasn't built the result yet.  CMake never does build it.  
+Rather, it creates
 the files needed for the native build process on your machine, in this case a Makefile.
-Take a look at that, but don't worry about it.  CMake creates a lot of structure in the Makefile
+Take a look at that, but don't worry about understanding all of it.  
+CMake creates a lot of structure in the Makefile
 for its own purposes.
 <p>
-To do that actual build:
+To do the actual build:
 
  <CODE><PRE>
     make
@@ -67,8 +69,9 @@ and then to run it:
 
 OK, it's not much.  <code>g++ HelloWorld.cxx ; ./a.out</code> will produce
 the same output.  But this is laying the groundwork for being able to build
-automatically.  For example:  How did you know to run g++ vs clang vs something else
-for the compiler knew?  CMake worked that out for you.
+automatically.  
+For example:  How did you know to use g++ vs clang vs something else
+for the compiler?  CMake worked that out for you.
 
 <h3>Adding Structure to Code</h3>
 
@@ -139,6 +142,12 @@ and repeat the <code>make</code> process)
 <p>
 Together, CMake and make have figured out the exact commands needed to build this
 code, and executed them with minimal intellectual effort on your part.
+<p>
+Also note that CMake started with a complete, consistent set of code.
+CMake is reasoning about how to combine source code versions; you've already done
+that in the code repository and checked out (or downloaded) what you want to build.
+CMake just takes on the job of building that code.
+
 <p>
 The ability to insert targeted test executables into the build process is
 very important for large projects.  

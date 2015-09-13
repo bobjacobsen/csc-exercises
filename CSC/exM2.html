@@ -182,9 +182,9 @@ and then change D.cxx to D2.cxx containing
 
 void D::print ()
 {
-        cout<<"Hello from D via D2"<<endl;
+        cout&lt;&lt;"Hello from D via D2"&lt;&lt;endl;
 }
- </PRE></code> 
+ </PRE></CODE> 
 plus appropriate changes in D's CMakeLists.txt file.
 You also have to declare a new subdirectory in the top-level
 CMakeLists.txt file)
@@ -198,8 +198,13 @@ If you're the D programmer, do you need to coordinate with people?
 <p>
 <blockquote><div style="background-color:#ECECEC; color:#000000">
 (Hint: If you're not able to get this after a little bit of work, there's
-a working version in ~/CSC/exerciseM2B.tar that you can expand
-and look at)
+a working version you can get with 
+    <CODE><PRE>
+    cd
+    csc_get exerciseM2B.tar
+    tar xf exerciseM2B.tar
+    </pre></code>
+and then look at)
 </div></blockquote>
 <p>
 Then try the same thing in the previous exerciseM2 structure.
