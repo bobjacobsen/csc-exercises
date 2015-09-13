@@ -28,7 +28,10 @@ Some resources you may want to refer to later on:
 <li>A writeup on how to <a href="http://git.or.cz/course/svn.html">convert your SVN thinking</a> to Git.
 <li>The Pro Git book is available to CSC students as a <a href="ProGit.en.pdf">PDF file</a>.
 </ul>
-
+See also the 
+<a href="index.html#biblio">Bibliography</a>
+linked from the 
+<a href="index.html">index page</a>.
 
 <h3>Basic Operations</h3>
 
@@ -127,6 +130,8 @@ option on the commit command:
 
 which does the add automatically for all changed files. Alternately, you
 can use the <code>git add</code> command to manually select the files to be included.  
+(This is different from how SVN uses "add".  "svn add" means "pay attention to changes
+in this file forever", while "git add" means "this file has interesting contents right now".)
 
 <p>
 Add some lines at the top of the file, and commit them using a manual add:
@@ -185,7 +190,7 @@ relates to what's in the working directory and .git subdirectory)
 The <code>git branch</code> command is a general branch management tool for Git and can do several different things. 
 We'll cover the basic ones that you'll use most: listing branches, creating branches and deleting branches. 
 We will also cover basic <code>git checkout</code> here which switches you between your branches.
-
+<p>
 First, you can list your available branches:
 
 <code><pre>
@@ -225,7 +230,9 @@ $ ls
 hello.txt
 </pre></code>
 
-The output shows that we have a new branch called "testing". 
+The output shows that we have a new branch called "testing",
+but the "*" indicates that we're still using "master".
+<p>
 When you create a branch this way it creates the branch at your last commit 
 so if you record some commits at this point and then switch to 'testing', 
 it will revert your working directory context back to when you created the branch in the first place.
@@ -297,6 +304,8 @@ $ git branch
   testing
 </pre></code>
 
+Note the "*" shows that you're working with the new branch.
+<p>
 Here's a more complex example to follow along:
 
 <code><pre>
@@ -367,8 +376,8 @@ and don't want to merge them back, what should you do?  In older systems like SV
 the answer is "Nothing:  Just leave it there".  That might still be the right answer
 if you're not certain the changes are valueless.  After all, you might come back and 
 want them later.  But if you're sure you don't want them, it's a Git convention to delete
-them.  Git repositories tell stories about code development, and dead-end branches aren't 
-an interesting part of the story.
+them.  Git repositories tell stories about code development, 
+and truly dead-end branches aren't an interesting part of the story.
 <p>
 To find un-merged branches, so you can decide what to do with them, do:
 <code><pre>
@@ -465,7 +474,8 @@ graphically:
     gitk --all
 </pre></code>
 
-although it's perhaps overkill at this point. Note that, by default, 
+although it's perhaps more than what's needed at this point. 
+Note that, by default, 
 gitk only shows the current branch. The --all option 
 changes that to show the entire repository, which can be slow for 
 big ones.  The "View" menu has options for doing smarter things to see
@@ -603,7 +613,7 @@ There are graphical tools that can help with merging, particularly complex ones.
 
 <h3>Selective Staging</h3>
 
-Part of using Git well is thinking about how your commits tell a story 
+To use Git well, you should think about how your work test a story 
 to developers who follow you.  Because it's easy to see the entire commit
 structure that led to the current state of the code, people tend to look at it.
 <p>
@@ -730,8 +740,8 @@ an easily name that can be passed around and used by anybody to tell Git to prod
 exactly that code.
 <p>
 
-Branches, even though they have names, don't provide the same level of permanent 
-stability.  They're intended to change as development proceeds along the branch.
+Branch names don't provide the same level of permanent 
+stability.  The content of a branch is intended to change as development proceeds along the branch.
 <p>
 
 To put a tag, say "v1.0",  on the current contents of the current branch in the repository, do
@@ -741,7 +751,7 @@ git tag -a -m'Signed off by Bob, time to celebrate!' v1.0
 </pre></code>
 
 The <code>-a</code> tells Git that you want to "annotate" the tag. 
-The -m option lets you put that one the same line, or leave -m
+The -m option lets you put that on the same line, or leave -m
 off to have an editor window open for longer comments.  
 
 <p>
