@@ -397,6 +397,178 @@ Git will work for a second, and they you're done.  Take a look at the new tree
 with gitk and see how clean it looks now.  And you got to rewrite the comment to say
 exactly what your colleages need to know about all this!
 
+<h3>Pull Requests</h3>
+
+In some cases, you want to contribute code, but you don't have direct write 
+access to the main repository. 
+<p>
+In the past, you'd be told to send in your contribution as a "patch", typically
+a long text file containing lots of 'diff' output that can be used to add and remove
+lines from files.  It can be a real pain to handle these in a consistent way, because a
+diff-format patch is very unforgiving of the exact starting version of the file, 
+character coding issues, etc.
+<p>
+Git is focused on the content of files, not the differences between them, 
+so it works in a different way.
+<p>
+With Git, you make your changes in your own copy of the repository.  
+The changed file(s) are there, along with lots of historical tracking information.  
+You submit a "pull request" to somebody who has write access to the main repository.
+They then use git tools to <em>pull</em> your entire set of changes from your
+local repository, look it over to make sure it's OK, and merge it into the main development
+in the main repository.
+
+<p>
+Git allows this process to be highly automated. 
+The <a href="http://github.com">GitHub site</a> 
+does it with a single click of a button.
+But to help you understand it, we're going to walk through manually.
+
+<p>
+First, let's create a branch in our local repository, and add a new file:
+<code><pre>
+% git branch pr-test
+% git checkout pr-test
+Switched to branch 'pr-test'
+
+% cat &gt;PullExample.txt &lt;&lt;EOF
+? This is the new content
+? that we'll submit as a pull request.
+? EOF
+
+% git status
+% git add PullExample.txt 
+% git commit -m"new file for pull request"
+</pre></code>
+
+That puts the file in our repository.
+<p>
+Now, we create a "pull request" that we'll send to somebody with write access.
+It looks like this:
+<code><pre>
+$ git request-pull master $PWD
+The following changes since commit 0dc16c1e72569018adb7ddd3df6759d9aaceb0b7:
+
+  Commit 6 on master (2013-08-18 18:11:19 +0300)
+
+are available in the git repository at:
+
+  /home/cscuser/exerciseG3A pr-test
+
+for you to fetch changes up to fe515cfa5686728d55dd9fe428c72508f01effef:
+
+  new file for pull request (2015-09-13 13:05:58 +0300)
+
+----------------------------------------------------------------
+CSC User (1):
+      new file for pull request
+
+ PullExample.txt | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 PullExample.txt
+</pre></code>
+
+The two arguments are the branch (or tag, more often) where we started our 
+work from, and how to access the repository.  That second one is often specified
+as an externally-visible URL because it's how the person doing the pull will
+access your changes.  Here, since we're working on one computer, it's just a 
+file pathname.
+
+<p>
+Normally, you just copy that information into an email and send it off.
+But let's look at it more closely.  The first lines
+<code><pre>
+The following changes since commit 0dc16c1e72569018adb7ddd3df6759d9aaceb0b7:
+
+  Commit 6 on master (2013-08-18 18:11:19 +0300)
+
+</pre></code>
+provide a machine-readable (the 40 character hash code) and person readable (the commit
+message and time) identity for where the work started.
+The next part says where to find the repository with the changes, including
+the branch within the repository.  
+And the third part
+<code><pre>
+for you to fetch changes up to fe515cfa5686728d55dd9fe428c72508f01effef:
+
+  new file for pull request (2015-09-13 13:05:58 +0300)
+
+----------------------------------------------------------------
+CSC User (1):
+      new file for pull request
+
+ PullExample.txt | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 PullExample.txt
+</pre></code>
+tells you what to pull, and gives you a preview of what it should look like.
+
+<p>
+To merge this into the main repository (or any other repository, really:  You
+might want to have somebody pull it and look at it to help you solve a problem),
+git pulls across complete files.  Note that it doesn't make any attempt to patch files, 
+or work out file differences, or anything like that: The information above is enough
+for it to pull out just the needed parts from your repository, and put them into 
+somebody else's.
+
+<p>
+Let's pretend to be somebody with write access to another copy of the repository.
+First, get set for that:
+
+<code><pre>
+    cd
+    mkdir exerciseG3C
+    cd exerciseG3C
+    git clone ../exG3MasterRepo.git .
+</pre></code>
+
+Use gitk or gitg to look at that, and you'll see that your
+"new file for pull request" change isn't there yet, as you'd expect.
+<p>
+Now we pull it in using the information from the change request:
+
+<code><pre>
+$ git pull  /home/cscuser/exerciseG3A/.git/ pr-test
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From /home/cscuser/exerciseG3A/
+ * branch            pr-test    -> FETCH_HEAD
+Updating 0dc16c1..fe515cf
+Fast-forward
+ PullExample.txt | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 PullExample.txt
+</pre></code>
+
+The <code>git pull</code> command takes its arguments right from the 
+information that the request-pull command generated:  The repository (which 
+would usually be a URL) and the branch.  It pulls that in and does the merge.
+<p>
+With big projects, people will sometimes for a "git fetch" first, check the changes, 
+then do a "git merge" if everything is OK.  For simplicity, we did them together as "git pull"
+here.
+<p>
+Use gitk or gitg to look at how it was merged in.
+<p>
+How is this process (somebody else doing a "git pull") different from you making the 
+change with a "git push"?  It's about who gets to decide.  The "git pull" process allows
+a small number of people, sometimes called "maintainers", to organize the flow of changes 
+into a central repository.  They can check for consistency and quality. 
+The can improve communications by passing the
+pull requests around to others who are working on similar parts of the code.
+The can pull onto the main <code>master</code> branch if the change is ready for publishing,
+or onto another development branch if it needs more work or is waiting for another part.
+<p>
+In general, the maintainers are the ones who make sure that the main branch of 
+development is always ready to go. That's a very powerful approach, because it combines
+the ability of machines to test that "this is always working" with the ability of 
+people to think about the changes in a systematic, collaborative way.
+
+ 
+
+
 
 </body>
 </html>
