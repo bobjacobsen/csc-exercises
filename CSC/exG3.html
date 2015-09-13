@@ -12,9 +12,10 @@ Reminder:  Look at
 for updates or corrections!
  
 <P>
-Goal: Gain familiarity with remote
+Goal: Gain familiarity with distributed, parallel 
+development using Git.
 
-
+<p>
 If you haven't done it already, you have to tell Git who you are:
 
 <code><pre>
@@ -106,7 +107,10 @@ back to the main one with:
     git push 
 </pre></code>
     
-This moved all the content.  Note that it also moved the 
+This moved all the content on the current branch up to the main repository.
+(<code>git push --all</code> moves all changes, not just the current branch.)
+<p> 
+Note that it also moved the 
 remotes/origin/master branch forward to agree with your current master branch.
 That's reflecting the change in the main repository.  You can 
 look at the main repository to see the changes:
@@ -217,7 +221,7 @@ To see this work,
     
 and look with <code>gitk --all</code> at what you'd got. You should see that 
 "master" and "remotes/origin/master" are on two separate sections of the tree.
-Too fix that, you merge "remotes/origin/master" onto your current work:
+To fix that, you merge "remotes/origin/master" onto your current work:
 
 <code><pre>
     git merge remotes/origin/master
@@ -253,11 +257,15 @@ the main repository stays clean and useful during rapid development.
 
 <h3>Branches and Distributed Development</h3>
 
-When you have a lot of people working, every body working on the
-master branch at the same time can be tricky.  Contributed changes
-have to get merged back to master to be in common use, so there's a 
-lot of activity there.  That can collide with your own work as
-you try to write you own changes.
+It can be tricky to have
+everybody working on the
+master branch when there are a lot of people working.  
+Contributed changes
+have to get committed and pushed back to the master branch in the main 
+repository to be in common use, so there's a 
+lot of activity there.  
+That can collide with your own work as
+you try to write your own changes.
 <p>
 It's often better to use Git's cheap and fast branches for your work.
 You can put each of your current efforts into a branch of it's own,
@@ -273,10 +281,11 @@ can run that makes the changes:
     ~/exG3script.sh
 </pre></code>
 
-Take a look at it with gitk to see all the various bits.  He's done
+Take a look at it with gitk to see all the various bits.  
+Developer A is done
 now, and just wants to publish what's on A_dev itself.
 <p>
-He tells the central maintainer, who just has to fetch that particular branch from A's 
+Developer A tells the central maintainer, who just has to fetch that particular branch from A's 
 repository, and then merge it on to the master branch there.
 <p>
 To do that:
@@ -344,7 +353,7 @@ The "rebase" command has several formats, and -i says we want to use it
 interactively.  The HEAD~6 means that we want to act on the HEAD commit of the current
 branch and the 6 commits leading up to that.  
 <p>
-Git pops an editor with a window that start with:
+Git pops an editor with a window that initially contains:
 
 <code><pre>
 pick 61b61d5 A_dev commit 1
@@ -366,6 +375,8 @@ pick ff3b151 A_dev bright idea 3
 </pre></code>
 
 You see the 6 most recent commits we asked for, their ID numbers, and their comments.
+(The ID numbers might be different for you.)
+<p>
 The "pick" at the front can be changed to one of the commands in the comment.
 We want to keep that first commit, but "squash" the other 5 onto it so they all look like just one 
 commit.
