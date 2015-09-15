@@ -1,4 +1,15 @@
+
+# large file, only encountered at top level
+CSC.tar
+
+# produced during use
 *.class
+*~
+a.out
+*.o
+*.so
+
+
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
