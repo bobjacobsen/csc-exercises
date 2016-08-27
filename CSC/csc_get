@@ -11,4 +11,6 @@
 
 wget -q "http://server/jake/log.php?user=${USER}&file=${1}&host=${HOST}"
 
-wget -nv http://server/jake/CSC/$1 -O "$1"
+#wget -nv http://server/jake/CSC/$1 -O "$1"
+
+cp ~/csc-exercises/CSC/$1 ~/$1
