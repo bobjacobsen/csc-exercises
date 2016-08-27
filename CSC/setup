@@ -1,0 +1,4 @@
+cd ~
+cp csc-exercises/CSC/csc_get .
+chmod 755 csc_get
+ln -s csc-exercises/CSC CSC
