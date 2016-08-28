@@ -1,3 +1,6 @@
+The very first step is get the School's virtual machine installed and running on your laptop, and then to log in.
+For more information on how to do that, see the School's [Laptop configuration page](http://csc.web.cern.ch/Laptop-Exercises-Requirements).
+
 To start the exercises, open a Terminal window on your machine and do:
 
 ````
