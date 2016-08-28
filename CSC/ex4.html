@@ -150,6 +150,13 @@ one done by experts.
 (<a href="https://xkcd.com/1185/">XKCD's set of custom sorts</a>)
 <li>One thing to look for is unnecessary work.  In that case, you don't need to make it faster,
 you should just remove it.
+<li>Note that we deliberately disable optimization and the Java Just In Time (JIT) compiler to make 
+this a tougher test of optimization.  If you turn those back on by running with defaults,
+your program will be a factor of 5-10 faster:
+<code><pre>
+  time java Stats 500 4001
+</pre></code>
+
 </ul>
  
 </body>
