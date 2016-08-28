@@ -25,14 +25,16 @@ First, create a local copy of the exercise files.
    source setup.sh
 </PRE></CODE>
  
-The program is meant to count the numbers that are both squares and cubes within a range. 
+The program is meant to count the numbers that are both exact squares (the square of 
+an integer, such as 9 and 64) and exact cubes (the cube of an integer, such as 27 and 64)
+within a given range. 
 I've started development for you by sketching out the class <code>FindVals</code>, 
 along with a test suite in the <code>TestFindVals</code> class.
 <P>
 <code>numInRange</code> is the primary method this class will provide to users; 
 that's the one that people will invoke.  
-There are two internal service methods for calculating whether a number is a square (<code>isSquare</code>) 
-and a cube (<code>isCube</code>).
+There are two internal service methods for calculating whether a number is an exact square (<code>isSquare</code>) 
+and an exact cube (<code>isCube</code>).
 Those were created in company with some tests. 
 <P> 
 You're picking up these classes in the midst of development.  
@@ -62,8 +64,8 @@ Then get the <code>FindVals</code> class to pass them.
  
 <LI>Add some more tests of the search range, convincing yourself that you've really got a functioning <code>FindVals</code> class.
 </OL> 
-<P>
-Hints:
+
+<h3>Hints:</h3>
  
 <UL>
 <LI>Just before I turned this development project over to you, I added a "floor" to the isSquare calculation.  Take a look at the failing <code>isCube</code>, and note that it's different.

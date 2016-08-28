@@ -82,7 +82,7 @@ or failed ("OK").  Then it prints a report on each failure it encountered, for e
     - Delta   : 0.05
 </PRE></CODE>
 
-That's enough to let you really track down the problem.
+That's enough to let you track down the problem.
 Edit line 8 of the ExampleTestCase.cpp file so that this tests passes, and then
 rebuild the program and try again:
 
@@ -92,7 +92,7 @@ rebuild the program and try again:
 </PRE></CODE>
 
 Now it fails in the next assertion in that test method.
-That test apparently wasn't run before, back when the method was asserting at the first statement.
+That assertion apparently wasn't run before, back when the method was asserting at the first statement.
 This is characteristic of unit testing:
 once a problem has been found in a test method, that method stops and the program proceeds to the
 next one.  The idea here is that the test has worked, a problem has been found, and it's too tricky to 
