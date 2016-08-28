@@ -1,21 +1,14 @@
 These are the files for the CSC exercises
 
-See Evernote  
-    Checklist   https://www.evernote.com/shard/s33/nl/3596462/58f89ce3-72e6-4656-9add-d852c2220904/
-    Issues list https://www.evernote.com/shard/s33/nl/3596462/a1248c0f-db3e-4e06-aca9-1aa1a570bae0/
-    Note Index  https://www.evernote.com/shard/s33/nl/3596462/071de48c-f2d3-4fe2-b0aa-642e172e815b/
-
 Structure:
-    "CSC" directory is meant to be rsync'd to /home/jake (or checked out from git and symbolic-linked)
-    For development, it's also symbolic-linked from the localhost home directory as CSC
+- "CSC" directory is meant to be checked out from git and symbolic-linked (or rsync'd to some home-visible directory)
+- For development, it's also symbolic-linked from the localhost home directory as CSC
     
-cmt-dev-all.tgz
-    Linux-i686
-    Linux-x86_64
-    Darwin-PowerMacintosh
+cmt-dev-all.tgz contains
+- Linux-i686
+- Linux-x86_64
+- Darwin-PowerMacintosh
 
 Auxiliary holds extras:
-
-Stats.java.phase9 is the best known solution to the tuning exercise
-
-log.php goes to web root to allow logging
+- Stats.java.phase9 is the best known solution to the tuning exercise
+- log.php goes to web root to allow logging
