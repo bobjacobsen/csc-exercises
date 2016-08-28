@@ -66,8 +66,10 @@ name in this repository (no --global option)
 <p>
 One difference that's easily visible in gitk is that, in addition to the "master" branch, 
 you've now got a "remotes/origin/master" branch.  The first is your local repository,
-and the second came from the original repository.  That original repository is "remote", 
-is by default called "origin", and "master" is the name of the branch inside it. See
+and the second came from the original repository.  That original repository is "remote", which 
+means "not here".  
+The repository from which yours was cloned is by default called "origin". 
+"master" is the name of the branch inside it. See
 the convention? You should also see a remotes/origin/A_dev branch and now understand what that is.
 <P>
 If you commit a change, what should happen within the repository? Do the branch flags move
@@ -109,7 +111,7 @@ back to the main one with:
 </pre></code>
     
 This moved all the content on the current branch up to the main repository.
-(<code>git push --all</code> moves all changes, not just the current branch.)
+(<code>git push --all</code> moves all changes on all branches, not just the current branch.)
 <p> 
 Note that it also moved the 
 remotes/origin/master branch forward to agree with your current master branch.
