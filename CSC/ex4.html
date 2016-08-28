@@ -52,7 +52,10 @@ The Stats program takes two arguments:
 <code><pre>
   time ./run 500 1001
 </pre></code>
+Write down how long this took, we'll use that number later. For example, 
+your laptop might take 20.6 real seconds and 18.7 user (CPU) seconds.
 
+<p>
 The program throws a set of random numbers, calculates the median, 
 and remembers that result. 
 It then repeats that a bunch of times with different random numbers so that it can
@@ -114,14 +117,14 @@ what you observe? If not, can you find and fix the problem?
 To add some interest, we provide some historical idea of how far students at previous CSCs have
 managed to push the performance:
 <UL>
-<li>"time ./run 500 1001" with the original code should take about 22 seconds or so
-<li>"time ./run 500 100001", our goal, takes way too long to wait for with the original code
+<li>If "time ./run 500 1001" with the original code takes about 20 seconds or so
+<li>then "time ./run 500 100001", our goal, takes way too long to wait for with the original code.
 <li>Basic profiling work should get you to about 120-135 seconds for the "time ./run 500 100001" goal
-<li>Under 90 seconds requires care, but is possible
+<li>Under 100 seconds requires care, but is possible
 <li>Under 40 seconds has been done
 </UL>
 
-Note that these are with the School's desktop machines! If you're using your own laptop,
+Note that these are with one specific laptop machine! Since you're using your own laptop,
 take the timing from the "time ./run 500 1001" and use ratios from that time:  "A factor of two faster!"
 
 <P>
