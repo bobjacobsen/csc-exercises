@@ -197,33 +197,29 @@ The other thing that's needed is the ability to
 locate and use external libraries and other components that
 have been installed on the computer independently of CMake.
 <p>
-Let's assume that we want to find and use the X11
+Let's assume that we want to find and use the Git
 libraries in our code. We add a 
 
 <CODE><PRE>
 cd ~/exerciseM1A
 cat &lt;&lt; EOF  &gt;&gt;CMakeLists.txt
-
-# Locate installed X11 and get path variables
-message("X11_INCLUDE_DIR before: " \${X11_INCLUDE_DIR})
-find_package(X11 REQUIRED)
-message("X11_INCLUDE_DIR after:  " \${X11_INCLUDE_DIR})
-
+# Locate installed Git and set path variables
+find_package(Git REQUIRED)
+# Show Git path variable
+message("GIT_EXECUTABLE set to:  " \${GIT_EXECUTABLE})
 EOF
 cmake .
 </PRE></code> 
 
 You'll see that the <code>find_package()</code>
-call locates the X11 installation, and updates
+call locates the Git installation, and updates
 variables that can be used to reference the package.
 (Or, you might find an error message if your
-machine isn't set up with an entire X11 development
-environment, in which case you should just proceed
-anyway)
+machine isn't set up with Git, in which case you should just proceed on this exercise anyway)
 <p>
 To get more information on a package such as use:
 <CODE><PRE>
-cmake --help-module FindX11
+cmake --help-module FindGit
 </PRE></code>
 The conventions the variable names aren't 100% followed,
 so when linking to a new component library you need to do
@@ -237,9 +233,10 @@ do
 <CODE><PRE>
 cmake --help-module-list
 </PRE></code>
-To see another example of a module description,
+To see more examples of a module description,
 
 <CODE><PRE>
+cmake --help-module FindX11
 cmake --help-module FindBoost
 </PRE></code>
 
