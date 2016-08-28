@@ -173,7 +173,11 @@ and then finally link any executables:
     cmt broadcast make
 </PRE></code>
  
-The "broadcast" modifier means to "build everything".  Now run that program:
+The "broadcast" modifier means to "build everything". That's very useful here, since
+cmt discovers that it has to build A before building B and handles that automatically.
+Take a look at the steps that were just run to see that.
+<p>
+Now run the program you just built:
  
 <CODE><PRE>
     ../${CMTCONFIG}/main.exe
