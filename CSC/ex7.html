@@ -116,7 +116,8 @@ CMT will again do this, we just have to tell it how by adding this line:
 </PRE></code>
  
 to the requirements file.  Try that, remake the project, and check to make sure it's been built. 
-(Where is it stored?  Why?)
+<p>
+Where is the library stored?  Why?
 <P>
 Now we want to work with a pair of packages with a dependency. First, we create two separate packages:
 
@@ -146,7 +147,7 @@ Try that:
     cmt make
 </PRE></code>
 
-CMT doesn't know that B depends on A:
+CMT doesn't yet know that B depends on A:
 
 <CODE><PRE>
     cmt show uses
