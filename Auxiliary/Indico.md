@@ -27,4 +27,4 @@ Checking connectivity... done.
 ````
 
 Finally, open the CSC/index.html file in your favorite web browser and follow those instructions.
-
+This will be a URL something like [file:///home/csc_me/CSC/index.html](file:///home/csc_me/CSC/index.html), though you'll have to put your own name in there.

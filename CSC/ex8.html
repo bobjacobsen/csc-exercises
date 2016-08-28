@@ -167,6 +167,20 @@ Which requirements file do you need to change to fix this?
 <P>
 Make the change, and confirm that the program really does produce the right output.
 Use the CMT "show uses" command to look at the new dependencies.
- 
+
+<p>
+Now, stop and think a bit about how this went. If this were a really big system,
+would there be coordination issues?
+<ul>
+<li>Who knows about which versions to include in the requirements file?
+<ul>
+<li>Is it the programmer for the package? They know what they changed.
+<li>Is it the central build team?  They know what updates people are asking for?
+</ul>
+<li>If those differ, how do you work it out?
+<li>Does this scale very well? it works for systems with a small number of packages and versions,
+where everybody knows everybody. But does it really work in larger cases?
+</ul>
+
 </body>
 </html>
