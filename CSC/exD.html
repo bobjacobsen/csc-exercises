@@ -69,8 +69,20 @@ To see that, make and run the tests:
     ./simple
 </PRE></CODE>
 
-The program runs all the tests, giving a brief summary of whether they passed ("assertion")
-or failed ("OK").  Then it prints a report on each failure it encountered, for example:
+The "make" might say it has nothing to do this first time through. That's OK, proceed.
+Sometimes, you'll get a link error in the "make" command, which means our 
+version of CppUnit is out-of-sync with the local compiler or libraries.
+If that happens, you can fix it by rebuilding CppUnit with:
+<CODE><PRE>
+    cd ~/exerciseD
+    ./configure
+    make
+    cd examples/simple
+</PRE></CODE>
+
+When you do "./simple", the program runs all the tests, 
+giving a brief summary of whether they failed ("assertion")
+or passed ("OK").  Then it prints a report on each failure it encountered, for example:
 
 
 <CODE><PRE>
