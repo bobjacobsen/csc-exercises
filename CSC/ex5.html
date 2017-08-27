@@ -14,7 +14,16 @@ before proceeding.
 
 <P>
 Goal: Gain some experience with types of memory faults 
-and tools that can help with them
+and tools that can help with them.
+
+<p>
+As you work through here, you may find some things that 
+are puzzling.  It's OK to ask!  There are also some 
+useful references in 
+<a href="https://docs.google.com/document/d/1Jvb1zYRibzOw74VKnGsmTVfWkQcOxb_yc8JboebFDpA/edit#heading=h.dwvcizbspysp">The Bibliography</a>, particularly
+the 
+<a href="https://docs.google.com/document/d/1Jvb1zYRibzOw74VKnGsmTVfWkQcOxb_yc8JboebFDpA/edit#heading=h.dwvcizbspysp">section on "Memory Issues"</a>.
+
 <P>
 First, create a local copy of the exercise files.
  <CODE><PRE>
@@ -112,7 +121,8 @@ Next, rerun each program under the scrutiny of valgrind:
  </PRE></code> 
 
 Look at each output carefully to see what error(s) valgrind has found.  Did it find any that you missed?
-Did it miss any that you found?
+Did it miss any that you found?  It not only checks for validity of references, it also
+checks for a number of different kinds of memory leaks.
 
 </body>
 </html>
