@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# csc_log
+#
+# Add an entry to the CSC exercise log with up to four parameters. 
+# For example:
+#  ./csc_log team Audrey Ben
+
+wget -q "http://10.10.0.10/jake/log.php?user=${USER}&item1=${1}&item2=${2}&item3=${3}&item4=${4}&host=${HOSTNAME}"
