@@ -7,14 +7,18 @@
 <body>
 <h1>Tools exercises:</h1>
 
-Please see the 
+Please read this all the way through first, to get an idea 
+of the overall plan of the exercises. Note that there are some  
 <a href="#general">general notes</a> at the bottom of this page.
 <p>
 There is no particular time expected for these. You should
 do them in order, but it's OK to spend more time on the ones that
-interest you and go quickly through others.  Generally,
-students get through the Test and Performance Issues groups in Monday's exercise period, 
-and may start the Memory Issues exercise. 
+interest you and go quickly through others.  It's completely
+fine to skip the ones marked "optional".
+
+Generally, some students will just complete the Memory Issues 
+exercise on Monday, while others will be well into the Code Management exercises.
+It depends on what's most interesting to them.  
 They then start Tuesday's exercise period with finishing up 
 anything they want to from Monday, complete Memory Issues and  
 Code Management and do as much of Build and Release
@@ -22,19 +26,25 @@ Management as they find useful.
 <p>
 Nobody does every bit of
 every exercise, and that's OK. Quite a few groups will
-probably stop around the end of the CMake exercises.
+probably stop around the end of the Code Management exercises, or 
+having just started the Release Management ones.
 <p>
 If you run out of time and want to 
 do more on particular topics, you can come back to these topics later
-in the week or load a copy onto your own machine.
+in the week. They can be run anywhere.  But please don't feel compelled to
+work on these after Tuesday; there is a lot more to the School!
 
 <p>
-The very first step is get the School's virtual machine installed and running on your laptop, and then to log in.
+The very first step is get a partner to work with.  You can change, and
+teams often do, but it's much better to work with somebody that to try to learn alone.
+
+<p>
+Next, get the School's virtual machine installed and running on your laptop, and then log in.
 For more information on how to do that, see the School's
 <a href="http://csc.web.cern.ch/Laptop-Exercises-Requirements">Laptop configuration page</a>.
 
 <p>
-If you haven't done this yet, open a Terminal window and get
+Then open a Terminal window and get
 a copy of the exercise files:
 <code><pre>
 cd ~
@@ -45,25 +55,37 @@ Finally, so a bit of setup:
 source csc-exercises/CSC/setup
 </pre></code>
 <p>
-Now move on the the instructions for each exercise.
+Now move on to the instructions for each exercise.
 
 <h3>Test Frameworks</h3>
 1) 
 <A HREF="ex1.html">ex1.html</a>
-Demonstration of a test framework
+Demonstration of a test framework - basic - this is a simple exercise to make sure
+that your laptop VM is working, you and your teammate can settle in, etc.
 <P>
+You should do at least one of the next two exercises to work with test frameworks in 
+a little more depth.  Exercise D on CppUnit (testing C++) requires a bit of experience with C++, 
+while Exercise 2 is more accessible to people without C++ experience.
+
+<p>
 2) 
 <A HREF="ex2.html">ex2.html</a>
-Practice debugging using a test framework (Java)
+Practice debugging using a test framework (Java) - basic
 <P>
 
 D)
 <A HREF="exD.html">exD.html</a>
-Simple use of CppUnit (Requires some C++ experience)
+Simple use of CppUnit - intermediate (Requires some C++ experience)
 <P>
 
 
 <h3>Performance Profiling</h3>
+
+Both of these exercises are optional.   They demonstrate how tools, even simple ones
+can help you focus on in where time is really being spent.  Later lectures and exercises
+will cover this in much more detail. If you've already worked with performance tools,
+you can certainly skip these; if not, they might get you thinking a bit.
+<P>
 
 3) 
 <A HREF="ex3.html">ex3.html</a>
@@ -76,7 +98,7 @@ Practice tuning a small application
 <P>
 
 <h3>Memory Issues</h3>
-Experienced C and C++ programmers might find this interesting, but 
+Experienced C and C++ programmers might find this  
 perhaps a little basic (though the valgrind tool can be 
 useful even for experts).  Everybody else should definitely
 do this one to learn more about how memory really works.
@@ -89,28 +111,29 @@ Testing for C++ memory faults
 <h3>Code Management</h3>
 If you don't use SVN and want an introduction, or 
 if you're a SVN user who wants to mess around with 
-no risk to your code, do exercise C.  Otherwise,
+no risk to your code, do optional exercise C.  Otherwise,
 jump to the Git exercises G1 through G3. They're
 more in line with the future.
 <p>
 C)
 <A HREF="exC.html">exC.html</a>
-Simple use of SVN
+Simple use of SVN - optional, intended for people who are using SVN and want to know more, 
+or who expect to be using it sometime soon.
 <P>
 
 G1)
 <A HREF="exG1.html">exG1.html</a>
-Simple use of git
+Simple use of git - basic
 <P>
 
 G2)
 <A HREF="exG2.html">exG2.html</a>
-Experience with Git branching
+Experience with Git branching - intermediate
 <P>
 
 G3)
 <A HREF="exG3.html">exG3.html</a>
-Distributed development with Git
+Distributed development with Git - advanced
 <P>
 
 
@@ -118,30 +141,45 @@ Distributed development with Git
 <h3>Build and Release Management</h3>
 
 
+
 M1)
 <A HREF="exM1.html">exM1.html</a>
-Introduction to CMake
+Introduction to CMake - basic
 <P>
 
 M2)
 <A HREF="exM2.html">exM2.html</a>
-CMake as a release tool
+CMake as a release tool - intermediate 
 <P>
 
-
+The next three are very optional.  They provide experience
+with release-specification tools using CMT as an example.
+Of interest historically, these tools are also in use today.
+So if you're in a collaboration that uses this type of
+tool, you might enjoy learning about them.
+<P>
 7)
 <A HREF="ex7.html">ex7.html</a>
-Simple release build activities with CMT
+Simple release build activities with CMT - optional, basic 
 <P>
 
 8) 
 <A HREF="ex8.html">ex8.html</a>
-Releasing code changes with CMT
+Releasing code changes with CMT - optional, intermediate
 <P>
 
 9)
 <A HREF="ex9.html">ex9.html</a>
-Managing configuration conflicts in CMT
+Managing configuration conflicts in CMT - optional, advanced
+<P>
+
+The last exercise is recommended, but somewhat advanced and open-ended. It's OK
+for student to run out of time in the middle somewhere.  But it's a useful experience to 
+attempt it.
+<P>
+F) 
+<a href="exF.html">exF.html</a>
+Distributed Development with Git and CMake - advanced
 
 
 <!-- 
