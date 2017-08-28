@@ -9,6 +9,6 @@
 # This version also does minor logging via getting a logging URL
 #
 
-wget -q "http://10.10.0.10/jake/log.php?user=${USER}&file=${1}&host=${HOSTNAME}"
+wget -O /dev/null -q "http://10.10.0.10/jake/log.php?user=${USER}&file=${1}&host=${HOSTNAME}"
 
 cp ~/csc-exercises/CSC/$1 ~/$1
