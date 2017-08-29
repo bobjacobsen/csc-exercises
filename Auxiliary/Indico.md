@@ -1,3 +1,5 @@
+Instructions for the 1st set of exercises
+
 The very first step is find somebody to work with and sit down together. The two of you will be working together on these exercises.  These have been designed to work best two two people (or occasionally three), not with one!
 
 Next, get the School's virtual machine installed and running on one laptop, and then log in.  For more information on how to do that, see the School's [Laptop configuration page](https://indico.cern.ch/event/581756/page/9650-laptop-configuration). You can use the 2nd laptop to show the instructions or to take notes.
