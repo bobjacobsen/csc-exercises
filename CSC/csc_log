@@ -6,4 +6,4 @@
 # For example:
 #  ./csc_log team Audrey Ben
 
-wget -O /dev/null -q "http://10.10.0.10/jake/log.php?user=${USER}&item1=${1}&item2=${2}&item3=${3}&item4=${4}&host=${HOSTNAME}"
+wget --timeout=1 --tries=1 -O /dev/null -q "http://signer.dyn.berkeley.edu:50080/log.php?user=${USER}&item1=${1}&item2=${2}&item3=${3}&item4=${4}&host=${HOSTNAME}"

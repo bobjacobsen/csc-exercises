@@ -1,4 +1,4 @@
-cd ~
+#! /bin/bash
 cp csc-exercises/CSC/csc_get .
 chmod 755 csc_get
 cp csc-exercises/CSC/csc_log .
