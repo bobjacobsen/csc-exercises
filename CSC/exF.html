@@ -49,19 +49,19 @@ GitHub will probably send you an email to verify that you're real. Once you repl
 
 <h3>Working with a GitHub repository</h3>
 
-Once you have a GitHub account, go to our sample GitHub repository for CSC 2017 <a href="https://github.com/bobjacobsen/csc-sample-2017">https://github.com/bobjacobsen/csc-sample-2017</a>.
+Once you have a GitHub account, go to our sample GitHub repository for CSC 2018 <a href="https://github.com/bobjacobsen/csc-sample-2018">https://github.com/bobjacobsen/csc-sample-2018</a>.
 <p>
 <a href="images/F_050.png"><img src="images/F_050.png" align="right" height="20%" width="20%"></a>
 Click around a bit to see the features.  From the front page you can directly browse the code.
 <p>
-The  <a href="https://github.com/bobjacobsen/csc-sample-2017/network">Network  button</a> under Insights will show you the branch structure, similar to gitg's graphics.
+The  <a href="https://github.com/bobjacobsen/csc-sample-2018/network">Network  button</a> under Insights will show you the branch structure, similar to gitg's graphics.
 <p>
 But the most import feature is the support for Pull Requests (PRs).  Click 
-"<a href="https://github.com/bobjacobsen/csc-sample-2017/pulls">Pull requests"</a>
+"<a href="https://github.com/bobjacobsen/csc-sample-2018/pulls">Pull requests"</a>
 on any screen to display those.  We start with one open one, and one closed one (you can see the closed ones by clicking the "Closed" under the search bar, or removing the "is:open" search term)
 <p>
 If you click on the 
-<a href="https://github.com/bobjacobsen/csc-sample-2017/pull/2">open PR</a>,
+<a href="https://github.com/bobjacobsen/csc-sample-2018/pull/2">open PR</a>,
 you'll get a summary that carries a lot of information.  We'll go over that later.
 
 <h3>Setting Up Repositories For A Collaboration</h3>
@@ -70,7 +70,7 @@ Now, we want to "fork" this repository so you can start working with it as your 
 <p>
 The two of you should pick one person to be the Release Builder (RB).  She'll have the main repository for the collaboration, and will gather changes to create consistent sets of code for release.  The other member of the pair will be the Enthused Physicist (EP) who develops changes.   (There two people will have separate GitHub accounts, which makes the following much easier to follow. It is possible to do this with one person and one account, but it's much more confusing; work with your partner!)
 <p>
-Now pretend that your all members of a Collaboration.  The RB is responsible for code for the Thaumaturgy Engine (TE), an important system in the Collaboration's combined experiment.  She'll put together consistent sets of code for that system and push them up to a central repository (our csc-sample-2017 repository).  But she needs a place of her own to do that.
+Now pretend that your all members of a Collaboration.  The RB is responsible for code for the Thaumaturgy Engine (TE), an important system in the Collaboration's combined experiment.  She'll put together consistent sets of code for that system and push them up to a central repository (our csc-sample-2018 repository).  But she needs a place of her own to do that.
 <a href="images/F_060.png"><img src="images/F_060.png" align="right" height="25%" width="25%"></a><p>
 To create that, she "forks" our main repository.  That's just a button push: click on the word "fork" in the upper right.
 <p>
@@ -79,7 +79,7 @@ That will create a repository of the RB's very own.  It will even look similar, 
 <p>
 But she can't do anything to the original repository, because she doesn't have permissions to do that. We've set up a repository structure that's aligned with the authority: She can pull changes into her repository, but can't push them upstream. Instead, she makes pull requests to get her code included in the main repository (see image to right).
 <p>
-Now we'll do a similar thing for the Enthused Physicist.  He should sign into GitHub, then go to the RB's repository (not the original bobjacobsen/csc-sample-2017 one!) and click "Fork" there.  He'll then have a repository of his own, with a similar situation regarding pull and push (see middle right).
+Now we'll do a similar thing for the Enthused Physicist.  He should sign into GitHub, then go to the RB's repository (not the original bobjacobsen/csc-sample-2018 one!) and click "Fork" there.  He'll then have a repository of his own, with a similar situation regarding pull and push (see middle right).
 <a href="images/CSC_GitHub_Structure_008.png"><img src="images/CSC_GitHub_Structure_008.png" align="right" height="25%" width="25%"/></a>
 <p>
 OK, but now what?  The EP is thinking that all his tools are on his laptop:  his favorite editor, cmake/make/compiler to build it, the ability to run it to test it, are now in a different place from the code. How should he work?
@@ -89,7 +89,7 @@ The last step completes that:  He clones his own GitHub repository down to his l
 <p>
 
 <code><pre>
-   git clone https://github.com/RP-account-name/csc-sample-2017.git
+   git clone https://github.com/RP-account-name/csc-sample-2018.git
 </pre></code>
 
 <p>
@@ -106,7 +106,7 @@ There are lots of ways to do this, but for this exercise we're going to use a fr
 <p>
 Go to 
 <a href="https://travis-ci.org">https://travis-ci.org</a>
-and look for the "Sign in with GitHub" in the upper right. Click it. If you're signed in to GitHub (which you should still be), it'll present a screen requesting access to your repositories and other information. Click "Authorize Travis-CI".  In a few seconds, it should take you to your profile. If it hasn't after about 10 seconds, click on your name in the upper right to get to the 'settings' screen, then to the 'profile' screen. On it you'll see sliders for any GitHub repositories you have (might be only one).  Have the one for the csc-sample-2017 repository slid to show a checkmark.
+and look for the "Sign in with GitHub" in the upper right. Click it. If you're signed in to GitHub (which you should still be), it'll present a screen requesting access to your repositories and other information. Click "Authorize Travis-CI".  In a few seconds, it should take you to your profile. If it hasn't after about 10 seconds, click on your name in the upper right to get to the 'settings' screen, then to the 'profile' screen. On it you'll see sliders for any GitHub repositories you have (might be only one).  Have the one for the csc-sample-2018 repository slid to show a checkmark.
 <p>
 <h3>Making a first change</h3>
 
@@ -187,7 +187,7 @@ A couple things can go wrong, and you might want to experiment with them by crea
 </ul>
 If there's a conflict, the solution is for the EP to resolve it. (The RB can, but it's better to reflect it down to the person who knows what the changes were exactly about)  He can do that by merging the RB's current (and conflicting) content back onto his laptop. To do that, first set up a 'remote" to make it easy to refer to the RB's repository:
 <p>
-git remote add ProjectRepo https://github.com/RP-account-name/csc-sample-2017.git
+git remote add ProjectRepo https://github.com/RP-account-name/csc-sample-2018.git
 <p>
 The "ProjectRepo" can be any convenient name. The RB-account-name in the URL is the account name used by the RB so it's a reference to the exact repository.  (In big projects, the common repositories are owned by projects and organizations, not by individual users, but we're not doing that in this example)
 <p>
@@ -210,7 +210,7 @@ Can you work together to make a change the effects the B-to-C interface?  How wo
 How should you set up the branches?<br/>
 How should you share code between the repositories?
 <p>
-You can PR from any repository into any other that comes from the same base repository.  Since all of these (your team and theirs) are from the bobjacobsen/csc-sample-2017 base, you can all PR to each other.  To do that, you select the repository you want to pull from your code in the left-most box when creating a PR:
+You can PR from any repository into any other that comes from the same base repository.  Since all of these (your team and theirs) are from the bobjacobsen/csc-sample-2018 base, you can all PR to each other.  To do that, you select the repository you want to pull from your code in the left-most box when creating a PR:
 <p>
 <a href="images/F_070.png"><img src="images/F_070.png" height="80%" width=80%"></a>
 <p>
