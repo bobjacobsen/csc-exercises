@@ -123,24 +123,39 @@ We'll come back to it below.
 
 <p>
 You can tell Git to automatically do the staging with the -a 
-option on the commit command:
+option on the commit command which will commit all changed files:
 
 <code><pre>
     git commit -a -m"Added lines at end"
 </pre></code>
 
-which does the add automatically for all changed files. Alternately, you
-can use the <code>git add</code> command to manually select the files to be included.  
+which does the add automatically for all changed files. You can also specify
+the files you want to commit on the command line, although that can get complicated:
+<code><pre>
+    git commit -a -m"Added lines at end" hello.txt
+</pre></code>
+
+Finally, you
+can use the <code>git add</code> command to manually select the specific files to be included.  
 (This is different from how SVN uses "add".  "svn add" means "pay attention to changes
 in this file forever", while "git add" means "this file has interesting contents right now".)
 
 <p>
-Add some lines at the top of the file, and commit them using a manual add:
+Add some lines at the top of the hello.txt file, and commit that single file:
+
+<code><pre>
+    git commit -m"Added lines at top of file" hello.txt
+</pre></code>
+
+<p>
+Then repeat the process using "git add". First, add some lines at the
+top (so there's a change to commit) and then
 
 <code><pre>
     git add hello.txt
-    git commit -m"Added lines at top of file"
+    git commit -m"Added more lines"
 </pre></code>
+
 
 The git blame command can be used to see when each line 
 in a file was changed and by whom:
@@ -216,7 +231,8 @@ but since it's the default that is created, most projects do.
 <p>
 To create a new branch, use the command <code>git branch (branchname)</code>
 <p>
-So let's start by creating a new branch called "testing" and switching to it. You can do that by running <code>git branch (branchname)</code>.
+So let's start by creating a new branch called "testing" and switching to it. 
+You can do that by running <code>git branch (branchname)</code>.
 
 <code><pre>
   git branch testing
@@ -238,7 +254,6 @@ When you create a branch this way it creates the branch at your last commit
 so if you record some commits at this point and then switch to 'testing', 
 it will revert your working directory context back to when you created the branch in the first place.
 You can think of it like a bookmark for where you currently are. 
-Let's see this in action. We use <code>git checkout (branch)</code> to switch the branch we're currently on.
 <p>
 To see that in action, let's add some files on the master branch so that it 
 differs from the testing branch:
@@ -370,6 +385,7 @@ all the changes in myBranch are now in master.  You can safely delete
 myBranch.  To find branches that have been merged, and can safely be deleted,
 do:
 <code><pre>
+    git checkout master
     git branch --merged
 </pre></code>
 Second, if you decide that your changes on a particular branch were a mistake,
