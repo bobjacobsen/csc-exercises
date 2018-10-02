@@ -85,7 +85,7 @@ e.g. Git, and then checked out. CMake and make then
 do their job to build a executable with the fix.
 
 <p>
-<img src="exM2fig1.png" ALIGN="RIGHT" HEIGHT="104" WIDTH="440"/>
+<img src="images/exM2fig1.png" ALIGN="RIGHT" HEIGHT="104" WIDTH="440"/>
 The structure is not so good, though.  What does testG
 depend on?  If any of the A-G packages change, 
 testG is going to have to change too.  That's a lot of 
@@ -108,7 +108,7 @@ each class forward the work of it's predecessor.
 For example, B could invoke A and then print its own report; 
 C could invoke B and then print its own report; etc.
 <p>
-<img src="exM2fig2.png" ALIGN="RIGHT" HEIGHT="485" WIDTH="64"/>
+<img src="images/exM2fig2.png" ALIGN="RIGHT" HEIGHT="485" WIDTH="64"/>
 This is not just a change to CMake files or even to source files.
 It's a change to the system which reduces the complexity 
 & coupling by changing each from "Just tell me about yourself" 
@@ -175,7 +175,7 @@ we want you to create a new sub-system:
 <li>It should contain a D2 class that is invoked
     by the D class to do the actual printing.
 </ul>
-<img src="exM2fig3.png" ALIGN="RIGHT" HEIGHT="485" WIDTH="120"/>
+<img src="images/exM2fig3.png" ALIGN="RIGHT" HEIGHT="485" WIDTH="120"/>
 The intended structure is shown on the right.
 <p>
 <blockquote><div style="background-color:#ECECEC; color:#000000">
