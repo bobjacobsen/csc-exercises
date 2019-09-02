@@ -9,6 +9,6 @@
 # This version also does minor logging via getting a logging URL
 #
 
-wget --timeout=1 --tries=1 -O /dev/null -q "http://signer.dyn.berkeley.edu:50080/log.php?user=${USER}&file=${1}&host=${HOSTNAME}"
+wget --timeout=1 --tries=1 -O /dev/null -q "http://signer.ugis.berkeley.edu:50080/log.php?user=${USER}&file=${1}&host=${HOSTNAME}"
 
 cp -RP csc-exercises/CSC/$1 $1
