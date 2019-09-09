@@ -1,0 +1,4 @@
+--tool=memcheck
+--memcheck:leak-check=yes
+--memcheck:show-reachable=yes
+--num-callers=16
