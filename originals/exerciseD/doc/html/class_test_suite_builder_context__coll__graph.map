@@ -1,0 +1,7 @@
+base referer
+rect $class_test_suite_builder_context_base.html 93,261 293,291
+rect $class_test_suite.html 24,165 101,195
+rect $class_test_composite.html 5,85 120,115
+rect $class_test.html 40,5 85,35
+rect $class_test_fixture_factory.html 125,165 261,195
+rect $class_test_namer.html 285,165 373,195

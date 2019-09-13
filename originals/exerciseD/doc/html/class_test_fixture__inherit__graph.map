@@ -1,0 +1,6 @@
+base referer
+rect $class_test_case.html 272,83 349,112
+rect $class_orthodox.html 5,160 211,189
+rect $class_test_caller.html 235,160 387,189
+rect $class_test_case_decorator.html 411,160 552,189
+rect $class_exception_test_case_decorator.html 304,237 659,267

@@ -1,0 +1,5 @@
+base referer
+rect $class_test_case.html 80,165 157,195
+rect $class_test_leaf.html 5,85 77,115
+rect $class_test.html 19,5 64,35
+rect $class_test_fixture.html 101,85 189,115

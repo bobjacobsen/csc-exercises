@@ -1,0 +1,6 @@
+base referer
+rect $class_test_case_decorator.html 112,237 253,267
+rect $class_test_case.html 144,160 221,189
+rect $class_test_leaf.html 95,83 167,112
+rect $class_test.html 108,5 153,35
+rect $class_test_fixture.html 191,83 279,112

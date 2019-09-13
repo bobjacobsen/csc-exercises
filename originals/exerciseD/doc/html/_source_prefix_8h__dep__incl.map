@@ -1,0 +1,9 @@
+base referer
+rect $_compiler_outputter_8cpp.html 177,5 343,35
+rect $_plug_in_manager_8cpp.html 191,59 329,88
+rect $_test_factory_registry_8cpp.html 173,112 347,141
+rect $_test_plug_in_default_impl_8cpp.html 168,165 352,195
+rect $_test_runner_8cpp.html 200,219 320,248
+rect $_test_suite_8cpp.html 208,272 312,301
+rect $_text_test_runner_8cpp.html 188,325 332,355
+rect $_xml_document_8cpp.html 189,379 331,408

@@ -1,0 +1,4 @@
+base referer
+rect $class_repeated_test.html 5,160 112,189
+rect $class_test_set_up.html 136,160 219,189
+rect $class_test.html 95,5 140,35

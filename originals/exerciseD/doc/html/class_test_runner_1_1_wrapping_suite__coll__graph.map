@@ -1,0 +1,4 @@
+base referer
+rect $class_test_suite.html 63,160 140,189
+rect $class_test_composite.html 44,83 159,112
+rect $class_test.html 79,5 124,35

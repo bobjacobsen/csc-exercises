@@ -1,0 +1,9 @@
+base referer
+rect $class_functor.html 113,293 180,323
+rect $class_protector_context.html 209,293 337,323
+rect $class_test.html 163,197 208,227
+rect $class_test_result.html 232,197 315,227
+rect $class_synchronized_object.html 83,101 232,131
+rect $class_synchronized_object_1_1_synchronization_object.html 5,5 309,35
+rect $class_protector_chain.html 256,101 371,131
+rect $class_protector.html 351,5 428,35

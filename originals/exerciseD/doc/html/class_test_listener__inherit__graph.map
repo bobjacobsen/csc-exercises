@@ -1,0 +1,6 @@
+base referer
+rect $class_brief_test_progress_listener.html 5,83 184,112
+rect $class_test_success_listener.html 208,83 357,112
+rect $class_text_test_progress_listener.html 381,83 557,112
+rect $class_test_result_collector.html 212,160 353,189
+rect $class_text_test_result.html 228,237 337,267
