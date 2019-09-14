@@ -115,3 +115,90 @@ Array
     [REMOTE_HOST] => 
     [DATE] => 2019-09-10 13:48:45
 )
+Array
+(
+    [user] => csc_willem
+    [file] => exercise5.tar
+    [host] => CSC2019
+    [IP] => 157.193.98.99
+    [REMOTE_HOST] => 
+    [DATE] => 2019-09-11 09:53:27
+)
+Array
+(
+    [user] => csc_willem
+    [file] => exG2_script.sh
+    [host] => CSC2019
+    [IP] => 157.193.98.99
+    [REMOTE_HOST] => 
+    [DATE] => 2019-09-11 13:28:22
+)
+Array
+(
+    [user] => csc_willem
+    [file] => exG2script.sh
+    [host] => CSC2019
+    [IP] => 157.193.98.99
+    [REMOTE_HOST] => 
+    [DATE] => 2019-09-11 13:28:29
+)
+Array
+(
+    [user] => csc_willem
+    [file] => exG3script.sh
+    [host] => CSC2019
+    [IP] => 157.193.98.99
+    [REMOTE_HOST] => 
+    [DATE] => 2019-09-12 08:42:11
+)
+Array
+(
+    [user] => csc_willem
+    [file] => exG3script.sh
+    [host] => CSC2019
+    [IP] => 157.193.98.99
+    [REMOTE_HOST] => 
+    [DATE] => 2019-09-12 08:42:26
+)
+Array
+(
+    [user] => csc_willem
+    [file] => exG3MasterRepo.tar
+    [host] => CSC2019
+    [IP] => 157.193.98.99
+    [REMOTE_HOST] => 
+    [DATE] => 2019-09-12 08:42:35
+)
+Array
+(
+    [user] => csc_willem
+    [file] => exerciseM1.tar
+    [host] => CSC2019
+    [IP] => 157.193.98.99
+    [REMOTE_HOST] => 
+    [DATE] => 2019-09-12 11:47:37
+)
+Array
+(
+    [user] => jake
+    [item1] => setup
+    [item2] => 
+    [item3] => 
+    [item4] => 
+    [host] => Bob-Jacobsens-MBP-2.local
+    [IP] => 82.78.32.255
+    [REMOTE_HOST] => 
+    [DATE] => 2019-09-14 17:36:58
+)
+Array
+(
+    [user] => jake
+    [item1] => team
+    [item2] => One Student Name
+    [item3] => Other Student Name
+    [item4] => 
+    [host] => Bob-Jacobsens-MBP-2.local
+    [IP] => 82.78.32.255
+    [REMOTE_HOST] => 
+    [DATE] => 2019-09-14 17:37:06
+)
