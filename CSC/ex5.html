@@ -34,9 +34,9 @@ First, create a local copy of the exercise files.
     source setup.sh
  </PRE></code> 
 
-This will provide ten simple C++ programs 
+This will provide twelve simple C++ programs 
 in files named "one.cpp" through
-"ten.cpp".
+"twelve.cpp".
 
 To run the first one, do:
 
@@ -61,15 +61,29 @@ If you open the source file in your favorite editor, you'll
 see that this is really simple code.
 
 <p>
-Programs two.cpp through ten.cpp all take slightly different approaches
+Programs two.cpp through twelve.cpp all take slightly different approaches
 and are meant to print similar, but not identical things.  Look through 
-each of them and make a list of the answers to two questions for each one:
+each of them and make a table of the answers to two questions for each one:
 <ol>
+<li>What will it print? I.e. will it print it's own number?
 <li>Are there any memory management errors in the program?
-<li>Will it print the right results?
 </ol>
 
 Is it possible for both answers to be "yes"?
+
+<p>Your table should look something like this. (We'll fill out the right 3 columns below)
+<table border="1">
+<tr>
+<th>Name</th><th>Expected<br>Output</th>
+<th>Errors To <br/>Be Captured</th>
+<th>Run<br/>MALLOC_CHECK_<br/>= 0</th>
+<th>Run<br/>MALLOC_CHECK_<br/>= 0</th><th>Run With<br/>Valgrind</th>
+</tr>
+<tr><td>One</td><td>1</td><td>None</td><td></td><td></td><td></td></tr>
+<tr><td>Two</td><td>2</td><td>??</td><td></td><td></td><td></td></tr>
+<tr><td>...</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Twelve</td><td>12, then 11</td><td>??</td><td></td><td></td><td></td></tr>
+</table>
 <p>
 Once you have your list, run each of the programs and see 
 if the program's results agree with your predictions.
