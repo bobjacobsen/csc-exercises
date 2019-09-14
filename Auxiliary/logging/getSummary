@@ -1,0 +1,1 @@
+curl signer.ugis.berkeley.edu:50080/log.txt | grep file | sort | uniq -c | sort -n

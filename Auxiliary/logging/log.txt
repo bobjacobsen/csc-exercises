@@ -1,0 +1,117 @@
+Array
+(
+    [user] => csc_student
+    [item1] => 
+    [item2] => 
+    [item3] => 
+    [item4] => 
+    [host] => CSC2019
+    [IP] => 157.131.108.177
+    [REMOTE_HOST] => 
+    [DATE] => 2019-09-02 00:41:26
+)
+Array
+(
+    [user] => jake
+    [item1] => setup
+    [item2] => 
+    [item3] => 
+    [item4] => 
+    [host] => BobJacosensMBP2
+    [IP] => 157.131.108.177
+    [REMOTE_HOST] => 
+    [DATE] => 2019-09-02 01:29:07
+)
+Array
+(
+    [user] => csc_willem
+    [item1] => Willem
+    [item2] => Person
+    [item3] => 
+    [item4] => 
+    [host] => CSC2019
+    [IP] => 157.193.98.99
+    [REMOTE_HOST] => 
+    [DATE] => 2019-09-10 08:54:56
+)
+Array
+(
+    [user] => csc_willem
+    [file] => exercise1.tar
+    [host] => CSC2019
+    [IP] => 157.193.98.99
+    [REMOTE_HOST] => 
+    [DATE] => 2019-09-10 09:03:44
+)
+Array
+(
+    [user] => csc_willem
+    [file] => exercise1.tar
+    [host] => CSC2019
+    [IP] => 157.193.98.99
+    [REMOTE_HOST] => 
+    [DATE] => 2019-09-10 09:05:09
+)
+Array
+(
+    [user] => csc_willem
+    [file] => excersise2
+    [host] => CSC2019
+    [IP] => 157.193.98.99
+    [REMOTE_HOST] => 
+    [DATE] => 2019-09-10 10:56:03
+)
+Array
+(
+    [user] => csc_willem
+    [file] => exercise2
+    [host] => CSC2019
+    [IP] => 157.193.98.99
+    [REMOTE_HOST] => 
+    [DATE] => 2019-09-10 10:56:10
+)
+Array
+(
+    [user] => csc_willem
+    [file] => exercise_2.tar
+    [host] => CSC2019
+    [IP] => 157.193.98.99
+    [REMOTE_HOST] => 
+    [DATE] => 2019-09-10 10:56:22
+)
+Array
+(
+    [user] => csc_willem
+    [file] => exercise2.tar
+    [host] => CSC2019
+    [IP] => 157.193.98.99
+    [REMOTE_HOST] => 
+    [DATE] => 2019-09-10 10:56:29
+)
+Array
+(
+    [user] => csc_willem
+    [file] => exercise3.tar
+    [host] => CSC2019
+    [IP] => 157.193.98.99
+    [REMOTE_HOST] => 
+    [DATE] => 2019-09-10 12:13:21
+)
+Array
+(
+    [user] => csc_willem
+    [file] => exercise_4.tar
+    [host] => CSC2019
+    [IP] => 157.193.98.99
+    [REMOTE_HOST] => 
+    [DATE] => 2019-09-10 13:48:27
+)
+Array
+(
+    [user] => csc_willem
+    [file] => exercise4.tar
+    [host] => CSC2019
+    [IP] => 157.193.98.99
+    [REMOTE_HOST] => 
+    [DATE] => 2019-09-10 13:48:45
+)

@@ -1,0 +1,2464 @@
+Array
+(
+    [IP] => 67.169.13.185
+    [REMOTE_HOST] => 
+    [DATE] => 2018-09-22 04:21:43
+)
+Array
+(
+    [IP] => 67.169.13.185
+    [REMOTE_HOST] => 
+    [DATE] => 2018-09-22 04:24:22
+)
+Array
+(
+    [IP] => 67.169.13.185
+    [REMOTE_HOST] => 
+    [DATE] => 2018-09-22 04:24:42
+)
+Array
+(
+    [user] => jake
+    [item1] => aftere
+    [item2] => 
+    [item3] => 
+    [item4] => 
+    [host] => Bob-Jacobsens-MBP-7.local
+    [IP] => 65.119.211.164
+    [REMOTE_HOST] => 
+    [DATE] => 2018-09-27 17:31:09
+)
+Array
+(
+    [user] => csc_bob
+    [item1] => 
+    [item2] => 
+    [item3] => 
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 65.119.211.164
+    [REMOTE_HOST] => 
+    [DATE] => 2018-09-27 17:31:38
+)
+Array
+(
+    [IP] => 128.32.235.123
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-02 07:51:16
+)
+Array
+(
+    [IP] => 128.32.235.123
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-02 07:57:08
+)
+Array
+(
+    [user] => csc_bob
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 82.81.131.246
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-02 23:24:47
+)
+Array
+(
+    [user] => csc_patrick
+    [item1] => team
+    [item2] => Vytautas Jankauskas
+    [item3] => Patrick Emonts
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 05:55:15
+)
+Array
+(
+    [user] => csc_javier
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 05:56:37
+)
+Array
+(
+    [user] => csc_patrick
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 05:56:46
+)
+Array
+(
+    [user] => csc_tiago
+    [item1] => team
+    [item2] => Tiago Ribeiro
+    [item3] => Guy Koren
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 05:58:52
+)
+Array
+(
+    [user] => csc_alexanderl
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 05:59:04
+)
+Array
+(
+    [user] => csc_iago
+    [item1] => team
+    [item2] => Vojtech
+    [item3] => Iago
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 05:59:20
+)
+Array
+(
+    [user] => csc_tiago
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 05:59:49
+)
+Array
+(
+    [user] => csc_javier
+    [item1] => team
+    [item2] => Gabriel Gallardo
+    [item3] => Javier Cervantes
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:00:05
+)
+Array
+(
+    [user] => csc_freja
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:00:44
+)
+Array
+(
+    [user] => csc_freja
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:01:10
+)
+Array
+(
+    [user] => csc_alexander
+    [item1] => team
+    [item2] => Alexander Burker
+    [item3] => Henrik Oppen
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:01:15
+)
+Array
+(
+    [user] => csc_alexanderl
+    [item1] => Alexander Leopold
+    [item2] => Filip Bogyai
+    [item3] => 
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:01:32
+)
+Array
+(
+    [user] => $
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:01:35
+)
+Array
+(
+    [user] => csc_alexanderl
+    [item1] => team
+    [item2] => Alexander Leopold
+    [item3] => Filip Bogyai
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:01:44
+)
+Array
+(
+    [user] => csc_nikitas
+    [item1] => team
+    [item2] => Nikitas Kotsolakos
+    [item3] => Sebastian Wozniewski
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:02:07
+)
+Array
+(
+    [user] => csc_adrian
+    [item1] => team
+    [item2] => Remi
+    [item3] => Adrian
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:02:57
+)
+Array
+(
+    [user] => csc_tetiana
+    [item1] => team
+    [item2] => Tetiana Moskalets
+    [item3] => Sebastien Masson
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:03:05
+)
+Array
+(
+    [user] => csc_maciej
+    [item1] => 
+    [item2] => 
+    [item3] => 
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:03:17
+)
+Array
+(
+    [user] => csc_maciej
+    [item1] => team
+    [item2] => Raynette Van Tonder
+    [item3] => Maciej Szymanski
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:03:40
+)
+Array
+(
+    [user] => csc_alexander
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:03:45
+)
+Array
+(
+    [user] => csc_filip
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:04:43
+)
+Array
+(
+    [user] => csc_michal
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:05:02
+)
+Array
+(
+    [user] => csc_wojciech
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:05:02
+)
+Array
+(
+    [user] => csc_maciej
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:05:03
+)
+Array
+(
+    [user] => csc_marcus
+    [item1] => team
+    [item2] => Christian
+    [item3] => Marc
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:05:12
+)
+Array
+(
+    [user] => csc_knut
+    [item1] => team
+    [item2] => Mikkel
+    [item3] => Knut
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:05:53
+)
+Array
+(
+    [user] => csc_malte
+    [item1] => team
+    [item2] => Malte
+    [item3] => Johann
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:06:06
+)
+Array
+(
+    [user] => csc_riccardo
+    [item1] => team
+    [item2] => Riccardo Poggi
+    [item3] => Freja Thoresen
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:06:24
+)
+Array
+(
+    [user] => csc_vojtech
+    [item1] => team
+    [item2] => Iago
+    [item3] => Vojtech
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:06:47
+)
+Array
+(
+    [user] => csc_riccardo
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:06:57
+)
+Array
+(
+    [user] => csc_julien
+    [item1] => team
+    [item2] => William Sutcliffe
+    [item3] => Julien Collet
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:07:01
+)
+Array
+(
+    [user] => csc_henrik
+    [item1] => team
+    [item2] => Alexander Burker
+    [item3] => Henrik Oppen
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:07:15
+)
+Array
+(
+    [user] => csc_aris
+    [item1] => team
+    [item2] => One Name
+    [item3] => Other Name
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 82.81.131.246
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:07:16
+)
+Array
+(
+    [user] => csc_bernhard
+    [item1] => team
+    [item2] => Vaggelis
+    [item3] => Bernie
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 82.81.131.246
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:07:17
+)
+Array
+(
+    [user] => csc_remi
+    [item1] => team
+    [item2] => Adrian
+    [item3] => 
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:07:18
+)
+Array
+(
+    [user] => csc_nikitas
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:07:31
+)
+Array
+(
+    [user] => csc_michael
+    [item1] => team
+    [item2] => Dmitry
+    [item3] => Michael
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:07:32
+)
+Array
+(
+    [user] => csc_daniell
+    [item1] => team
+    [item2] => Benjamin
+    [item3] => Daniel
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 82.81.131.246
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:07:34
+)
+Array
+(
+    [user] => csc_remi
+    [item1] => team
+    [item2] => Remi
+    [item3] => Adrian
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:07:35
+)
+Array
+(
+    [user] => csc_iago
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:07:43
+)
+Array
+(
+    [user] => csc_johann
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:07:51
+)
+Array
+(
+    [user] => csc_peter
+    [item1] => team
+    [item2] => Peter
+    [item3] => Karolina
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:07:58
+)
+Array
+(
+    [user] => csc_julien
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:08:01
+)
+Array
+(
+    [user] => mconcas
+    [item1] => team
+    [item2] => Matteo Concas
+    [item3] => Paul Gessinger
+    [item4] => 
+    [host] => egobrain.local
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:08:01
+)
+Array
+(
+    [user] => csc_aris
+    [item1] => team
+    [item2] => Aris Angelogiannopoulos
+    [item3] => Andy Mathis
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 82.81.131.246
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:08:13
+)
+Array
+(
+    [user] => csc_daniell
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 82.81.131.246
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:08:15
+)
+Array
+(
+    [user] => csc_vojtech
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:08:17
+)
+Array
+(
+    [user] => csc_william
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:08:19
+)
+Array
+(
+    [user] => csc_adrian
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:08:19
+)
+Array
+(
+    [user] => csc_marcus
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:08:20
+)
+Array
+(
+    [user] => csc_andreasm
+    [item1] => Aris
+    [item2] => Andi
+    [item3] => 
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 82.81.131.246
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:08:20
+)
+Array
+(
+    [user] => csc_michael
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:08:21
+)
+Array
+(
+    [user] => csc_henrik
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:08:27
+)
+Array
+(
+    [user] => csc_malte
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:08:36
+)
+Array
+(
+    [user] => csc_henrik
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:08:38
+)
+Array
+(
+    [user] => csc_rizalina
+    [item1] => team
+    [item2] => Giorgio Lopez
+    [item3] => Rizalina Mingazheva
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:09:00
+)
+Array
+(
+    [user] => csc_tetiana
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:09:03
+)
+Array
+(
+    [user] => Paul
+    [item1] => Matteo Concas
+    [item2] => 
+    [item3] => 
+    [item4] => 
+    [host] => Neuromancer.local
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:09:38
+)
+Array
+(
+    [user] => csc_michael
+    [item1] => team
+    [item2] => Dmitry Neverov
+    [item3] => Michael Eliachevitch
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:09:43
+)
+Array
+(
+    [user] => csc_michael
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:09:54
+)
+Array
+(
+    [user] => csc_sebastien
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:10:17
+)
+Array
+(
+    [user] => csc_aris
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 82.81.131.246
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:10:17
+)
+Array
+(
+    [user] => csc_andreasm
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 82.81.131.246
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:10:19
+)
+Array
+(
+    [user] => csc_elena
+    [item1] => team
+    [item2] => Elena
+    [item3] => Luisa
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:10:23
+)
+Array
+(
+    [user] => csc_fudong
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:10:30
+)
+Array
+(
+    [user] => mconcas
+    [file] => exercise1.tar
+    [host] => egobrain.local
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:10:37
+)
+Array
+(
+    [user] => csc_igor
+    [item1] => team
+    [item2] => Igor Pelevanyuk
+    [item3] => Christoph Heidecker
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:11:05
+)
+Array
+(
+    [user] => csc_rizalina
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:11:05
+)
+Array
+(
+    [user] => csc_remi
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:11:16
+)
+Array
+(
+    [user] => Paul
+    [file] => exercise1.tar
+    [host] => Neuromancer.local
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:11:44
+)
+Array
+(
+    [user] => csc_omar
+    [item1] => team
+    [item2] => 
+    [item3] => 
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:11:50
+)
+Array
+(
+    [user] => csc_omar
+    [item1] => team
+    [item2] => Omar
+    [item3] => Mingrui
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:12:07
+)
+Array
+(
+    [user] => csc_eric
+    [item1] => team
+    [item2] => Eric Edward Corrigan
+    [item3] => Daniel Hugo Campora Perez
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:12:08
+)
+Array
+(
+    [user] => csc_laura
+    [item1] => team
+    [item2] => Laura Martikainen
+    [item3] => Matthias Schnepf
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:12:27
+)
+Array
+(
+    [user] => csc_christoph
+    [item1] => team
+    [item2] => Igor Pelevanyuk
+    [item3] => Christoph Heidecker
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:12:36
+)
+Array
+(
+    [user] => csc_marcus
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:12:37
+)
+Array
+(
+    [user] => csc_laura
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:13:10
+)
+Array
+(
+    [user] => csc_igor
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:13:22
+)
+Array
+(
+    [user] => csc_elena
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:13:25
+)
+Array
+(
+    [user] => csc_trine
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:13:57
+)
+Array
+(
+    [user] => csc_christoph
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:14:50
+)
+Array
+(
+    [user] => csc_daniel
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:15:08
+)
+Array
+(
+    [user] => csc_daniel
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:15:40
+)
+Array
+(
+    [user] => csc_fudong
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:15:56
+)
+Array
+(
+    [user] => csc_eirik
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:16:04
+)
+Array
+(
+    [user] => csc_eric
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:16:28
+)
+Array
+(
+    [user] => csc_daniel
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:16:52
+)
+Array
+(
+    [user] => csc_riccardo
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:17:00
+)
+Array
+(
+    [user] => csc_omar
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:18:00
+)
+Array
+(
+    [user] => csc_petar
+    [item1] => team
+    [item2] => Petar Tonkovic
+    [item3] => Niklas Nolte
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 82.81.131.246
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:18:03
+)
+Array
+(
+    [user] => csc_tiago
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:18:57
+)
+Array
+(
+    [user] => csc_piotr
+    [item1] => team
+    [item2] => Piotr
+    [item3] => Stefan
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:20:15
+)
+Array
+(
+    [user] => csc_petar
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 82.81.131.246
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:20:56
+)
+Array
+(
+    [user] => csc_patrick
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:21:24
+)
+Array
+(
+    [user] => csc_knuto
+    [item1] => team
+    [item2] => Jakub Kandra
+    [item3] => Knut O.H. Vadla
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 82.81.131.246
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:21:36
+)
+Array
+(
+    [user] => csc_filip
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:21:58
+)
+Array
+(
+    [user] => csc_alexanderl
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:21:58
+)
+Array
+(
+    [user] => csc_piotr
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:22:13
+)
+Array
+(
+    [user] => csc_stefan
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:22:24
+)
+Array
+(
+    [user] => csc_luisa
+    [item1] => team
+    [item2] => Elena
+    [item3] => Luisa
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:23:44
+)
+Array
+(
+    [user] => csc_riccardo
+    [file] => exercise5.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:24:15
+)
+Array
+(
+    [user] => csc_luisa
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:24:55
+)
+Array
+(
+    [user] => csc_stefan
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:25:01
+)
+Array
+(
+    [user] => csc_knuto
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 82.81.131.246
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:25:08
+)
+Array
+(
+    [user] => csc_aris
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 82.81.131.246
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:25:27
+)
+Array
+(
+    [user] => csc_nicholai
+    [item1] => team
+    [item2] => Nicholai Mauritzson
+    [item3] => Rabi Soto
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:25:40
+)
+Array
+(
+    [user] => csc_piotr
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:26:09
+)
+Array
+(
+    [user] => csc_julien
+    [file] => exercise2
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:27:41
+)
+Array
+(
+    [user] => csc_julien
+    [file] => exercise2.tar.gz
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:27:47
+)
+Array
+(
+    [user] => csc_julien
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:27:52
+)
+Array
+(
+    [user] => csc_henrik
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:29:14
+)
+Array
+(
+    [user] => csc_christoph
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:29:50
+)
+Array
+(
+    [user] => csc_nicholai
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:30:03
+)
+Array
+(
+    [user] => csc_igor
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:30:07
+)
+Array
+(
+    [user] => csc_william
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:30:42
+)
+Array
+(
+    [user] => csc_piotr
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:31:22
+)
+Array
+(
+    [user] => csc_alexander
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:32:13
+)
+Array
+(
+    [user] => csc_wojciech
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:32:18
+)
+Array
+(
+    [user] => csc_javier
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:32:36
+)
+Array
+(
+    [user] => mconcas
+    [file] => exercise2.tar
+    [host] => egobrain.local
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:34:06
+)
+Array
+(
+    [user] => csc_michal
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:34:10
+)
+Array
+(
+    [user] => csc_michal
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:34:17
+)
+Array
+(
+    [user] => Paul
+    [file] => exercise2.tar
+    [host] => Neuromancer.local
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:34:20
+)
+Array
+(
+    [user] => csc_patrick
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:34:30
+)
+Array
+(
+    [user] => csc_maciej
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:34:52
+)
+Array
+(
+    [user] => csc_daniel
+    [file] => exercise5.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:36:12
+)
+Array
+(
+    [user] => csc_rabi
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:36:38
+)
+Array
+(
+    [user] => csc_mikkel
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:36:51
+)
+Array
+(
+    [user] => csc_eric
+    [file] => exercise4.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:36:55
+)
+Array
+(
+    [user] => csc_tiago
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:37:22
+)
+Array
+(
+    [user] => csc_eric
+    [file] => exercise5.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:37:56
+)
+Array
+(
+    [user] => csc_nikitas
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:39:33
+)
+Array
+(
+    [user] => csc_rizalina
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:41:43
+)
+Array
+(
+    [user] => csc_mikkel
+    [file] => 
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:42:09
+)
+Array
+(
+    [user] => csc_mikkel
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:42:17
+)
+Array
+(
+    [user] => csc_michael
+    [file] => exercise1.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:43:43
+)
+Array
+(
+    [user] => csc_michael
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:43:54
+)
+Array
+(
+    [user] => csc_igor
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:44:02
+)
+Array
+(
+    [user] => csc_aris
+    [file] => exercise5.tar
+    [host] => CSC2018
+    [IP] => 82.81.131.246
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:44:07
+)
+Array
+(
+    [user] => csc_michael
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:44:15
+)
+Array
+(
+    [user] => csc_knut
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:45:07
+)
+Array
+(
+    [user] => csc_christoph
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:45:15
+)
+Array
+(
+    [user] => csc_maciej
+    [file] => cppunit.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:45:19
+)
+Array
+(
+    [user] => csc_julien
+    [file] => exercise-3.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:46:09
+)
+Array
+(
+    [user] => csc_maciej
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:47:26
+)
+Array
+(
+    [user] => csc_nicholai
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:48:11
+)
+Array
+(
+    [user] => csc_rabi
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:48:42
+)
+Array
+(
+    [user] => csc_tetiana
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:48:56
+)
+Array
+(
+    [user] => csc_julien
+    [file] => exercise4.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:49:35
+)
+Array
+(
+    [user] => csc_sebastien
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:50:44
+)
+Array
+(
+    [user] => csc_iago
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:50:51
+)
+Array
+(
+    [user] => csc_patrick
+    [file] => exercise4.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:51:06
+)
+Array
+(
+    [user] => csc_vojtech
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:51:10
+)
+Array
+(
+    [user] => mconcas
+    [file] => exercise3.tar
+    [host] => egobrain.local
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:51:32
+)
+Array
+(
+    [user] => csc_filip
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:51:52
+)
+Array
+(
+    [user] => csc_peter
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:52:10
+)
+Array
+(
+    [user] => csc_vytautas
+    [file] => exercise4.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:52:36
+)
+Array
+(
+    [user] => Paul
+    [file] => exerciseD.tar
+    [host] => Neuromancer.local
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:52:38
+)
+Array
+(
+    [user] => csc_adrian
+    [file] => exercideD.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:52:39
+)
+Array
+(
+    [user] => csc_remi
+    [file] => exerciseD
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:52:39
+)
+Array
+(
+    [user] => csc_remi
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:52:42
+)
+Array
+(
+    [user] => csc_adrian
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:52:43
+)
+Array
+(
+    [user] => csc_vaggelis
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:52:44
+)
+Array
+(
+    [user] => mconcas
+    [file] => exerciseD.tar
+    [host] => egobrain.local
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:52:51
+)
+Array
+(
+    [user] => csc_william
+    [file] => exercise4.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:54:06
+)
+Array
+(
+    [user] => csc_marcus
+    [file] => exercise3
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:54:10
+)
+Array
+(
+    [user] => csc_marcus
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:54:15
+)
+Array
+(
+    [user] => csc_laura
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:56:17
+)
+Array
+(
+    [user] => csc_trine
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:57:09
+)
+Array
+(
+    [user] => csc_wojciech
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:58:12
+)
+Array
+(
+    [user] => csc_alexander
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:58:22
+)
+Array
+(
+    [user] => csc_daniell
+    [file] => exersise2.tar
+    [host] => CSC2018
+    [IP] => 82.81.131.246
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 06:59:42
+)
+Array
+(
+    [user] => csc_eirik
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:00:00
+)
+Array
+(
+    [user] => csc_daniell
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 82.81.131.246
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:00:04
+)
+Array
+(
+    [user] => csc_johann
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:00:05
+)
+Array
+(
+    [user] => csc_michal
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:00:32
+)
+Array
+(
+    [user] => csc_wojciech
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:00:45
+)
+Array
+(
+    [user] => csc_daniel
+    [file] => exG2script.sh
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:01:19
+)
+Array
+(
+    [user] => csc_omar
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:01:23
+)
+Array
+(
+    [user] => csc_michael
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:01:56
+)
+Array
+(
+    [user] => csc_aris
+    [file] => exG2script.sh
+    [host] => CSC2018
+    [IP] => 82.81.131.246
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:02:39
+)
+Array
+(
+    [user] => csc_eric
+    [file] => exG2script.sh
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:02:46
+)
+Array
+(
+    [user] => csc_alexanderl
+    [file] => exercise5.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:02:53
+)
+Array
+(
+    [user] => csc_michael
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:04:44
+)
+Array
+(
+    [user] => csc_marcus
+    [file] => exercise4.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:06:53
+)
+Array
+(
+    [user] => csc_stefan
+    [file] => exercise5.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:09:51
+)
+Array
+(
+    [user] => csc_piotr
+    [file] => exercise5.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:10:48
+)
+Array
+(
+    [user] => csc_javier
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:11:19
+)
+Array
+(
+    [user] => csc_adrian
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:11:38
+)
+Array
+(
+    [user] => csc_fudong
+    [item1] => team
+    [item2] => Fudong He
+    [item3] => Luigi Pertoldi
+    [item4] => 
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:11:39
+)
+Array
+(
+    [user] => csc_knuto
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 82.81.131.246
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:11:47
+)
+Array
+(
+    [user] => csc_remi
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:12:54
+)
+Array
+(
+    [user] => csc_luigi
+    [file] => exercise5.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:12:58
+)
+Array
+(
+    [user] => csc_michael
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:13:06
+)
+Array
+(
+    [user] => csc_fudong
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:13:14
+)
+Array
+(
+    [user] => csc_daniel
+    [file] => exG3script.sh
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:14:15
+)
+Array
+(
+    [user] => csc_daniel
+    [file] => exG3MasterRepo.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:14:17
+)
+Array
+(
+    [user] => csc_fudong
+    [file] => exercise4.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:14:26
+)
+Array
+(
+    [user] => csc_aris
+    [file] => exerciseM1.tar
+    [host] => CSC2018
+    [IP] => 82.81.131.246
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:14:51
+)
+Array
+(
+    [user] => csc_eric
+    [file] => exG3script.sh
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:15:42
+)
+Array
+(
+    [user] => csc_eric
+    [file] => exG3MasterRepo.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:15:57
+)
+Array
+(
+    [user] => csc_alexander
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:16:44
+)
+Array
+(
+    [user] => csc_freja
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:16:52
+)
+Array
+(
+    [user] => csc_aris
+    [file] => exerciseM1A.tar
+    [host] => CSC2018
+    [IP] => 82.81.131.246
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:17:14
+)
+Array
+(
+    [user] => csc_tetiana
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:18:05
+)
+Array
+(
+    [user] => csc_patrick
+    [file] => exercise5.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:18:20
+)
+Array
+(
+    [user] => csc_marcus
+    [file] => exercise5.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:18:22
+)
+Array
+(
+    [user] => csc_elena
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:18:27
+)
+Array
+(
+    [user] => csc_luisa
+    [file] => exercise2.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:18:39
+)
+Array
+(
+    [user] => csc_omar
+    [file] => exercise5.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:18:41
+)
+Array
+(
+    [user] => csc_vytautas
+    [file] => exercise5.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:18:56
+)
+Array
+(
+    [user] => csc_laura
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:21:25
+)
+Array
+(
+    [user] => csc_giorgio
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:22:07
+)
+Array
+(
+    [user] => csc_michal
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:22:33
+)
+Array
+(
+    [user] => csc_maciej
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:23:42
+)
+Array
+(
+    [user] => csc_maciej
+    [file] => exercise4.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:23:47
+)
+Array
+(
+    [user] => csc_william
+    [file] => exercise5.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:25:22
+)
+Array
+(
+    [user] => csc_mikkel
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:25:38
+)
+Array
+(
+    [user] => csc_henrik
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:25:46
+)
+Array
+(
+    [user] => csc_aris
+    [file] => exerciseM2.tar
+    [host] => CSC2018
+    [IP] => 82.81.131.246
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:26:00
+)
+Array
+(
+    [user] => csc_knut
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:27:12
+)
+Array
+(
+    [user] => csc_filip
+    [file] => exercise5.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:27:37
+)
+Array
+(
+    [user] => csc_wojciech
+    [file] => exercise5.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:28:44
+)
+Array
+(
+    [user] => csc_michal
+    [file] => exercise5.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:28:58
+)
+Array
+(
+    [user] => csc_nikitas
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:29:03
+)
+Array
+(
+    [user] => csc_iago
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:29:38
+)
+Array
+(
+    [user] => csc_sebastien
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:30:57
+)
+Array
+(
+    [user] => malte
+    [file] => exerciseD.tar
+    [host] => myMac
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:31:43
+)
+Array
+(
+    [user] => csc_aris
+    [file] => exerciseM2A.tar
+    [host] => CSC2018
+    [IP] => 82.81.131.246
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:32:56
+)
+Array
+(
+    [user] => csc_daniell
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 82.81.131.246
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:32:59
+)
+Array
+(
+    [user] => csc_rizalina
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:33:03
+)
+Array
+(
+    [user] => csc_tetiana
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:33:20
+)
+Array
+(
+    [user] => csc_rabi
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:33:29
+)
+Array
+(
+    [user] => csc_eric
+    [file] => exerciseM2.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:34:17
+)
+Array
+(
+    [user] => csc_tiago
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:34:33
+)
+Array
+(
+    [user] => csc_bernhard
+    [file] => exerciseD.tar
+    [host] => CSC2018
+    [IP] => 82.81.131.246
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:34:33
+)
+Array
+(
+    [user] => csc_eirik
+    [file] => exercise5.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:34:55
+)
+Array
+(
+    [user] => csc_trine
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:35:00
+)
+Array
+(
+    [user] => csc_eirik
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:35:25
+)
+Array
+(
+    [user] => csc_riccardo
+    [file] => exerciseM1.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:36:09
+)
+Array
+(
+    [user] => csc_aris
+    [file] => exercise3.tar
+    [host] => CSC2018
+    [IP] => 82.81.131.246
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:36:16
+)
+Array
+(
+    [user] => csc_stefan
+    [file] => exG2script.sh
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:37:02
+)
+Array
+(
+    [user] => csc_riccardo
+    [file] => exerciseM1A.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:39:36
+)
+Array
+(
+    [user] => csc_freja
+    [file] => exercise5.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:42:47
+)
+Array
+(
+    [user] => csc_piotr
+    [file] => exG2script.sh
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:43:27
+)
+Array
+(
+    [user] => csc_javier
+    [file] => exercise5.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:44:47
+)
+Array
+(
+    [user] => csc_eric
+    [file] => exerciseM2A.tar
+    [host] => CSC2018
+    [IP] => 81.218.204.195
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:44:56
+)
+Array
+(
+    [user] => luigipertoldi
+    [file] => exercise5.tar
+    [host] => MacBookAir.lan
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:45:44
+)
+Array
+(
+    [user] => csc_patrick
+    [file] => exerciseM1.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:47:21
+)
+Array
+(
+    [user] => csc_vytautas
+    [file] => exerciseM1.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:47:45
+)
+Array
+(
+    [user] => csc_stefan
+    [file] => exerciseM1.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:48:09
+)
+Array
+(
+    [user] => csc_christoph
+    [file] => exercise4.tar
+    [host] => CSC2018
+    [IP] => 82.81.47.241
+    [REMOTE_HOST] => 
+    [DATE] => 2018-10-03 07:48:34
+)

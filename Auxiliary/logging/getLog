@@ -1,0 +1,1 @@
+curl signer.ugis.berkeley.edu:50080/log.txt > log.`date | awk '{print $4}'`.txt
