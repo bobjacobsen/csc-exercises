@@ -42,3 +42,11 @@ echo '---- ten ----'
 $1 ten.cpp
 $2 ./a.out
 
+echo '---- eleven ----'
+$1 eleven.cpp
+$2 ./a.out
+
+echo '---- twelve ----'
+$1 twelve.cpp
+$2 ./a.out
+
