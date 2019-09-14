@@ -10,30 +10,8 @@
 Please read this all the way through first, to get an idea 
 of the overall plan of the exercises. Note that there are some  
 <a href="#general">general notes</a> at the bottom of this page.
-<p>
-There is no particular time expected for these. You should
-do them in order, but it's OK to spend more time on the ones that
-interest you and go quickly through others.  It's completely
-fine to skip the ones marked "optional".
 
-Generally, many students will complete the Test Framework, Performance
-and Memory
-exercises in the Tuesday morning exercise period.
-It depends on what's most interesting to them.  
-They then start the Wednesday afternoon exercise period with finishing up 
-anything they want to from Tuesday, complete 
-Code Management and do as much of Build and Release
-Management as they find useful. 
-<p>
-Nobody does every bit of
-every exercise, and that's OK.
-<p>
-If you run out of time and want to 
-do more on particular topics, you can come back to these topics later
-in the week. They can be run anywhere.  But please don't feel compelled to
-work on these after the scheduled sessions; there is a lot more to the School!
-
-<p>
+<h3>Getting Started</h3>
 The very first step is get a partner to work with.  You can change, and
 teams often do, but it's much better to work with somebody than to try to learn alone.
 
@@ -49,16 +27,42 @@ a copy of the exercise files:
 cd ~
 git clone https://github.com/bobjacobsen/csc-exercises.git
 </pre></code>
-Finally, do a bit of setup:
+Do a bit of setup (this only has to be done once):
 <code><pre>
 source csc-exercises/CSC/setup
 </pre></code>
 
 <p>
-Tell us who makes up your team, so we can find you later with updates:
+Finally, tell us who makes up your team, so we can find you later with updates:
 <code><pre>
 ./csc_log team "One Student Name" "Other Student Name"
 </pre></code>
+
+<h3>About the Exercises</h3>
+
+There is no particular time expected for these exercises. 
+You should
+do them in order, but it's OK to spend more time on the ones that
+interest you and go quickly through others.  It's completely
+fine to skip the ones marked "optional".
+
+Generally, students will complete the Test Framework and Performance
+exercises in the Tuesday morning exercise period, depending on how many 
+sections they want to do.
+A few will also start on the Memory exercise, depending on what's most interesting to them.  
+People will then start the Wednesday afternoon exercise period by finishing up 
+anything they want to from Tuesday, then complete 
+Code Management and do as much of Build and Release
+Management as they find useful. 
+<p>
+Nobody does every bit of
+every exercise, and that's OK.
+<p>
+If you run out of time and want to 
+do more on particular topics, you can come back to these topics later
+in the week. They can be run anywhere.  But please don't feel compelled to
+work on these after the scheduled sessions; there is a lot more to the School!
+
 
 <p>
 Now move on to the instructions for each exercise.
@@ -74,9 +78,10 @@ and create a new one.  You can't break anything, so please feel free to experime
 Demonstration of a test framework - basic - this is a simple exercise to make sure
 that your laptop VM is working, you and your teammate can settle in, etc.
 <P>
-You should do at least one of the next two exercises to work with test frameworks in 
-a little more depth.  Exercise D on CppUnit (testing C++) requires a bit of experience with C++, 
-while Exercise 2 uses Java to be more accessible to people without C++ experience.
+You should do at least one of the next three exercises to work with test frameworks in 
+a little more depth. It's also OK to do all three; the later ones will be fast.
+Exercise D on CppUnit (testing C++) requires a bit of experience with C++, 
+and exercise P requires a bit of Python experience.
 
 <p>
 2) 
@@ -87,6 +92,11 @@ Practice debugging using a test framework (Java) - basic
 D)
 <A HREF="exD.html">exD.html</a>
 Simple use of CppUnit - intermediate (Requires some C++ experience)
+<P>
+
+P)
+<A HREF="exP.html">exP.html</a>
+Simple use of PyUnit - intermediate (Requires some Python experience)
 <P>
 
 
@@ -100,12 +110,12 @@ you can certainly skip these; if not, they might get you thinking a bit.
 
 3) 
 <A HREF="ex3.html">ex3.html</a>
-Demonstration of profiling tool
+Demonstration of profiling tool - optional
 <P>
 
 4) 
 <A HREF="ex4.html">ex4.html</a>
-Practice tuning a small application
+Practice tuning a small application - optional
 <P>
 
 <h3>Memory Issues</h3>
@@ -149,10 +159,7 @@ Distributed development with Git - advanced
 <P>
 
 
- 
 <h3>Build and Release Management</h3>
-
-
 
 M1)
 <A HREF="exM1.html">exM1.html</a>
@@ -166,7 +173,6 @@ CMake as a release tool - intermediate
 
 The next three are <u>very optional</u>.  They provide experience
 with release-specification tools using CMT as an example.
-Of interest historically, these tools are also in use today.
 If you're in a collaboration that uses this type of
 tool, you might enjoy learning about them; 
 otherwise we recommend you move on to the last exercise F.
