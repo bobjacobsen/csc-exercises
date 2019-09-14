@@ -22,6 +22,9 @@ int main()
   cout << "New value of a[LENGTH] is " << a[LENGTH] << endl;
   cout << "New value of b[LENGTH] is " << b[LENGTH] << endl;
    
+  delete[] b;
+  delete[] a;
+  
   cout << "Done" << endl;
 
 }
