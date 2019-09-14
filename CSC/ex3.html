@@ -133,9 +133,15 @@ Which would be the right one if you were checking between 9 000 000 000 and 10 0
 Which would be the right one if you were checking between 9 999 999 000 and 10 000 000 000?
 
 <P>
-(Hint: When checking
+Hint: When checking
 factors, should you check <u>up to</u> the square root of the
-number, or <u>up to and including</u> the square root?)
+number, or <u>up to and including</u> the square root?
+
+<p>
+Hint: The modulo operator "%" can be surprisingly slow in Java when Just-In-Time (JIT)
+compilation is not in use.  The hardware has support for doing it quickly, which the JIT compiler 
+will use, but the Java compiler starts by generating divide/multiply/subtract/test 
+high-level code.
 
 <P>
 Note:  You can't go too far with using sampling tools and small samples; those can really 

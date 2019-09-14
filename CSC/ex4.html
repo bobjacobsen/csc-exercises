@@ -53,7 +53,7 @@ The Stats program takes two arguments:
   time ./run 500 1001
 </pre></code>
 Write down how long this took, we'll use that number later. For example, 
-your laptop might take 20.6 real seconds and 18.7 user (CPU) seconds.
+your laptop might take 16 real seconds and 13 user (CPU) seconds.
 
 <p>
 The program throws a set of random numbers, calculates the median, 
@@ -119,12 +119,14 @@ what you observe? If not, can you find and fix the problem?
 On Bob's laptop, the original program scales like:
 <table border="1">
 <tr><th>Run</th><th>CPU sec</th</tr>
-<tr><td>time ./run 500 501</td><td>4.6</td></tr>
-<tr><td>time ./run 500 101</td><td>16.5</td></tr>
-<tr><td>time ./run 500 2001</td><td>63.3</td></tr>
-<tr><td>time ./run 500 3001</td><td>145.0</td></tr>
-<tr><td>time ./run 500 4001</td><td>260.9</td></tr>
+<tr><td>time ./run 500 501</td><td>3.7</td></tr>
+<tr><td>time ./run 500 1001</td><td>13.7</td></tr>
+<tr><td>time ./run 500 2001</td><td>53</td></tr>
+<tr><td>time ./run 500 3001</td><td>124</td></tr>
+<tr><td>time ./run 500 4001</td><td>214</td></tr>
 </table>
+<p>
+Is this scaling like the N ln(N) you'd expect?
 <P> 
 Students at previous CSCs have
 managed to push the performance:
@@ -168,7 +170,12 @@ your program will be a factor of 5-10 faster:
 <code><pre>
   time java Stats 500 4001
 </pre></code>
-
+<li>
+Hint: Java checks every array reference, which means they can be slow
+since we're not using the just-in-time compiler here.
+It also checks the stack when leaving a block, which can also be slow.
+We'll do more on memory checking in 
+<a href="ex5.html">exercise 5</a>.
 </ul>
  
 </body>
