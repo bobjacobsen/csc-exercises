@@ -2,7 +2,7 @@
 /* This script handles CSC logging requests to the server and writes them to a local file */
 $file = fopen("log.txt","a");
 
-/* _GET has the original request, to which we add some information */
+/* _GET has the original request, to which we add some additional information */
 $_GET["IP"] = $_SERVER['REMOTE_ADDR'];
 $_GET["REMOTE_HOST"] = $_SERVER['REMOTE_HOST'];
 date_default_timezone_set("UTC");               /* llog time in UTC */
