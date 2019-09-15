@@ -52,9 +52,17 @@ You'll then see a questionnaire which you can fill out as you'd like.  Click "Su
 <a href="images/F_040.png"><img src="images/F_040.png"  align="right" width="25%"></a>
 GitHub will probably send you an email to verify that you're real. Once you reply to that, you have an account.
 
+<p>
+Tell us which account you're going to use so we can help if any problems arise:
+
+<code><pre>
+   ~/csc_log github "Your Real Name" githubAccountName
+</pre></code>
+
 <h3>Working with a GitHub repository</h3>
 
-Once you have a GitHub account, go to our sample GitHub repository for CSC 2018 <a href="https://github.com/bobjacobsen/csc-sample">https://github.com/bobjacobsen/csc-sample</a>.
+Once you have a GitHub account, go to our sample GitHub repository for CSC 2019 
+<a href="https://github.com/bobjacobsen/csc-sample">https://github.com/bobjacobsen/csc-sample</a>.
 <p>
 <a href="images/F_050.png"><img src="images/F_050.png" align="right" height="20%" width="20%"></a>
 Click around a bit to see the features.  From the front page you can directly browse the code.
@@ -75,7 +83,7 @@ Now, we want to "fork" this repository so you can start working with it as your 
 <p>
 The two of you should pick one person to be the Release Builder (RB).  She'll have the main repository for the collaboration, and will gather changes to create consistent sets of code for release.  The other member of the pair will be the Enthused Physicist (EP) who develops changes.   (There two people will have separate GitHub accounts, which makes the following much easier to follow. It is possible to do this with one person and one account, but it's much more confusing; work with your partner!)
 <p>
-Now pretend that your all members of a Collaboration.  The RB is responsible for code for the Thaumaturgy Engine (TE), an important system in the Collaboration's combined experiment.  She'll put together consistent sets of code for that system and push them up to a central repository (our csc-sample repository).  But she needs a place of her own to do that.
+Now pretend that you're all members of a physics Collaboration.  The RB is responsible for code for the Thaumaturgy Engine (TE), an important system in the Collaboration's combined experiment.  She'll put together consistent sets of code for that system and push them up to a central repository (our csc-sample repository).  But she needs a place of her own to do that.
 <a href="images/F_060.png"><img src="images/F_060.png" align="right" height="25%" width="25%"></a><p>
 To create that, she "forks" our main repository.  That's just a button push: click on the word "fork" in the upper right.
 <p>
@@ -105,19 +113,29 @@ But why does the EP need that GitHub repository?  Why not directly connect EP's 
 
 <h3>Attaching Continuous Integration</h3>
 
-It's possible to configure GitHub to run Continuous Integration (CI) checks when repositories change.  By having a convention to always do this, collaborations can ensure that tests pass <u>before</u> they merge code.
+It's possible to configure GitHub to run Continuous Integration (CI) checks when repositories change.
+By having a convention to always do this, collaborations can ensure that tests pass <u>before</u> they merge code.
 <p>
 There are lots of ways to do this, but for this exercise we're going to use a free service called Travis.  
 <p>
 Go to 
 <a href="https://travis-ci.org">https://travis-ci.org</a>
-and look for the "Sign in with GitHub" in the upper right. Click it. If you're signed in to GitHub (which you should still be), it'll present a screen requesting access to your repositories and other information. Click "Authorize Travis-CI".  In a few seconds, it should take you to your profile. If it hasn't after about 10 seconds, click on your name in the upper right to get to the 'settings' screen, then to the 'profile' screen. On it you'll see sliders for any GitHub repositories you have (might be only one).  Have the one for the csc-sample repository slid to show a checkmark.
+and look for the "Sign in with GitHub" in the upper right. Click it. 
+If you're signed in to GitHub (which you should still be), 
+it'll present a screen requesting access to your repositories and other information. 
+Click "Authorize Travis-CI".  
+In a few seconds, it should take you to your profile. 
+If it hasn't after about 10 seconds, click on your name in the upper right to get to the 'settings' screen, 
+then to the 'profile' screen. 
+On it you'll see sliders for any GitHub repositories you have (might be only one).  
+Have the one for the csc-sample repository slid to show a checkmark.
 <p>
 <h3>Making a first change</h3>
 
 Finally, with everything set up, we're going to work through our first change.  Horray!
 <p>
-EP should go to his laptop repository, and add a new file (any change is fine, but a new file is an easy one to see).  By now you've got this and can certainly do it independently, but as a reminder the steps are:
+EP should go to his laptop repository, and add a new file (any change is fine, but a new file is an easy one to see).  
+By now you've got this and can certainly do it independently, but as a reminder the steps are:
 <ul>
 <li>start a new branch to contain this work with '<code>git checkout -b some-name</code>'
 <li>create the new file
@@ -126,7 +144,7 @@ EP should go to his laptop repository, and add a new file (any change is fine, b
 <li>'<code>git commit</code>' to put it in the local repository
 </ul>
 <p>
-All of this could have been done completely offline.  
+All of this can be done completely offline.
 <p>
 Next we push it up to EP's GitHub repository with
 <p>
@@ -134,7 +152,8 @@ Next we push it up to EP's GitHub repository with
    git push
 </pre></code>
 <p>
-(that defaults to the parent repository, but you could have said "git push origin" to be specific) The first time through, that might ask for extra information:
+(that defaults to the parent repository, but you could have said "git push origin" to be specific) 
+The first time through, that might ask for extra information:
 <p>
 <code><pre>
    The current branch another-PR-branch has no upstream branch.
@@ -143,32 +162,49 @@ Next we push it up to EP's GitHub repository with
     git push --set-upstream origin some-name
 </pre></code>
 <p>
-Just cut and paste command it recommends.  The repositories are already connected, but the additional arguments are needed to connect the branches inside them.
+Just cut and paste the command that it recommended.  
+The repositories are already connected, but the additional arguments are needed to connect the branches inside them.
 <p>
-If you set Travis up properly, it's already running on that branch you just pushed up.  Go to your status page at 
+If you set Travis up properly, it'll immediately start running on that branch you just pushed up.  
+(Travis couldn't see it on your laptop, which might have even been offline, but it can always monitor a repository on GitHub for updates)
+Go to your status page at 
 <a href="https://travis-ci.org">https://travis-ci.org</a>
-to look. It should quickly do a complete Cmake, make and run unless your change broke something; there's a lot of status report info at the front of the log, so either collapse that or just skip to the end.
+to look. It should quickly do a complete Cmake, make and run unless your change broke something; 
+there's a lot of status report info at the front of the log, so either collapse that or just skip to the end.
 
 <h3>Requesting Your Changes Be Merged</h3>
 
 Your changes are up and confirmed integrating OK!  How do you let other people use them?  
 <p>
-Now that they're on GitHub, anybody with access (which for a public repository is anybody; another approach that's often used to have "private" repositories restricted to an organization, but that's a topic for the collaboration to address as a whole) can see the repository and pull from it.  So you can tell a colleague to "get the some-name branch from my repository and try that".
+Now that they're on GitHub, anybody with access (which for a public repository is anybody; 
+another approach that's often used to have "private" repositories restricted to an organization, 
+but that's a topic for the collaboration to address as a whole) can see the repository and pull from it.  
+So you can tell a colleague to "get the some-name branch from my repository and try that".
 <p>
-But you also want to make an orderly contribution to the collaboration's software.  To do that, you send a Pull Request upstream, in this case to RP.
+But you also want to make an orderly contribution to the collaboration's software.  
+To do that, you send a Pull Request upstream, in this case to RP.
 <p>
 <a href="images/F_070.png"><img src="images/F_070.png" align="right" height="25%" width="25%"></a>
-On your GitHub repository page, you'll see a "new pull request" button.  If it's soon enough after your push, you'll also see a status bar that references your recent change.  Either of those can be used to create a pull request.
+On your GitHub repository page, you'll see a "new pull request" button.  
+If it's soon enough after your push, you'll also see a status bar that references your recent change.  
+Either of those can be used to create a pull request.
 <p>
-If there's a status bar with a pull-request button, just click that. It's easiest. But if not, click "new pull request" on the center-left and you'll get a place to specify what you want to do (image will vary a bit).
+If there's a status bar with a pull-request button, just click that. It's easiest. 
+But if not, click "new pull request" on the center-left and you'll get a place to specify what you want to do (image will vary a bit).
 <p>
 <a href="images/F_070.png"><img src="images/F_070.png" height="80%" width="80%"></a>
 <p>
-The left two boxes should select your RB's repository and the branch on it you want to merge to (in this example, you can just use 'master'). The right should have your repository selected, along with your most recent branch; if not, pick the right branch.  
+The left two boxes should select your RB's repository and the branch on it you want to merge to 
+(in this example, you can just use 'master'). 
+The right should have your repository selected, along with your most recent branch; if not, pick the right branch.  
 <p>
 Then click the "Create Pull Request" button. 
 <p>
-You'll get a form for title and description, along with a summary of exactly what you're asking to be pulled.  In most cases, the form be pre-filled out with the <u>imperfect</u> info from the commit message(s) - just another reminder to write good commit messages.  Fix those up. The title often appears in release notes, so make it good.  Click Create Pull Request once it's active (once you've filed the form out).
+You'll get a form for title and description, along with a summary of exactly what you're asking to be pulled.  
+In most cases, the form be pre-filled out with the <u>imperfect</u> info from the commit message(s) 
+- just another reminder to write good commit messages.  Fix those up. 
+The title often appears in release notes, so make it good.  
+Click Create Pull Request once it's active (once you've filed the form out).
 <p>
 And the EP is done! He's handed his change over. He can go off to create another branch and work on some other neat discovery or feature.
 <p>
@@ -191,7 +227,8 @@ A couple things can go wrong, and you might want to experiment with them by crea
 <li>CI might fail. Oops, a bug, but we caught it early!  In that case, the EP can make changes with his laptop on the same branch and push them to his GitHub repository. Because the PR is to the front of that branch, when the front moves (new changes are added), GitHub reprocess the PR, the tests are rerun, etc.  Hopefully the branch will eventually have the right contents!
 <li>The changes might conflict with something that came in via another PR earlier.
 </ul>
-If there's a conflict, the solution is for the EP to resolve it. (The RB can, but it's better to reflect it down to the person who knows what the changes were exactly about)  
+If there's a conflict, the solution is for the EP to resolve it. 
+(The RB can, but it's better to reflect it down to the person who knows what the changes were exactly about)  
 The EP can do that by merging the RB's repositories current (and conflicting) content of its master branch back onto his laptop. To do that, first set up a 'remote" to make it easy to refer to the RB's repository:
 <p>
 git remote add ProjectRepo https://github.com/RP-account-name/csc-sample.git
@@ -229,5 +266,6 @@ Then talk through your approach and their approach to decide on how the four (or
 <p>
 One possible end state is a branch in one (or both) of the RB's repositories that has the entire change on it.  It might be good to keep that off master until it's working, using other branches to allow master to still work for other people. Once you have that, one of your team can send it up to the original repository via a PR to there. That'll deliver it to the entire Collaboration, a success for your team!
 
+<a href="images/CSC_GitHub_Collaboration.png"><img src="images/CSC_GitHub_Collaboration.png" height="424" width="657"></a>
 </body>
 </html>
