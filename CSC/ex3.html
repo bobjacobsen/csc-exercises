@@ -32,13 +32,15 @@ with two of them here:
 <UL>
 <LI>simpleCheck - for each number in the range, it does a divide by
 all possible divisors to see if the number is prime
-<LI>sieveCheck - uses the Sieve of Erathosenes to check, which involves
+<LI>sieveCheck - uses the 
+<a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">Sieve of Erathosenes</a> to check, which involves
 making an array and walking through it, marking off numbers that 
 can be divided.
 </UL>
 It's not obvious which will be faster in this case.  simpleCheck can 
 stop checking as soon as a factor is found, whereas sieveCheck seems to do
-less division, but has to step through all the numbers below 900,000 too.
+less division, but 
+<a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes#Computational_analysis">has to step through all the numbers below 900,000</a> too.
 <P>
 We'll profile these to see how much of a difference this makes. First, we compile and run it:
   

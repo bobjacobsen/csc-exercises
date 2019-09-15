@@ -92,7 +92,7 @@ testG is going to have to change too.  That's a lot of
 coupling, and will make G a pain to maintain.
 <p>
 In larger systems, tools to compute and display the coupling
-can be very helpful.  The image to the right 
+can be very helpful.  The image to the above right 
 was made automatically by CMake, using
 
  <CODE><PRE>
@@ -111,11 +111,12 @@ C could invoke B and then print its own report; etc.
 <img src="images/exM2fig2.png" ALIGN="RIGHT" HEIGHT="485" WIDTH="64"/>
 This is not just a change to CMake files or even to source files.
 It's a change to the system which reduces the complexity 
-& coupling by changing each from "Just tell me about yourself" 
-to "Tell me about yourself and the ones that follow you". 
-The first, "about yourself"
+& coupling by changing each from 
+"Just tell me about yourself and somebody else will understand the global structure" 
+to "Tell me about yourself and what you need". 
+The first, "just yourself"
 seems simple, until you realize that everybody using the code needs
-to know much more about everything.  The second, "yourself and followers",
+to know much more about everything.  The second, "yourself and what you need",
 moves that responsibility from being spread across all the using classes
 to being localized in each specific package.
 <p>
@@ -131,7 +132,7 @@ To see this in practice:
 
 Now look at a couple classes, say starting with
 <code>C/C.h</code> and <code>C/C.cxx</code>.  They 
-include and reference their successor.  
+include and reference the package(s) they need.  
 The CMakeLists.txt
 file had to make sure that C could
 properly reference B, both at include-time and 

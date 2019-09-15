@@ -146,7 +146,7 @@ Together, CMake and make have figured out the exact commands needed to build thi
 code, and executed them with minimal intellectual effort on your part.
 <p>
 Also note that CMake started with a complete, consistent set of code.
-CMake is reasoning about how to combine source code versions; you've already done
+CMake is <u>not</u> reasoning about how to combine source code versions; you've already done
 that in the code repository and checked out (or downloaded) what you want to build.
 CMake just takes on the job of building that code.
 
@@ -222,9 +222,9 @@ To get more information on a package such as use:
 <CODE><PRE>
 cmake --help-module FindGit
 </PRE></code>
-The conventions the variable names aren't 100% followed,
-so when linking to a new component library you need to do
-this to find out the right ones.
+The conventions around variable and package naming haven't always been followed,
+so when linking to a new component library you may need to do
+this to find out the right names to use.
 <p>
 CMake uses "modules" as customization plug-ins.
 "Find" modules are a special case that make the 

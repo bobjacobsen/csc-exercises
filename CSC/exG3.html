@@ -399,6 +399,11 @@ will go with the combined commit.  Do that, save and exit normally.
 Git will work for a second, and they you're done.  Take a look at the new tree
 with gitk and see how clean it looks now.  And you got to rewrite the comment to say
 exactly what your colleages need to know about all this!
+<p>
+Note that the original commits are still in the repository; Git hasn't forgotten
+them.  The "git reflog" command (that's short for "reference log") can find the
+original commits if they're needed for some reason, but that's beyond the scope of this 
+exercise.
 
 <h3>Pull Requests</h3>
 
