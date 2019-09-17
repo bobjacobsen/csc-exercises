@@ -69,15 +69,16 @@ each of them and make a table of the answers to two questions for each one:
 <li>Are there any memory management errors in the program?
 </ol>
 
-Is it possible for both answers to be "yes"?
+Is it possible for a program with an error to still print the right answer? Which do that?
 
 <p>Your table should look something like this. (We'll fill out the right 3 columns below)
 <table border="1">
 <tr>
 <th>Name</th><th>Expected<br>Output</th>
 <th>Errors To <br/>Be Captured</th>
-<th>Run<br/>MALLOC_CHECK_<br/>= 0</th>
-<th>Run<br/>MALLOC_CHECK_<br/>= 0</th><th>Run With<br/>Valgrind</th>
+<th>Run with<br/>MALLOC_CHECK_<br/>blank</th>
+<th>Run wtih<br/>MALLOC_CHECK_<br/>= 1</th>
+<th>Run with<br/>Valgrind</th>
 </tr>
 <tr><td>One</td><td>1</td><td>None</td><td></td><td></td><td></td></tr>
 <tr><td>Two</td><td>2</td><td>??</td><td></td><td></td><td></td></tr>
