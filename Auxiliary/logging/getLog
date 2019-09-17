@@ -1,1 +1,3 @@
-curl signer.ugis.berkeley.edu:50080/log.txt > log.`date | awk '{print $4}'`.txt
+curl signer.ugis.berkeley.edu:50080/log.txt > log.`date | awk '{print $3 "-" $4}'`.txt
+cp `ls -t log*.txt | head -1` log.txt
+php transfer.php
