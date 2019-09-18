@@ -1,0 +1,1 @@
+java -Xmx60M -Xms12M -Xrunhprof:cpu=samples,depth=12,thread=y,heap=dump -Xint Stats $1 $2
