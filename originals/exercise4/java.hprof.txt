@@ -1,0 +1,122 @@
+JAVA PROFILE 1.0.1, created Sun Aug 29 19:29:14 2004
+
+Header for -Xhprof ASCII Output
+
+Copyright 1998 Sun Microsystems, Inc. 901 San Antonio Road, Palo Alto,
+California, 94303, U.S.A.  All Rights Reserved.
+
+WARNING!  This file format is under development, and is subject to
+change without notice.
+
+This file contains the following types of records:
+
+THREAD START
+THREAD END      mark the lifetime of Java threads
+
+TRACE           represents a Java stack trace.  Each trace consists
+                of a series of stack frames.  Other records refer to
+                TRACEs to identify (1) where object allocations have
+                taken place, (2) the frames in which GC roots were
+                found, and (3) frequently executed methods.
+
+HEAP DUMP       is a complete snapshot of all live objects in the Java
+                heap.  Following distinctions are made:
+
+                ROOT    root set as determined by GC
+                CLS     classes 
+                OBJ     instances
+                ARR     arrays
+
+SITES           is a sorted list of allocation sites.  This identifies
+                the most heavily allocated object types, and the TRACE
+                at which those allocations occurred.
+
+CPU SAMPLES     is a statistical profile of program execution.  The VM
+                periodically samples all running threads, and assigns
+                a quantum to active TRACEs in those threads.  Entries
+                in this record are TRACEs ranked by the percentage of
+                total quanta they consumed; top-ranked TRACEs are
+                typically hot spots in the program.
+
+CPU TIME	is a profile of program execution obtained by measuring
+                the time spent in individual methods (excluding the time
+                spent in callees), as well as by counting the number of
+                times each method is called. Entries in this record are
+                TRACEs ranked by the percentage of total CPU time. The
+                "count" field indicates the number of times each TRACE 
+                is invoked.
+
+MONITOR TIME    is a profile of monitor contention obtained by measuring
+		the time spent by a thread waiting to enter a monitor.
+		Entries in this record are TRACEs ranked by the percentage
+		of total monitor contention time and a brief description
+		of the monitor.  The "count" field indicates the number of 
+		times the monitor was contended at that TRACE.
+
+MONITOR DUMP	is a complete snapshot of all the monitors and threads in 
+		the System.
+
+HEAP DUMP, SITES, CPU SAMPLES|TIME and MONITOR DUMP|TIME records are generated 
+at program exit.  They can also be obtained during program execution by typing 
+Ctrl-\ (on Solaris) or by typing Ctrl-Break (on Win32).
+
+--------
+
+THREAD START (obj=35fd20, id = 1, name="Finalizer", group="system")
+THREAD START (obj=35fe40, id = 2, name="Reference Handler", group="system")
+THREAD START (obj=35ff10, id = 3, name="main", group="main")
+THREAD START (obj=367730, id = 4, name="HPROF CPU profiler", group="system")
+THREAD START (obj=368e30, id = 5, name="Signal Dispatcher", group="system")
+THREAD END (id = 3)
+THREAD START (obj=35ff30, id = 6, name="DestroyJavaVM", group="main")
+THREAD END (id = 6)
+TRACE 1: (thread=3)
+	<empty>
+TRACE 7: (thread=3)
+	Stats.main(Stats.java:83)
+TRACE 2: (thread=3)
+	java.lang.StringBuffer.append(StringBuffer.java:555)
+	sun.net.www.ParseUtil.decode(ParseUtil.java:159)
+	sun.misc.FileURLMapper.getPath(FileURLMapper.java:47)
+	sun.misc.FileURLMapper.exists(FileURLMapper.java:56)
+	sun.misc.URLClassPath$JarLoader.getJarFile(URLClassPath.java:572)
+	sun.misc.URLClassPath$JarLoader.<init>(URLClassPath.java:542)
+TRACE 3: (thread=3)
+	java.util.Random.next(Random.java:143)
+	java.util.Random.nextDouble(Random.java:383)
+	java.lang.Math.random(Math.java:636)
+	Stats.main(Stats.java:84)
+TRACE 5: (thread=3)
+	Stats.mean(Stats.java:19)
+	Stats.stddev(Stats.java:55)
+	Stats.main(Stats.java:92)
+TRACE 6: (thread=3)
+	java.lang.StrictMath.pow(StrictMath.java:Native method)
+	java.lang.Math.pow(Math.java:550)
+	Stats.stddev(Stats.java:55)
+	Stats.main(Stats.java:92)
+TRACE 10: (thread=3)
+	Stats.mean(Stats.java:19)
+	Stats.stddev(Stats.java:55)
+	Stats.main(Stats.java:98)
+TRACE 4: (thread=3)
+	Stats.sortHalfValues(Stats.java:38)
+	Stats.median(Stats.java:33)
+	Stats.main(Stats.java:90)
+TRACE 9: (thread=3)
+	Stats.stddev(Stats.java:55)
+	Stats.main(Stats.java:92)
+TRACE 8: (thread=3)
+	Stats.main(Stats.java:82)
+CPU SAMPLES BEGIN (total = 117) Sun Aug 29 19:29:19 2004
+rank   self  accum   count trace method
+   1 54.70% 54.70%      64     5 Stats.mean
+   2 37.61% 92.31%      44     4 Stats.sortHalfValues
+   3  1.71% 94.02%       2     8 Stats.main
+   4  1.71% 95.73%       2     9 Stats.stddev
+   5  0.85% 96.58%       1    10 Stats.mean
+   6  0.85% 97.44%       1     6 java.lang.StrictMath.pow
+   7  0.85% 98.29%       1     7 Stats.main
+   8  0.85% 99.15%       1     2 java.lang.StringBuffer.append
+   9  0.85% 100.00%       1     3 java.util.Random.next
+CPU SAMPLES END
