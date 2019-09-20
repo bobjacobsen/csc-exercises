@@ -22,6 +22,7 @@ hs_err_pid*
 # logging extra files
 Auxiliary/logging/.ipynb_checkpoints/
 Auxiliary/logging/log.json
+Auxiliary/logging/log*.txt
 
 # annoying alias artifact
 CSC/CSC
