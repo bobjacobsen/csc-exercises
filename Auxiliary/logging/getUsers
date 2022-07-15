@@ -1,1 +1,1 @@
-curl signer.ugis.berkeley.edu:50080/log.txt | grep user | sort | uniq -c | sort -n
+curl 174.105.89.157:50080/log.txt | grep user | sort | uniq -c | sort -n
