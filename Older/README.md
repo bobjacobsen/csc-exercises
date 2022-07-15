@@ -9,4 +9,9 @@ Contents:
  - exA.html and exerciseA.tar: Simple CVS
  - exB.html and exerciseB.tar: Conflicts in CVS
  - exG4.html: start of a Git exercise, no real content
-
+ - exG3*:  Distributed development with Git
+ - exC.html: Simple SVN
+ - ex*M1*: Introduction to CMake
+ - ex*M2*: CMake as a release tool
+ - *cmt*: CMT infrastructure
+ - ex7.html: simple release activities (CMT)
