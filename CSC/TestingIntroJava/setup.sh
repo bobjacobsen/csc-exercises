@@ -1,0 +1,4 @@
+umask 0022
+chmod 755 .
+export CLASSPATH=".:junit.jar:PerfAnal.jar"
+
