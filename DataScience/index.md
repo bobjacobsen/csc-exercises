@@ -6,8 +6,12 @@ Please read this all the way through first to get a idea of the overall plan of 
 
 We use the CERN SWAN service for these exercises.  You should already have an account.
 
-...
+To access SWAN
+(URL)
+(Login)
+(...)
 (git clone --depth 2 https://github.com/bobjacobsen/csc-exercises.git)
+Exercises are in Data Science directory
 
 ## About the Exercises
 
@@ -16,10 +20,9 @@ There are three categories...
 To do each exercise, navigate SWAN to the folder for the exercise, then launch the .ipynb file found there.  For some exercises, there are also data files that you can browse by opening them in the notebook.
 
 
-
 ### Introductory
 
-These are meant to be an good starting point to make sure that your technical setup is working and to give you familiarity with Jupyter notebooks and analysis packages. Be sure to do the first one ("Old Faithful") to make sure everything is working, then do one or two of the following ones that you find interesting.
+These are meant to be an good starting point to make sure that your technical setup is working and to give you familiarity with Jupyter notebooks and analysis packages. Be sure to do the first one ("Old Faithful") to make sure everything is working, then do one or two of the following ones that you find interesting. Each has some additional calculations and questions at the end, beyond what we did in lecture, for your exploration and enjoyment.
 
 A lot of analysis code is written by copy-and-paste from prior notebooks (and sometimes from [StackOverflow](https://stackoverflow.com/questions/66675146/calculate-the-difference-between-pandas-rows-in-pairs)...).  Even if you skip doing some of these, you might want to open them to copy how to make a particular calculation or plot.
 
