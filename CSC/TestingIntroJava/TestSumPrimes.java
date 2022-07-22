@@ -18,24 +18,29 @@ public class TestSumPrimes extends TestCase  {
 //       Assert.assertEquals("check sumPrimes(1)", 0, s.sumPrimes(1));
 //     }
 
-//     public void testTwoIsPrime() { // 2 is prime, but not in sum
+//     public void testTwoIsPrime() { // 2 is prime
 //       SumPrimes s = new SumPrimes();
-//       Assert.assertEquals("check sumPrimes(2)", 0, s.sumPrimes(2));
+//       Assert.assertEquals("check sumPrimes(2)", 2, s.sumPrimes(2));
 //     }
 
-//     public void testThreeIsPrime() { // and 2 shows up here
+//     public void testThreeIsPrime() { // 3 is prime
 //      SumPrimes s = new SumPrimes();
-//      Assert.assertEquals("check sumPrimes(3)", 2, s.sumPrimes(3));
+//      Assert.assertEquals("check sumPrimes(3)", 5, s.sumPrimes(3));
 //     }
 
-//     public void testFourIsNotPrime() { // but 3 is prime
+//     public void testFourIsNotPrime() {
 //       SumPrimes s = new SumPrimes();
 //       Assert.assertEquals("check sumPrimes(4)", 5, s.sumPrimes(4));
 //     }
 
+//     public void testTenIsNotPrime() {
+//       SumPrimes s = new SumPrimes();
+//       Assert.assertEquals("check sumPrimes(10)", 17, s.sumPrimes(10));
+//     }
+
 //     public void testElevenIsPrime() {
 //       SumPrimes s = new SumPrimes();
-//       Assert.assertEquals("check sumPrimes(11)", 17, s.sumPrimes(11));
+//       Assert.assertEquals("check sumPrimes(11)", 28, s.sumPrimes(11));
 //     }
 
 //     public void testTwelve() {

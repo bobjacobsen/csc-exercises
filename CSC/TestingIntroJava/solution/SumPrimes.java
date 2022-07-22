@@ -5,10 +5,10 @@ public class SumPrimes {
         // return the sum of prime numbers less than or equal to argument
         // (Hint: sometimes comments are wrong, and the test is really the definition)
         int sum = 0;
-        for ( int i=0; i < largest; i++ ) {  // loop over possible primes
+        for ( int i=2; i <= largest; i++ ) {  // loop over possible primes
             boolean prime = true;
-                for (int j=1; j < 10; j++) { // loop over possible factors; would <= Math.sqrt(value) be better?
-            if (i % j == 0) prime = false;
+            for (int j=2; j <= Math.sqrt(i); j++) { // loop over possible factors
+                if (i % j == 0) prime = false;
             }
             if (prime) sum += i;
         }
