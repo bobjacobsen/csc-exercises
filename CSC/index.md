@@ -6,8 +6,7 @@ general notes at the bottom of this page.
 
 
 ## Getting Started
-The very first step is get a partner to work with.  You can change, and
-teams often do, but it's much better to work with somebody than to try to learn alone.
+The very first step is get a partner to work with.  You can change, and teams often do, but it's much better to work with somebody than to try to learn alone.
 
 Next, get the School's virtual machine installed and running on your laptop, and then log in.
 For more information on how to do that, see the School's
@@ -45,7 +44,7 @@ do more on particular topics, you can come back to these topics later
 in the week. They can be run anywhere.  But please don't feel compelled to
 work on these after the scheduled sessions; there is a lot more to the School!
 
-Now move on to the instructions for each exercise.
+If there are any problems or updates to the exercises, we'll post announcements to a [Google doc](https://docs.google.com/document/d/1g3b2e7wf3mWaIZ4U6MkNR5B4fQuO71y6Q341LGs45HQ/edit) and display them on a screen in the exercise room for your reference.
 
 A short comment on structure: Many of these exercises start by asking you
 to create a directory by unpacking a .tar file.  We do this so that, if you
@@ -178,7 +177,7 @@ It is periodically updated as cool new things are found.
 <h2>For more information</h2>
 For more information on Java math routines like floor(...), sqrt(...), etc
 please see the
-<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Math.html">Math class doc page</a>.
+<a href="http://download.oracle.com/javase/8/docs/api/java/lang/Math.html">Math class doc page</a>.
 
 For more information on the JUnit unit test classes for Java, see their
 <a href="http://junit.sourceforge.net/javadoc/">class documentation</a>.
@@ -196,19 +195,8 @@ Information on Git:
 <li>A writeup on how to <a href="https://git.wiki.kernel.org/index.php/GitSvnCrashCourse">convert your SVN thinking</a> to Git;
 see also a
 <a href="http://git.or.cz/course/svn.html">slightly older but more readable version</a>.
-<li>The Pro Git book is available to CSC students as a <a href="ProGit.en.pdf">PDF file</a>.
 </ul>
 The web has lots of talks and tutorials on more advanced Git topics.
-
-Information on CMake:
-<ul>
-<li>CMake <a href="http://www.cmake.org">main web site</a>.
-<li>Main CMake <a href="http://www.cmake.org/cmake/help/documentation.html">documentation page</a>.
-<li>CMake <a href="http://www.cmake.org/cmake/help/v3.0/manual/cmake-language.7.html#syntax">syntax summary</a>.
-<li>How
-    <a href="https://agenda.infn.it/getFile.py/access?contribId=12&resId=0&materialId=slides&confId=7698">GEANT4 is built with CMake</a>,
-    an example.
-</ul>
 
 </body>
 </html>
