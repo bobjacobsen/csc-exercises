@@ -1,0 +1,5 @@
+
+
+# macOS on Apple Silicon
+arch -x86_64 cc -std=c++11 -lcppunit -lc++  *.cpp
+

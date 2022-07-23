@@ -2,14 +2,14 @@
         "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html>
 <head>
-	<title>TestingIntroJava</title>
+	<title>Testing SumPrimes in Java</title>
 </head>
 <body>
-<h1>TestingIntroJava: Demonstration of a test framework</h1>
+<h1>Testing SumPrimes in Java</h1>
 
 Reminder: If there's been a correction to this exercise posted,
 update your local copy via
-<A HREF="../../index.html#corrections">these instructions</a>
+<A HREF="../index.html#corrections">these instructions</a>
 before proceeding.
 
 <P>
@@ -59,7 +59,7 @@ Remove the leading // that comments out those lines, and watch the test fail whe
 Isn't that "FAILURES!!!" message ugly? Now fix the bug(s) (See below for hints),
 and see the lovely "OK" again.
 Finally, add a couple more tests to check other ranges.
-(The sum of primes from 1 to 20 is 77, for example)
+(The sum of primes from 1 to 20 inclusive is 77, for example)
 <P>
 Hints:
 <UL>
@@ -74,6 +74,10 @@ You might want to add additional tests to TestSumPrimes.java.
 <LI>It's OK for a prime number to be divisible by 1.
 
 <LI>If you try to divide a prime number by itself, you'll find that the remainder is zero.
+
+<li>For more information on Java math routines like floor(...), round(...), sqrt(...), etc
+please see the
+<a href="http://download.oracle.com/javase/8/docs/api/java/lang/Math.html">Math class doc page</a>.
 
 </UL>
 </body>
