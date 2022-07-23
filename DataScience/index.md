@@ -61,6 +61,7 @@ These are meant to give you more experience with analysis. Please feel free to s
 _Movies_
 
 
+
 _Census 1 and Census 2_
 
 
@@ -71,7 +72,7 @@ If you have time, there are some optional projects where you can try out these t
 
 In the `Projects` directory you will find several project subdirectories. In order of increasing depth and size, these are:
 
-0) Use some SCADA data to check the health of a HVAC system
+0) Use some SCADA data to check the health of a cooling system
 
 1) An examination of global demographics
 
@@ -104,4 +105,8 @@ Then checkout the exercise material to your machine. During the CERN School, ple
     - [Manual](https://readthedocs.org/projects/datascience/downloads/pdf/master/)
 
  - [`matplotlib` package](https://matplotlib.org/stable/index.html)
+
+ ### Data
+
+ One good source of data sets is [Google Dataset Search](https://datasetsearch.research.google.com).  For more, see [this blog entry](https://www.blog.google/products/search/making-it-easier-discover-datasets/).
 
