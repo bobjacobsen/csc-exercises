@@ -1,0 +1,7 @@
+
+g++ Main_SumPrimes.cpp -o SumPrimes
+
+# cc -std=c++11 -lcppunit -lc++  SumPrimes.cpp TestSumPrimes.cpp TestSumPrimes_Main.cpp -o TestSumPrimes
+
+# macOS version
+arch -x86_64 cc -std=c++11 -lcppunit -lc++  TestSumPrimes.cpp TestSumPrimes_Main.cpp -o TestSumPrimes
