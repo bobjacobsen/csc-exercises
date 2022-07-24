@@ -57,19 +57,19 @@ You should do all three of the these first exercises to work with test framework
 and make sure that your exercise environment is working correctly.
 Each is a little bit different. Please do
 
-1: TestIntroJava - brief demo of using JUnit for Java code testing. We put this first because JUnit is perhaps the simplest of the unit testing frameworks.
+1: [TestIntroJava](TestIntroJava/index.md) - brief demo of using JUnit for Java code testing. We put this first because JUnit is perhaps the simplest of the unit testing frameworks.
 
-2: TestIntroPy - brief demo of using PyUnit for Python code testing.
+2: [TestIntroPy](TestIntroPy/index.md) - brief demo of using PyUnit for Python code testing.
 
-3: TestIntroCpp - brief demo of using CppUnit for C++ code testing. Will benefit from a bit of C++ experience with header files, etc, but can be done without it.
+3: [TestIntroCpp](TestIntroCpp/index.md) - brief demo of using CppUnit for C++ code testing. Will benefit from a bit of C++ experience with header files, etc, but can be done without it.
 
 We then move forward to a more significant example, the SumPrimes code from lecture.  Do (at least) one of the following. (You can do more than one, but that's very optional)
 
-4: TestSumPrimesJava -
+4: [TestSumPrimesJava](TestSumPrimesJava/index.md) -
 
-5: TestSumPrimesPy -
+5: [TestSumPrimesPy](TestSumPrimesPy/index.md) -
 
-6: TestSumPrimesCpp -
+6: [TestSumPrimesCpp](TestSumPrimesCpp/index.md) -
 
 
 

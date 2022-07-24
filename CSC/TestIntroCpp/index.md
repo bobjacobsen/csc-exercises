@@ -4,7 +4,14 @@ This is a brief introduction to the use of CppUnit to test C++ code.
 
 (It also makes sure your system is set up for later exercises)
 
-To start, look at the ExampleTestCase.cpp file.  You'll see a series of tests that are structured like:
+First, do some setup:
+
+<CODE><PRE>
+    cd exercise2
+    source setup.sh
+</PRE></CODE>
+
+Then look at the ExampleTestCase.cpp file.  You'll see a series of tests that are structured like:
 
 ```
 void ExampleTestCase::example()
