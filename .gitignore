@@ -21,3 +21,7 @@ Auxiliary/logging/log*.txt
 # annoying alias artifact
 CSC/CSC
 
+# specific build artifacts
+CSC/TestSumPrimesCpp/SumPrimes
+CSC/TestSumPrimesCpp/TestSumPrimes
+
