@@ -1,2 +1,2 @@
 #! /bin/bash
-./csc_log "setup"
+./csc_log setup

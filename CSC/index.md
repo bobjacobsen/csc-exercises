@@ -8,6 +8,9 @@ general notes at the bottom of this page.
 ## Getting Started
 The very first step is get a partner to work with.  You can change, and teams often do, but it's much better to work with somebody than to try to learn alone.
 
+These exercises involve some minimal Java, Python and/or C++ programming. We recommend that you arrange yourself in groups so that somebody in each group has at least a little experience with Java, Python and/or C++.
+
+
 Next, get the School's virtual machine installed and running on your laptop, and then log in.
 For more information on how to do that, see the School's
 <a href="https://indico.cern.ch/event/769356/page/15184-laptop-configuration">Laptop configuration page</a>.
@@ -23,33 +26,25 @@ Do a bit of setup (this only has to be done once):
 source csc-exercises/CSC/setup
 ```
 
-
 Finally, tell us who makes up your team, so we can find you later with updates:
 ```
 ./csc_log team "One Student Name" "Other Student Name"
 ```
 
+
 ## About the Exercises
 
-There is no particular time expected for these exercises.
-You should
-do them in order, but it's OK to spend more time on the ones that
-interest you and go quickly through others.  It's completely
-fine to skip the ones marked "optional".
+There is no particular time expected for these exercises. You should do them in order, but it's OK to spend more time on the ones that interest you and go quickly through others.  It's completely fine to skip the ones marked "optional".
 
 Nobody does every bit of every exercise, and that's OK.
 
-If you run out of time and want to
-do more on particular topics, you can come back to these topics later
-in the week. They can be run anywhere.  But please don't feel compelled to
-work on these after the scheduled sessions; there is a lot more to the School!
+If you run out of time and want to do more on particular topics, you can come back to these topics later in the week. They can be run anywhere.  But please don't feel compelled to work on these after the scheduled sessions; there is a lot more to the School!
 
 If there are any problems or updates to the exercises, we'll post announcements to a [Google doc](https://docs.google.com/document/d/1g3b2e7wf3mWaIZ4U6MkNR5B4fQuO71y6Q341LGs45HQ/edit) and display them on a screen in the exercise room for your reference.
 
-A short comment on structure: Many of these exercises start by asking you
-to create a directory by unpacking a .tar file.  We do this so that, if you
-get too confused about the contents of things, you can just delete the directory
-and create a new one.  You can't break anything, so please feel free to experiment!
+A short comment on structure: Some of these exercises start by asking you to create a directory by unpacking a .tar file.  We do this so that because putting a Git repository inside another Git repository can get very complicated.
+
+You can't break anything, so please feel free to experiment!
 
 ## Test Frameworks
 
@@ -63,7 +58,7 @@ Each is a little bit different. Please do
 
 3: [TestIntroCpp](TestIntroCpp/index.md) - brief demo of using CppUnit for C++ code testing. Will benefit from a bit of C++ experience with header files, etc, but can be done without it.
 
-We then move forward to a more significant example, the SumPrimes code from lecture.  Do (at least) one of the following. (You can do more than one, but that's very optional)
+We then move forward to a more significant example, the SumPrimes code from lecture.  Do one or two of the following. (If you speak all three languages, you could do all three, but that's very optional)
 
 4: [TestSumPrimesJava](TestSumPrimesJava/index.md) -
 
@@ -91,16 +86,15 @@ you can certainly skip these; if not, they might get you thinking a bit.
 4C: <A HREF="ex4C.html">ex4C.html</a> Practice tuning a small C++ application - optional
 
 
+-- -- --
 
 ## Memory Issues
-People with experience programming C and C++ close to the hardware might find this
-a little basic (though the valgrind tool can be  useful even for experts).
-Everybody else should definitely
-do this one to learn more about how memory really works.
 
-5: <A HREF="ex5.html">ex5.html</a>
-Testing for C++ memory faults
+People with experience programming C and C++ close to the hardware might find this a little basic (though the valgrind tool can be  useful even for experts). Everybody else should definitely do this one to learn more about how memory really works.
 
+5: [MemIntroCpp](MemIntroCpp/index.md) - Testing for C++ memory faults
+
+-- -- --
 
 ## Code Management
 
@@ -121,7 +115,7 @@ Experience with Git branching - intermediate
 ## Corrections
 
 If there are any last-minute corrections to the instructions,
-we will post them in the exercise room. To update your local copy, do
+we will post them in the exercise room and on this [Google Doc](https://docs.google.com/document/d/1g3b2e7wf3mWaIZ4U6MkNR5B4fQuO71y6Q341LGs45HQ/edit?usp=sharing). To update your local copy, do
 ```
     cd ~/csc-exercises
     git pull
@@ -142,10 +136,6 @@ by looking for the
 <a href="https://github.com/bobjacobsen/csc-exercises/releases">CSC-2022</a> release tag.
 
 ## General notes:
-
-These exercises involve some minimal Java, Python and/or C++ programming.
-We recommend that you arrange yourself in groups so that somebody in
-each group has at least a little experience with Java, Python and/or C++.
 
 Note that the instructions for these exercises are written for a Bash-type shell.  If you use a C-type shell:
 <OL>
@@ -189,13 +179,13 @@ For more information on valgrind, see their
 <a href="http://valgrind.org/docs/">documentation page</a>.
 
 Information on Git:
-<ul>
-<li>The <a href="https://www.kernel.org/pub/software/scm/git/docs/">detailed Git documentation</a>.
-<li>Lots of <a href="http://gitready.com">questions and answers</a> on Git usage.
-<li>A writeup on how to <a href="https://git.wiki.kernel.org/index.php/GitSvnCrashCourse">convert your SVN thinking</a> to Git;
+
+ - The <a href="https://www.kernel.org/pub/software/scm/git/docs/">detailed Git documentation</a>.
+ - Lots of <a href="http://gitready.com">questions and answers</a> on Git usage.
+ - A writeup on how to <a href="https://git.wiki.kernel.org/index.php/GitSvnCrashCourse">convert your SVN thinking</a> to Git;
 see also a
 <a href="http://git.or.cz/course/svn.html">slightly older but more readable version</a>.
-</ul>
+
 The web has lots of talks and tutorials on more advanced Git topics.
 
 </body>

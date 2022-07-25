@@ -24,4 +24,6 @@ CSC/CSC
 # specific build artifacts
 CSC/TestSumPrimesCpp/SumPrimes
 CSC/TestSumPrimesCpp/TestSumPrimes
+CSC/TestSumPrimesCpp/refactored/SumPrimes
+CSC/TestSumPrimesCpp/refactored/TestSumPrimes
 
