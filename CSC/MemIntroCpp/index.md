@@ -1,9 +1,6 @@
 ## MemIntroCpp: Testing for C++ Memory Faults
 
-Reminder: If there's been a correction to this exercise posted,
-update your local copy via
-<A HREF="index.html#corrections">these instructions</a>
-before proceeding.
+Reminder: If there's been a correction to this exercise posted, update your local copy via [these instructions](https://docs.google.com/document/d/1g3b2e7wf3mWaIZ4U6MkNR5B4fQuO71y6Q341LGs45HQ/edit?usp=sharing) before proceeding.
 
 Goal: Gain some experience with types of memory faults and tools that can help with them.
 
@@ -65,12 +62,6 @@ Your table should look something like this. (We'll fill out the right 3 columns 
 <tr><td>...</td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>Twelve</td><td>12, then 11</td><td>??</td><td></td><td></td><td></td></tr>
 </table>
-
-|Name|Expected Output|Errors|Run|MALLOC set|valgrind|
-|----|---------------|----------|----------|--------|
-|One |1              | None     |          |        |
-|Two |2              | ???      |          |        |
-|... |...            |          |          |        |
 
 Once you have your list, run each of the programs and see if the program's results agree with your predictions.
 

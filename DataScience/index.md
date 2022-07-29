@@ -97,6 +97,16 @@ If you want to run these on your own machine, first install Jupyter Notebooks.  
 
 Then checkout the exercise material to your machine. During the CERN School, please use the head of the `master` branch.  After the School is over, you can checkout the `CSC2022` tag to get exactly these exercises.
 
+### Files
+
+An updated PDF file is available for the
+<a href="https://indico.cern.ch/event/1125271/contributions/4975770/">lectures</a> in Indico.
+
+We continually update the exercises in GitHub.
+After the School is complete, you can get the specific version we used
+by looking for the
+<a href="https://github.com/bobjacobsen/csc-exercises/releases/CSC-2002">CSC-2022</a> release tag.
+
 
 ### Documentation
 

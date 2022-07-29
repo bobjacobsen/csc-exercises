@@ -98,17 +98,17 @@ People with experience programming C and C++ close to the hardware might find th
 
 ## Code Management
 
+Depending on your level of experience, these are all optional.  People who just use `git` by recipe or want a better understanding of the basics, including how to use it locally for your own individual work, would probably benefit most from the first two.  People with more experience might find the more advanced topics in the 2nd two interesting.
 
-G1: <A HREF="exG1.html">exG1.html</a>
-Simple use of git - basic
+N: <A HREF="GitBasics1/intro.md">GitBasics1</a> Simple use of git - basic introduction, so if you have git experience you might want to quickly read through this for things you haven't seen (do you know what `git add --patch` does?)
 
+N: <A HREF="GitBasics2/index.md">GitBasics2</a> Demonstration of Git branching - also basic. Good introduction for people who haven't done much branching and merging on their own, but optional for people who have.
 
-G2: <A HREF="exG2.html">exG2.html</a>
-Experience with Git branching - intermediate
+N: <A HREF="GitBisect/index.md">GitBisect</a> Introduction to the use of `git bisect` to track down where an error was introduced, `git blame` to know who to consult about a fix, and your options for handling the error.
 
+N: <A HREF="GitHeadBanging/index.md">GitHeadBanging</a> You've committed something that maybe you shouldn't.  What are your options now, beyond the XKCD "delete and download a new one"?
 
-
-
+(`git rebase` needs to be here somewhere; from G3 - can it rebase away the error in Bisect?)
 
 
 
@@ -126,14 +126,13 @@ and then refresh your web browser windows to pick up the new instructions.
 ## Files
 
 Updated PDF files are available for
-<a href="https://indico.cern.ch/event/769356/contributions/3197066/">lecture 1</a> and
-<a href="https://indico.cern.ch/event/769356/contributions/3197063/">lecture 2</a> in Indico.
-
+<a href="https://indico.cern.ch/event/1125271/contributions/4723302/">lecture 1</a> and
+<a href="https://indico.cern.ch/event/1125271/contributions/4723247/">lecture 2</a> in Indico.
 
 We continually update the exercises in GitHub.
 After the School is complete, you can get the specific version we used
 by looking for the
-<a href="https://github.com/bobjacobsen/csc-exercises/releases">CSC-2022</a> release tag.
+<a href="https://github.com/bobjacobsen/csc-exercises/releases/CSC-2022">CSC-2022</a> release tag.
 
 ## General notes:
 

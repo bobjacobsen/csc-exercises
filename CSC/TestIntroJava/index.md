@@ -1,20 +1,9 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
-<html>
-<head>
-	<title>Introduction to Java Testing with JUnit</title>
-</head>
-<body>
-<h1>ntroduction to Java Testing with JUnit</h1>
+## Introduction to Java Testing with JUnit
 
-Reminder: If there's been a correction to this exercise posted,
-update your local copy via
-<A HREF="../index.html#corrections">these instructions</a>
-before proceeding.
+Reminder: If there's been a correction to this exercise posted, update your local copy via [these instructions](https://docs.google.com/document/d/1g3b2e7wf3mWaIZ4U6MkNR5B4fQuO71y6Q341LGs45HQ/edit?usp=sharing) before proceeding.
 
-<P>
 Goal: Get a feel for how tests can help you develop better code faster
-<P>
+
 First, do some setup:
 
 <CODE><PRE>
@@ -58,7 +47,3 @@ Note the basic structure in the file
 Fix the broken tests and get the tests to pass.  (Don't put a lot of time into it; you can just comment out the failing asserts) Notice the nice clean output when you do that.
 
 Now add another test method.  What do you have to change to do that?  Have it fail at first, so you know it's being run, then make it pass.
-
-</UL>
-</body>
-</html>

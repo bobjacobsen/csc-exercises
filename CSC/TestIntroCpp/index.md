@@ -2,6 +2,8 @@
 
 This is a brief introduction to the use of CppUnit to test C++ code.
 
+Reminder: If there's been a correction to this exercise posted, update your local copy via [these instructions](https://docs.google.com/document/d/1g3b2e7wf3mWaIZ4U6MkNR5B4fQuO71y6Q341LGs45HQ/edit?usp=sharing) before proceeding.
+
 (It also makes sure your system is set up for later exercises)
 
 First, do some setup:

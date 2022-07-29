@@ -1,20 +1,9 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
-<html>
-<head>
-	<title>Testing SumPrimes in Java</title>
-</head>
-<body>
-<h1>Testing SumPrimes in Java</h1>
+## Testing SumPrimes in Java
 
-Reminder: If there's been a correction to this exercise posted,
-update your local copy via
-<A HREF="../index.html#corrections">these instructions</a>
-before proceeding.
+Reminder: If there's been a correction to this exercise posted, update your local copy via [these instructions](https://docs.google.com/document/d/1g3b2e7wf3mWaIZ4U6MkNR5B4fQuO71y6Q341LGs45HQ/edit?usp=sharing) before proceeding.
 
-<P>
 Goal: Gain familiarity with a typical test framework
-<P>
+
 First, set up the local environment:
  <CODE><PRE>
    cd TestingIntroJava
@@ -27,14 +16,11 @@ To compile and run it, hopefully printing the sum of primes in the 1st 7 integer
    ./build
    java SumPrimes 7
  </PRE></code>
-(As we discussed in class, the original code doesn't work correctly.)
-<p>
-If you want to see the actual compilation commands used, look inside the "build" file.
-Note that this is just recompiling everything and leaving the resulting machine-readable files in the current directory.
-This is a fine approach in a simple project like this exercise;
-larger projects will use some form of "make" tool to do this smarter and more efficiently.
 
- <P>
+(As we discussed in class, the original code doesn't work correctly.)
+
+If you want to see the actual compilation commands used, look inside the "build" file. Note that this is just recompiling everything and leaving the resulting machine-readable files in the current directory. This is a fine approach in a simple project like this exercise; larger projects will use some form of "make" tool to do this smarter and more efficiently.
+
 The file TestSumPrimes.java contains the code to setup JUnit, plus a single test.
 Take a look at it, and see if you understand what it contains.
 You can run it with
@@ -45,7 +31,7 @@ You can run it with
 
 In its initial form, the test just makes sure that you can create a SumPrimes object, and passes.
 That gives the "OK" response.
-<P>
+
 There are commented-out tests that will check specific test cases,
 and therefore fail in the manner we discussed in lecture.
 Remove the leading // that comments out those lines, and watch the test fail when you run it:
@@ -60,25 +46,19 @@ Isn't that "FAILURES!!!" message ugly? Now fix the bug(s) (See below for hints),
 and see the lovely "OK" again.
 Finally, add a couple more tests to check other ranges.
 (The sum of primes from 1 to 20 inclusive is 77, for example)
-<P>
+
 Hints:
-<UL>
-<LI>It might be simpler to separate development
+
+ - It might be simpler to separate development
 and test of the "is N prime?" code from the "check the sum over a range" code.
 That way you can test the two parts separately.
 In the "refactored" subdirectory we've provided a version of the SumPrimes.java
 and TestSumPrimes.java files where that's been started.
-Copy those to the exercise1 directory if you'd like to see if that's an easier way to work.
+Copy those to the exercise directory if you'd like to see if that's an easier way to work.
 You might want to add additional tests to TestSumPrimes.java.
 
-<LI>It's OK for a prime number to be divisible by 1.
+ - It's OK for a prime number to be divisible by 1.
 
-<LI>If you try to divide a prime number by itself, you'll find that the remainder is zero.
+ - If you try to divide a prime number by itself, you'll find that the remainder is zero.
 
-<li>For more information on Java math routines like floor(...), round(...), sqrt(...), etc
-please see the
-<a href="http://download.oracle.com/javase/8/docs/api/java/lang/Math.html">Math class doc page</a>.
-
-</UL>
-</body>
-</html>
+<li>For more information on Java math routines like floor(...), round(...), sqrt(...), etc please see the <a href="http://download.oracle.com/javase/8/docs/api/java/lang/Math.html">Math class doc page</a>.
