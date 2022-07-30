@@ -12,7 +12,7 @@ Git. To reduce the amount of typing involved, we've got a
 for you to run that does the typing. It periodically stops to allow you to check the results in a
 separate window.
 
-<h3>Basic Operations</h3>
+### Basic Operations
 
 If you haven't done it already, you have to tell Git who you are:
 
@@ -53,7 +53,7 @@ Now hit "enter" or "return" to step through the script one section at a time.  A
  - Look at the contents.txt file
  - Refresh the gitk and gitg displays by hitting F5 or selecting "Refresh" from the menu
  - Look at the gitk and gitg displays  to see how the repository structure changes
- - and maybe do some <code>git log</code> or other commands to see the details.
+ - and maybe do some `git log` or other commands to see the details.
 
 Some brief summary information is below.
 

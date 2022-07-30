@@ -122,4 +122,5 @@ so we can take a look at it
 one done by experts.
 See (<a href="https://xkcd.com/1185/">XKCD's set of custom sorts</a>)
  - One thing to look for is unnecessary work.  In that case, you don't need to make that work faster, you should just remove it.
+ - For more info on gprof, see the man page and [the manual](https://sourceware.org/binutils/docs/gprof/).
 

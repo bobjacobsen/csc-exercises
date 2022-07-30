@@ -1,9 +1,6 @@
-## ProfileStatsJava: Practice tuning a small application<
+## ProfileStatsJava: Practice tuning a small application
 
-Reminder: If there's been a correction to this exercise posted,
-update your local copy via
-<A HREF="index.html#corrections">these instructions</a>
-before proceeding.
+Reminder: If there's been a correction to this exercise posted, update your local copy via [these instructions](https://docs.google.com/document/d/1g3b2e7wf3mWaIZ4U6MkNR5B4fQuO71y6Q341LGs45HQ/edit?usp=sharing) before proceeding.
 
 
 Goal: Get some practice improving the performance of an application
@@ -90,24 +87,23 @@ How much longer should that take?  How should finding the median scale with numb
 On Bob's laptop, the original program scales like:
 <table border="1">
 <tr><th>Run</th><th>CPU sec</th</tr>
-<tr><td>time ./run 500 501</td><td>3.7</td></tr>
-<tr><td>time ./run 500 1001</td><td>13.7</td></tr>
-<tr><td>time ./run 500 2001</td><td>53</td></tr>
-<tr><td>time ./run 500 3001</td><td>124</td></tr>
-<tr><td>time ./run 500 4001</td><td>214</td></tr>
+<tr><td>time ./run 500 501</td><td>6.6</td></tr>
+<tr><td>time ./run 500 1001</td><td>26</td></tr>
+<tr><td>time ./run 500 2001</td><td>96</td></tr>
+<tr><td>time ./run 500 4001</td><td>332</td></tr>
 </table>
 
 Is this scaling like the N ln(N) you'd expect?
 
 Students at previous CSCs have managed to push the performance:
 
- - If "time ./run 500 1001" with the original code takes about 20 seconds or so
+ - If "time ./run 500 1001" with the original code takes about 10 seconds or so
  - then "time ./run 500 100001", our goal, takes way too long to wait for with the original code.
- - Basic profiling work should get you to about 120-135 seconds for the "time ./run 500 100001" goal
- - Under 100 seconds requires care, but is possible
- - Under 40 seconds has been done but requires extraordinary effort. Is that worth it?
+ - Basic profiling work should get you to about 50-60 seconds for the "time ./run 500 100001" goal
+ - Under 45 seconds requires care, but is possible
+ - Under 30 seconds has been done but requires extraordinary effort. Is that worth it?
 
-Note that these are with one specific laptop: Since you're using your own laptop,
+Note that these are with one specific machine: Since you're using a different one,
 take the timing from the "time ./run 500 1001" and use ratios from that time:  "It got a factor of two faster!"
 
 But for this improved performance to matter, remember that the program must still be correct!
@@ -124,9 +120,7 @@ so we can take a look at it
 
 ## Hints
 
- - It's really hard to write your own sort algorithm and have it be faster than one done by experts. See  (<a href="https://xkcd.com/1185/">XKCD's set of custom sorts</a>)
+ - It's really hard to write your own sort algorithm and have it be faster than one done by experts. See [XKCD's set of custom sorts](https://xkcd.com/1185/).
  - One thing to look for is unnecessary work.  In that case, you don't need to make it faster, you should just remove it.
  - Note: we deliberately disable optimization and the Java Just In Time (JIT) compiler to make this a tougher test of algorithm optimization.  If you turn those back on by running with defaults, your program will be a factor of 5-10 faster, but that doesn't count as improving the algorithm.
  -  Note: Java checks every array reference, which means they can be slow since we're not using the just-in-time compiler here. It also checks the stack when leaving a block, which can also be slow.
-</body>
-</html>

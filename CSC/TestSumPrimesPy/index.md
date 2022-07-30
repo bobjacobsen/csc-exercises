@@ -12,7 +12,7 @@ First, set up the local environment:
 You'll find our sum-of-primes example in the file SumPrimes.py.  It's been recast as a Python function. To compile and run it, hopefully printing the sum of primes in the 1st 7 integers, do:
 
 ```
-   % python SumPrimes.py
+   % python3 SumPrimes.py
    >>> from SumPrimes import sumPrimes
 ```
 and then invoke it interactively
@@ -28,7 +28,7 @@ Take a look at it, and see if you understand what it contains.
 You can run it with
 
 ```
-  python TestSumPrimes.py
+  python3 TestSumPrimes.py
 ```
 
 In its initial form, the test just invokes sumPrimes(1) and makes sure it returns 0. This passes and gives the "OK" response.
@@ -37,7 +37,7 @@ There are commented-out tests that will check specific test cases, and therefore
 
 ```
   (edit the TestSumPrimes.java file)
-  python TestSumPrimes.py
+  python3 TestSumPrimes.py
 ```
 
 Isn't that "FAILED" message ugly? Now fix the bug(s) (See below for hints),

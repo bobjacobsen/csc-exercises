@@ -8,17 +8,17 @@ PyUnit is a unit test framework for Python code. PyUnit is the familiar name for
 
 Start by doing some set up:
 
-<CODE><PRE>
+```
     cd TestIntoPy
     source setup.sh
-</PRE></CODE>
+```
 
 Let's run a very simple set of tests for the existing
 Python string routines:
 
-<CODE><PRE>
-    python -m unittest TestStringMethods
-</PRE></CODE>
+```
+    python3 -m unittest TestStringMethods
+```
 
 This should print three dots while it runs, then tell you something like "Ran 3 tests in 0.000s"
 
@@ -30,9 +30,11 @@ Un-comment that and run the tests again to see what a failed test looks like.
 You should see an "F" instead of a period, plus information about what failed and where.
 
 You can also use module, class and method syntax to run just one specific test method:
-<CODE><PRE>
-    python -m unittest TestStringMethods.TestStringMethods.test_split
-</PRE></CODE>
+
+```
+    python3 -m unittest TestStringMethods.TestStringMethods.test_split
+```
+
 This can be really useful if you've just fixed a problem and want to return the specific
 test that had caught it.
 
@@ -45,12 +47,11 @@ See if that all looks OK.
 Even though it's very simple, it would be good to test it,
 so the TestSampleClass.py test class was prepared.
 To run it,
-<CODE><PRE>
-    python TestSampleClass.py
-</PRE></CODE>
+```
+    python3 TestSampleClass.py
+```
 
 It will fail.  Find out what's going wrong and fix it so the tests run cleanly.
-
 
 ### For more information
 

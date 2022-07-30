@@ -6,37 +6,37 @@ Goal: Get a feel for how tests can help you develop better code faster
 
 First, do some setup:
 
-<CODE><PRE>
+```
     cd TestIntoJava
     source setup.sh
-</PRE></CODE>
+```
 
 Then look at the TestExample.java file.  You'll see a series of tests that are structured like:
 
-<CODE><PRE>
+```
     public void testEquals() {
         Assert.assertEquals( 1, 1 );
         Assert.assertEquals( 2, 2 );
         Assert.assertEquals( 1, 2 );
     }
-</PRE></CODE>
+```
 
 By inspection, some of those assertions are expected to pass, some to fail.
 
 To run the tests:
 
-<CODE><PRE>
+```
     ./build
     java TestExample
-</PRE></CODE>
+```
 
 
 This should provide a bunch of information on the passing and failing tests, then finish with something like:
 
-<CODE><PRE>
+```
 FAILURES!!!
 Tests run: 4,  Failures: 4,  Errors: 0
-</PRE></CODE>
+```
 
 Note the basic structure in the file
  - There are multiple test methods

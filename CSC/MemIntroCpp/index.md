@@ -99,6 +99,3 @@ Next, rerun each program under the scrutiny of valgrind:
  </PRE></code>
 
 Look at each output carefully to see what error(s) valgrind has found.  Did it find any that you missed? Did it miss any that you found?  It not only checks for validity of references, it also checks for a number of different kinds of memory leaks.
-
-</body>
-</html>

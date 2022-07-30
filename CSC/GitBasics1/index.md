@@ -43,7 +43,7 @@ Now we create a new Git repository with nothing in it:
     git config --global color.ui true
 ```
 
-The first line creates the repository in a <code>.git</code> subdirectory. Take a moment and look at that. The second line turns on coloring in the output from Git.  Some people like colored output, some hate it; if you don't want it, omit that line or repeat is with false instead of true.
+The first line creates the repository in a `.git` subdirectory. Take a moment and look at that. The second line turns on coloring in the output from Git.  Some people like colored output, some hate it; if you don't want it, omit that line or repeat is with false instead of true.
 
 More usefully, you can ask Git about the status:
 
@@ -103,7 +103,7 @@ You can tell Git to automatically do the staging with the -a
 option on the commit command which will commit all changed files:
 
 ```
-    git commit -a -m"Added lines at end"
+    git commit -a -m"Added lines at end" .
 ```
 
 which does the add automatically for all changed files. You can also specify
@@ -113,7 +113,7 @@ the files you want to commit on the command line, although that can get complica
 ```
 
 Finally, you
-can use the <code>git add</code> command to manually select the specific files to be included. "git add" means "this file has interesting contents right now".
+can use the `git add` command to manually select the specific files to be included. "git add" means "this file has interesting contents right now".
 
 Add some lines at the top of the hello.txt file, and commit that single file:
 
@@ -135,15 +135,15 @@ in a file was changed and by whom:
 
 ```
 $ git blame hello.txt
-f9480b5d (Bob Jacobsen 2015-04-15 08:57:30 -0700 1) Several lines
-f9480b5d (Bob Jacobsen 2015-04-15 08:57:30 -0700 2) added at top
-f9480b5d (Bob Jacobsen 2015-04-15 08:57:30 -0700 3) and committed third.
-f9480b5d (Bob Jacobsen 2015-04-15 08:57:30 -0700 4)
-^795658b (Bob Jacobsen 2015-04-15 08:48:08 -0700 5) Initial file: Hello World!
-1f135c09 (Bob Jacobsen 2015-04-15 08:55:09 -0700 6)
-1f135c09 (Bob Jacobsen 2015-04-15 08:55:09 -0700 7) Several lines
-1f135c09 (Bob Jacobsen 2015-04-15 08:55:09 -0700 8) added at end and
-1f135c09 (Bob Jacobsen 2015-04-15 08:55:09 -0700 9) committed second.
+f9480b5d (Bob Jacobsen 2019-04-15 08:57:30 -0700 1) Several lines
+f9480b5d (Bob Jacobsen 2019-04-15 08:57:30 -0700 2) added at top
+f9480b5d (Bob Jacobsen 2019-04-15 08:57:30 -0700 3) and committed third.
+f9480b5d (Bob Jacobsen 2019-04-15 08:57:30 -0700 4)
+^795658b (Bob Jacobsen 2019-04-15 08:48:08 -0700 5) Initial file: Hello World!
+1f135c09 (Bob Jacobsen 2019-04-15 08:55:09 -0700 6)
+1f135c09 (Bob Jacobsen 2019-04-15 08:55:09 -0700 7) Several lines
+1f135c09 (Bob Jacobsen 2019-04-15 08:55:09 -0700 8) added at end and
+1f135c09 (Bob Jacobsen 2019-04-15 08:55:09 -0700 9) committed second.
 ```
 
 The number at the front is a revision ID, which can be used to get additional
@@ -160,13 +160,13 @@ section on
 Let's start over and make a clean local environment with a new repository:
 
 ```
-    cd
+    cd ..
     rm -rf exerciseG1
     mkdir exerciseG1
     cd exerciseG1
     git init
     git config --global color.ui true
-    echo 'Initial file: Hello World!' &gt; hello.txt
+    echo 'Initial file: Hello World!' > hello.txt
     git add hello.txt
     git commit -m"Commit hello.txt as first file in repository"
 ```
@@ -175,9 +175,9 @@ Let's start over and make a clean local environment with a new repository:
 spend the time to understand it.  After each command, go through the output and see how it
 relates to what's in the working directory and .git subdirectory)
 
-The <code>git branch</code> command is a general branch management tool for Git and can do several different things.
+The `git branch` command is a general branch management tool for Git and can do several different things.
 We'll cover the basic ones that you'll use most: listing branches, creating branches and deleting branches.
-We will also cover basic <code>git checkout</code> here which switches you between your branches.
+We will also cover basic `git checkout` here which switches you between your branches.
 
 First, you can list your available branches:
 
@@ -185,7 +185,7 @@ First, you can list your available branches:
     git branch
 ```
 
-Without arguments, <code>git branch</code> will list out the local branches that you have.
+Without arguments, `git branch` will list out the local branches that you have.
 The branch that you are currently working on will have a star next to it and if you have coloring turned on,
 will show the current branch in green. After initializing the repository, you should see:
 
@@ -195,15 +195,15 @@ $ git branch
 ```
 
 This means that we have a 'master' branch and we are currently on it.
-When you run <code>git init</code> it will automatically create a 'master' branch for you by default,
+When you run `git init` it will automatically create a 'master' branch for you by default,
 however there is nothing special about the name -
 you don't actually have to have a 'master' branch
 but since it's the default that is created, most projects do.
 
-To create a new branch, use the command <code>git branch (branchname)</code>
+To create a new branch, use the command `git branch (branchname)`
 
 So let's start by creating a new branch called "testing" and switching to it.
-You can do that by running <code>git branch (branchname)</code>.
+You can do that by running `git branch (branchname)`.
 
 ```
   git branch testing
@@ -261,7 +261,7 @@ We can switch back to the 'master' branch and see them re-appear.
     ls
 ```
 
-"<code>git branch</code>" with no arguments shows the branches:
+"`git branch`" with no arguments shows the branches:
 
 ```
 $ git branch
@@ -280,7 +280,7 @@ $ git branch -v
 In most cases you will want to switch to the newly-created branch immediately,
 so you can do work in it and then merge it into a branch that only contains stable work
 (such as 'master') at a later point when the work in your new context branch is stable.
-You can do this pretty easily with <code>git branch newbranch; git checkout newbranch</code>,
+You can do this pretty easily with `git branch newbranch; git checkout newbranch`,
 but Git gives you a shortcut for this via the -b flag to checkout:
 
 ```
@@ -329,7 +329,7 @@ and if you're forced to switch back to a more stable context your work in progre
 is easy to put aside and then come back to.
 
 To delete a branch (such as the 'testing' branch in the previous example, since there is no unique work on it),
-we can run <code>git branch -d (branch)</code> to remove it.
+we can run `git branch -d (branch)` to remove it.
 
 ```
 $ git branch
@@ -349,7 +349,7 @@ But what does deleting a branch mean?  There are really two cases.
 
 First, when the branch has been merged back, perhaps into master, then
 there's nothing really special about that branch any more.  If you do
-<code>git checkout master</code> followed by <code>git merge myBranch</code>,
+`git checkout master` followed by `git merge myBranch`,
 all the changes in myBranch are now in master.  You can safely delete
 myBranch.  To find branches that have been merged, and can safely be deleted,
 do:
@@ -399,7 +399,7 @@ tell Git to do the merge, and check the results:
 You should have only two remaining files, and nothing that
 needs to be committed.
 
-Use the <code>git log</code> command to see the changes on the current (master) branch:
+Use the `git log` command to see the changes on the current (master) branch:
 
 ```
     git log
@@ -436,7 +436,7 @@ where the previous merge was just merging which files are included.)
 Look at the hello.txt file.  Both sets of edits are now present, so
 both developments have been (syntactically) merged.
 
-As merges get more complicated, the "--graph" option to <code>git log</code>
+As merges get more complicated, the "--graph" option to `git log`
 can make it easier to understand how the code has evolved.
 It shows branches and changes in a simple ASCII graph:
 
@@ -582,11 +582,10 @@ and commit the results of that edit.
 Now all is well!  If you'd like, you can also merge it back onto the development branch.
 
 There are graphical tools that can help with merging, particularly complex ones. These include:
-<ul>
-<li>git mergetool
-<li>gitk --merge
-<li>For emacs, gitsum.el by Christian Neukirchan
-</ul>
+
+ - git mergetool
+ - gitk --merge
+ - For emacs, gitsum.el by Christian Neukirchan
 
 ### Selective Staging
 
@@ -603,7 +602,7 @@ right, commit everything, and move to the next thing.
 But what if you're working on multiple things at once, and want to commit just part of the
 changes in your working directory?
 
-Often you want to control what's committed at the level of whole files. Git can do that either directly on a <code>git commit -a</code> command, or via the use of <code>git add</code>.
+Often you want to control what's committed at the level of whole files. Git can do that either directly on a `git commit -a` command, or via the use of `git add`.
 
 But what if you have changes within a single file, some of which are to be included
 and some not?  With older systems, that's usually a pain to manage, but Git's staging metaphor makes it simple:  Only stage the changes you want to.
@@ -648,9 +647,9 @@ the bottom
 EOF
 ```
 
-The "<code>git diff</code>" command will show you the changes.
+The `git diff` command will show you the changes.
 
-To control in detail what's being staged, use the "--patch" option on the <code>git add</code>
+To control in detail what's being staged, use the "--patch" option on the `git add`
 command (without --patch, it includes all the changes in the file).
 
 ```
@@ -681,7 +680,7 @@ git diff
 ```
 
 
-It's important to remember that <code>git commit</code> moves whatever has been
+It's important to remember that `git commit` moves whatever has been
 staged into the repository, and doesn't do anything to changes that haven't been staged.
 Try this sequence:
 
@@ -691,9 +690,9 @@ git add hello.txt
 echo '2nd new line' &gt;&gt; hello.txt
 ```
 
-If we now do a <code>git commit</code>, what will be put in the repository?
+If we now do a `git commit`, what will be put in the repository?
 
-Do a <code>git status</code> and a <code>git diff</code> and see if you understand their output.
+Do a `git status` and a `git diff` and see if you understand their output.
 
 The ability to easily control what gets committed is particularly useful for people
 who are responsible for accumulating changes from lots of developers. Some experiments
@@ -719,11 +718,11 @@ To put a tag, say "v1.0",  on the current contents of the current branch in the 
 git tag -a -m'Signed off by Bob, time to celebrate!' v1.0
 ```
 
-The <code>-a</code> tells Git that you want to "annotate" the tag.
+The `-a` tells Git that you want to "annotate" the tag.
 The -m option lets you put that on the same line, or leave -m
 off to have an editor window open for longer comments.
 
-<code>git log</code> will show tags in addition to everything else.  There are options that control the format,
+`git log` will show tags in addition to everything else.  There are options that control the format,
 see the documentation, but a useful one is:
 
 ```

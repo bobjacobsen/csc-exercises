@@ -1,2 +1,2 @@
 #! /bin/bash
-./csc_log TestSumPrimesPy
+../csc_log TestSumPrimesPy

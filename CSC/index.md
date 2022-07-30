@@ -23,14 +23,14 @@ git clone https://github.com/bobjacobsen/csc-exercises.git
 ```
 Do a bit of setup (this only has to be done once):
 ```
-source csc-exercises/CSC/setup
+cd csc-exercises/CSC
+source setup
 ```
 
 Finally, tell us who makes up your team, so we can find you later with updates:
 ```
 ./csc_log team "One Student Name" "Other Student Name"
 ```
-
 
 ## About the Exercises
 
@@ -58,50 +58,43 @@ Each is a little bit different. Please do
 
 3: [TestIntroCpp](TestIntroCpp/index.md) - brief demo of using CppUnit for C++ code testing. Will benefit from a bit of C++ experience with header files, etc, but can be done without it.
 
-We then move forward to a more significant example, the SumPrimes code from lecture.  Do one or two of the following. (If you speak all three languages, you could do all three, but that's very optional)
+We then move forward to a more significant example, the SumPrimes code from lecture.  Do one or two of the following. (If your team speaks all three languages, you could do all three, but that's optional)
 
-4: [TestSumPrimesJava](TestSumPrimesJava/index.md) -
+4: [TestSumPrimesJava](TestSumPrimesJava/index.md) - SumPrimes in Java
 
-5: [TestSumPrimesPy](TestSumPrimesPy/index.md) -
+5: [TestSumPrimesPy](TestSumPrimesPy/index.md) - SumPrimes in Python
 
-6: [TestSumPrimesCpp](TestSumPrimesCpp/index.md) -
-
+6: [TestSumPrimesCpp](TestSumPrimesCpp/index.md) - SumPrimes in C++
 
 ## Performance Profiling
 
-They demonstrate how tools, even simple ones can help you focus on in where time is really being spent.
+These demonstrate how tools, even simple ones can help you focus on in where time is really being spent.
 We recommend you do at least one of these.
 If you've already worked with performance tools, you can perhaps skip these; if not, they might get you thinking a bit.
 
+7: [ProfileStatsJava](ProfileStatsJava/index.md) Practice tuning a small Java program
 
-7: [ProfileStatsJava](ProfileStatsJava/index.md) Practice tuning a small Java application
-
-8: [ProfileStatsCpp](ProfileStatsCppindex.md) Practice tuning a small C++ application
+8: [ProfileStatsCpp](ProfileStatsCppindex.md) Practice tuning a small C++ program
 
 
 ## Memory Issues
 
 People with experience programming C and C++ close to the hardware might find this a little basic (though the valgrind tool can be  useful even for experts). Everybody else should definitely do this one to learn more about how memory really works.
 
-5: [MemIntroCpp](MemIntroCpp/index.md) - Testing for C++ memory faults
+9: [MemIntroCpp](MemIntroCpp/index.md) - Testing for C++ memory faults
 
--- -- --
-
-## Code Management
 
 Depending on your level of experience, these are all optional.  People who just use `git` by recipe or want a better understanding of the basics, including how to use it locally for your own individual work, would probably benefit most from the first two.  People with more experience might find the more advanced topics in the 2nd two interesting.
 
-N: <A HREF="GitBasics1/intro.md">GitBasics1</a> Simple use of git - basic introduction, so if you have git experience you might want to quickly read through this for things you haven't seen (do you know what `git add --patch` does?)
+10: [GitBasics1](GitBasics1/index.md) Simple use of git - basic introduction, so if you have git experience you might want to quickly read through this for things you haven't seen (do you know what `git add --patch` does?)
 
-N: <A HREF="GitBasics2/index.md">GitBasics2</a> Demonstration of Git branching - also basic. Good introduction for people who haven't done much branching and merging on their own, but optional for people who have.
+N: [GitBasics2](GitBasics2/index.md) Demonstration of Git branching - also basic. Good introduction for people who haven't done much branching and merging on their own, but optional for people who have.
 
 N: <A HREF="GitBisect/index.md">GitBisect</a> Introduction to the use of `git bisect` to track down where an error was introduced, `git blame` to know who to consult about a fix, and your options for handling the error.
 
 N: <A HREF="GitHeadBanging/index.md">GitHeadBanging</a> You've committed something that maybe you shouldn't.  What are your options now, beyond the XKCD "delete and download a new one"?
 
 (`git rebase` needs to be here somewhere; from G3 - can it rebase away the error in Bisect?)
-
-
 
 ## Corrections
 
