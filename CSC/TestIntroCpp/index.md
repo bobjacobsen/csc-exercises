@@ -9,7 +9,7 @@ Reminder: If there's been a correction to this exercise posted, update your loca
 First, do some setup:
 
 ```
-    cd exercise2
+    cd TestIntoCpp
     source setup.sh
 ```
 

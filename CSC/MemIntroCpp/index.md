@@ -11,14 +11,13 @@ particularly the
 
 First, create a local copy of the exercise files.
 ```
-    cd
-    ./csc_get exercise5.tar
-    tar xf exercise5.tar
-    cd exercise5
+    cd MemIntroCpp
     source setup.sh
 ```
 
-This will provide twelve simple C++ programs in files named "one.cpp" through "twelve.cpp".
+(Note to people using this on their own machines: This will overwrite your ~/.valgrind configuration file if you already have one)
+
+Three are twelve simple C++ programs in files named "one.cpp" through "twelve.cpp".
 
 To run the first one, do:
 
@@ -53,7 +52,7 @@ Your table should look something like this. (We'll fill out the right 3 columns 
 <tr>
 <th>Name</th><th>Expected<br>Output</th>
 <th>Errors To <br/>Be Captured</th>
-<th>Run with<br/>MALLOC_CHECK_<br/>blank</th>
+<th>Run with<br/>MALLOC_CHECK_<br/>= 0</th>
 <th>Run wtih<br/>MALLOC_CHECK_<br/>= 1</th>
 <th>Run with<br/>Valgrind</th>
 </tr>

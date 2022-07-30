@@ -67,26 +67,17 @@ We then move forward to a more significant example, the SumPrimes code from lect
 6: [TestSumPrimesCpp](TestSumPrimesCpp/index.md) -
 
 
-
--- -- --
-
-
 ## Performance Profiling
 
-Both of these exercises are optional.   They demonstrate how tools, even simple ones
-can help you focus on in where time is really being spent.   If you've already worked with performance tools,
-you can certainly skip these; if not, they might get you thinking a bit.
+They demonstrate how tools, even simple ones can help you focus on in where time is really being spent.
+We recommend you do at least one of these.
+If you've already worked with performance tools, you can perhaps skip these; if not, they might get you thinking a bit.
 
 
-3: <A HREF="ex3.html">ex3.html</a> Demonstration of profiling tool - optional
+7: [ProfileStatsJava](ProfileStatsJava/index.md) Practice tuning a small Java application
 
+8: [ProfileStatsCpp](ProfileStatsCppindex.md) Practice tuning a small C++ application
 
-4: <A HREF="ex4.html">ex4.html</a> Practice tuning a small Java application - optional
-
-4C: <A HREF="ex4C.html">ex4C.html</a> Practice tuning a small C++ application - optional
-
-
--- -- --
 
 ## Memory Issues
 

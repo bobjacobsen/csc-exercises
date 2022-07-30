@@ -5,6 +5,7 @@ CSC.tar
 *.class
 *~
 a.out
+gmon.out
 *.o
 *.so
 .DS_Store

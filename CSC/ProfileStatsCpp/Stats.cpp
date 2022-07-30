@@ -6,6 +6,7 @@
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <algorithm>
 #include <unistd.h>
 #include <math.h>
 
