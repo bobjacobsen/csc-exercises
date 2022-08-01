@@ -5,17 +5,17 @@ Reminder: If there's been a correction to this exercise posted, update your loca
 Goal: Gain familiarity with a typical test framework
 
 First, set up the local environment:
- <CODE><PRE>
-   cd TestingIntroJava
+```
+   cd TestSumPrimesJava
    source setup.sh
- </PRE></code>
+```
 You'll find our sum-of-primes example in the file SumPrimes.java.  It's been recast as a Java class.
 To compile and run it, hopefully printing the sum of primes in the 1st 7 integers, do:
 
- <CODE><PRE>
+```
    ./build
    java SumPrimes 7
- </PRE></code>
+```
 
 (As we discussed in class, the original code doesn't work correctly.)
 
@@ -25,9 +25,9 @@ The file TestSumPrimes.java contains the code to setup JUnit, plus a single test
 Take a look at it, and see if you understand what it contains.
 You can run it with
 
- <CODE><PRE>
+```
   java TestSumPrimes
- </PRE></code>
+```
 
 In its initial form, the test just makes sure that you can create a SumPrimes object, and passes.
 That gives the "OK" response.
@@ -36,11 +36,11 @@ There are commented-out tests that will check specific test cases,
 and therefore fail in the manner we discussed in lecture.
 Remove the leading // that comments out those lines, and watch the test fail when you run it:
 
- <CODE><PRE>
+```
   (edit the TestSumPrimes.java file)
   ./build
   java TestSumPrimes
- </PRE></code>
+```
 
 Isn't that "FAILURES!!!" message ugly? Now fix the bug(s) (See below for hints),
 and see the lovely "OK" again.
@@ -61,4 +61,4 @@ You might want to add additional tests to TestSumPrimes.java.
 
  - If you try to divide a prime number by itself, you'll find that the remainder is zero.
 
-<li>For more information on Java math routines like floor(...), round(...), sqrt(...), etc please see the <a href="http://download.oracle.com/javase/8/docs/api/java/lang/Math.html">Math class doc page</a>.
+ - For more information on Java math routines like floor(...), round(...), sqrt(...), etc please see the <a href="http://download.oracle.com/javase/8/docs/api/java/lang/Math.html">Math class doc page</a>.

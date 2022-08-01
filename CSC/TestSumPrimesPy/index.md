@@ -1,4 +1,4 @@
-## Testing SumPrimes in Python</title>
+## Testing SumPrimes in Python
 
 Reminder: If there's been a correction to this exercise posted, update your local copy via [these instructions](https://docs.google.com/document/d/1g3b2e7wf3mWaIZ4U6MkNR5B4fQuO71y6Q341LGs45HQ/edit?usp=sharing) before proceeding.
 
@@ -6,18 +6,18 @@ Goal: Gain familiarity with a typical test framework
 
 First, set up the local environment:
 ```
-   cd TestingIntroPython
+   cd TestSumPrimesPy
    source setup.sh
 ```
 You'll find our sum-of-primes example in the file SumPrimes.py.  It's been recast as a Python function. To compile and run it, hopefully printing the sum of primes in the 1st 7 integers, do:
 
 ```
-   % python3 SumPrimes.py
+   % python3
    >>> from SumPrimes import sumPrimes
 ```
 and then invoke it interactively
 ```
-    sumPrimes(2)
+    >>> sumPrimes(2)
 ```
 
 (As we discussed in class, the original code doesn't work correctly.)

@@ -1,4 +1,4 @@
 
 g++ Main_SumPrimes.cpp -o SumPrimes
 
-g++ -std=c++11 -lcppunit SumPrimes.cpp TestSumPrimes.cpp TestSumPrimes_Main.cpp -o TestSumPrimes
+g++ -std=c++11 -lcppunit TestSumPrimes.cpp TestSumPrimes_Main.cpp -o TestSumPrimes

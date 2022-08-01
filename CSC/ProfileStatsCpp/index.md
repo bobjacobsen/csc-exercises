@@ -1,4 +1,4 @@
-## ProfileIntroCpp: Practice tuning a small C++ application
+## ProfileStatsCpp: Practice tuning a small C++ application
 
 Reminder: If there's been a correction to this exercise posted,
 update your local copy via
@@ -10,12 +10,12 @@ Goal: Get some practice improving the performance of a C++ application
 First, do some setup:
 
 ```
-    cd ProfileIntroCpp
+    cd ProfileStatsCpp
     source setup.sh
 ```
 
 This is the equivalent of
-<a href="ProfileIntroJava.md">ProfileIntroJava</a>,
+<a href="ProfileStatsJava.md">ProfileStatsJava</a>,
 except using a basic C++ program and gprof for profiling.
 
 The directory contains a Stats class, which computes various statistical quantities from an array of integers.

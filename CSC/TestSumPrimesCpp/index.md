@@ -5,37 +5,37 @@ Reminder: If there's been a correction to this exercise posted, update your loca
 Goal: Gain familiarity with a typical test framework
 
 First, set up the local environment:
- <CODE><PRE>
-   cd TestingIntroJava
+```
+   cd TestSumPrimesCpp
    source setup.sh
- </PRE></code>
+```
 
 You'll find our sum-of-primes example in the file SumPrimes.cpp.  It's been recast as a C++ class. To compile and run it, hopefully printing the sum of primes in the 1st 7 integers, do:
 
- <CODE><PRE>
+```
    ./build
-   SumPrimes 7
- </PRE></code>
+   ./SumPrimes 7
+```
 (As we discussed in class, the original code doesn't work correctly.)
 
 If you want to see the actual compilation commands used, look inside the "build" file. Note that this is just recompiling specific files and leaving the resulting executable in the current directory. This is a fine approach in a simple project like this exercise; larger projects will use some form of "make" tool to do this smarter and more efficiently.
 
 The file TestSumPrimes.cpp contains the code to setup CppUnit, plus a single test. Take a look at it, and see if you understand what it contains. You can run it with
 
- <CODE><PRE>
+```
   ./build
-  TestSumPrimes
- </PRE></code>
+  ./TestSumPrimes
+```
 
 In its initial form, the test just makes sure that you can create a SumPrimes object, and passes. That gives the "OK" response.
 
 There are commented-out tests that will check specific test cases, and therefore fail in the manner we discussed in lecture. Remove the leading // that comments out those lines, and watch the test fail when you run it:
 
- <CODE><PRE>
+```
   (edit the TestSumPrimes.java file)
   ./build
-  TestSumPrimes
- </PRE></code>
+  ./TestSumPrimes
+```
 
 Isn't that "FAILURES!!!" message ugly? Now fix the bug(s) (See below for hints), and see the lovely "OK" again. Finally, add a couple more tests to check other ranges. (The sum of primes from 1 to 20 inclusive is 77, for example)
 

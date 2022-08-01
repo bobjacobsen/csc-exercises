@@ -7,10 +7,10 @@ Goal: Get some practice improving the performance of an application
 
 First, create a local copy of the exercise files.
 
-'''
+```
     cd ProfileStatsJava
     source setup.sh
-'''
+```
 
 The directory contains a Stats class, which computes various statistical quantities from an array of integers.
 For examples of how it's used, see the tests in the TestStats class.
@@ -23,18 +23,18 @@ Our goal is to write a program to measure the standard deviation of that fluctua
 
 To run the test suite,
 
-'''
+```
   ./build
   ./test
-'''
+```
 
 Note that the tests pass!  The Stats class is correct, but it is much too slow.
 
 The Stats program takes two arguments:
 
-'''
+```
   time ./run 500 1001
-'''
+```
 Write down how long this took, we'll use that number later. For example, your machine might take 23 user (CPU) seconds.
 
 The program throws a set of random numbers, calculates the median, and remembers that result.
@@ -52,15 +52,15 @@ You can see how this works in the main() routine in Stats.java.
 
 To get a profile after running the program:
 
-'''
+```
   ./analysis
-'''
+```
 
 The goal is to reduce the total time needed to find the mean of the variance observed in each of 500 iterations of finding the median of 100,001 numbers, e.g. to print the correct stddev-median value while using the smallest possible CPU time as measured by:
 
-'''
+```
   time ./run 500 100001
-'''
+```
 
 The program doesn't need to do anything else.
 
@@ -77,9 +77,9 @@ Don't forget to recompile with ./build after changing the program!
 
 Once you've fixed the examples of poor coding, try increasing the sample size by a factor of 4, e.g.
 
-'''
+```
   time ./run 500 4001
-'''
+```
 
 How much longer should that take?  How should finding the median scale with number of samples?  Is that what you observe? If not, can you find and fix the problem?
 

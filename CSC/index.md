@@ -16,7 +16,7 @@ Next sign into the CERN LXPlus8 cluster:
 ssh -X youraccountname@lxplus8.cern.ch
 ```
 
-The -X open should forward X11 windows back to your machine.  (We use LXPlus8 because we know that environment would work.  In theory, you could also work on your own machine, but you might need to do some configuration and installations)
+The -X option should forward X11 windows back to your machine.  (We use LXPlus8 because we know that environment would work.  In theory, you could also work on your own machine, but you'll probably need to do some configuration and installations)
 
 Then get a copy of the exercise files:
 ```
@@ -76,7 +76,7 @@ If you've already worked with performance tools, you can perhaps skip these; if 
 
 7: [ProfileStatsJava](ProfileStatsJava/index.md) Practice tuning a small Java program
 
-8: [ProfileStatsCpp](ProfileStatsCppindex.md) Practice tuning a small C++ program
+8: [ProfileStatsCpp](ProfileStatsCpp/index.md) Practice tuning a small C++ program
 
 
 ## Memory Issues
@@ -86,17 +86,19 @@ People with experience programming C and C++ close to the hardware might find th
 9: [MemIntroCpp](MemIntroCpp/index.md) - Testing for C++ memory faults
 
 
+## Git Practice
+
 Depending on your level of experience, these are all optional.  People who just use `git` by recipe or want a better understanding of the basics, including how to use it locally for your own individual work, would probably benefit most from the first two.  People with more experience might find the more advanced topics in the 2nd two interesting.
 
-10: [GitBasics1](GitBasics1/index.md) Simple use of git - basic introduction, so if you have git experience you might want to quickly read through this for things you haven't seen (do you know what `git add --patch` does?)
+10: [GitBasics1](GitBasics1/index.md) - Simple use of git - basic introduction, so if you have git experience you might want to quickly read through this for things you haven't seen (do you know what `git add --patch` does?)
 
-N: [GitBasics2](GitBasics2/index.md) Demonstration of Git branching - also basic. Good introduction for people who haven't done much branching and merging on their own, but optional for people who have.
+11: [GitBasics2](GitBasics2/index.md) - Demonstration of Git branching - also basic. Good introduction for people who haven't done much branching and merging on their own, but optional for people who have.
 
-N: <A HREF="GitBisect/index.md">GitBisect</a> Introduction to the use of `git bisect` to track down where an error was introduced, `git blame` to know who to consult about a fix, and your options for handling the error.
+12: <A HREF="GitBisect/index.md">GitBisect</a> - Introduction to the use of `git bisect` to track down where an error was introduced, `git blame` to know who to consult about a fix, and your options for handling the error.
 
-N: <A HREF="GitHeadBanging/index.md">GitHeadBanging</a> You've committed something that maybe you shouldn't.  What are your options now, beyond the XKCD "delete and download a new one"?
+13: <A HREF="GitHeadBanging/index.md">GitHeadBanging</a> - You've committed something that maybe you shouldn't.  What are your options now, beyond the XKCD "delete and download a new one"?
 
-(`git rebase` needs to be here somewhere; from G3 - can it rebase away the error in Bisect?)
+<--- (`git rebase` needs to be here somewhere; from G3 - can it rebase away the error in Bisect?) --->
 
 ## Corrections
 
