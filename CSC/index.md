@@ -10,13 +10,15 @@ The very first step is get a partner to work with.  You can change, and teams of
 
 These exercises involve some minimal Java, Python and/or C++ programming. We recommend that you arrange yourself in groups so that somebody in each group has at least a little experience with Java, Python and/or C++.
 
+Next sign into the CERN LXPlus8 cluster:
 
-Next, get the School's virtual machine installed and running on your laptop, and then log in.
-For more information on how to do that, see the School's
-<a href="https://indico.cern.ch/event/769356/page/15184-laptop-configuration">Laptop configuration page</a>.
+```
+ssh -X youraccountname@lxplus8.cern.ch
+```
 
-Then open a Terminal window and get
-a copy of the exercise files:
+The -X open should forward X11 windows back to your machine.  (We use LXPlus8 because we know that environment would work.  In theory, you could also work on your own machine, but you might need to do some configuration and installations)
+
+Then get a copy of the exercise files:
 ```
 cd ~
 git clone https://github.com/bobjacobsen/csc-exercises.git
@@ -27,7 +29,7 @@ cd csc-exercises/CSC
 source setup
 ```
 
-Finally, tell us who makes up your team, so we can find you later with updates:
+Finally, tell us who makes up your team, so we can find you later with updates (only needed once):
 ```
 ./csc_log team "One Student Name" "Other Student Name"
 ```
