@@ -25,27 +25,26 @@ Next, create a work area:
 
 
 ```
-    cd
-   ./csc_get exG2script.sh
+    cd GitBasics2
     mkdir exerciseG2
     cd exerciseG2/
 ```
 Then run the script:
 
 ```
-    ~/ex_script.sh
+    ../ex_script.sh
 ```
 It will create a new repository for you, then stop.
 
-Open another window in which to check things, and in that do:
+Open another window in which to check things, and in that (after navigating to the CSC directory and doing `setup`) do:
 
 ```
-    cd ~/exerciseG2
+    cd GitBasics2/exerciseG2
     gitk --all &
     gitg &
 ```
 
-The `gitg` tool  might not be installed on your machine, as it's an optional component. To get the best display on gitg, select "Branches" on the left-hand side.
+The `gitg` tool  might not be installed on your machine, as it's an optional component. If it is available, select "Branches" to get the best display.
 
 Now hit "enter" or "return" to step through the script one section at a time.  At each pause,
 

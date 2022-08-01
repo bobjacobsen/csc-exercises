@@ -59,7 +59,9 @@ Your table should look something like this. (We'll fill out the right 3 columns 
 <tr><td>One</td><td>1</td><td>None</td><td></td><td></td><td></td></tr>
 <tr><td>Two</td><td>2</td><td>??</td><td></td><td></td><td></td></tr>
 <tr><td>...</td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>Twelve</td><td>12, then 11</td><td>??</td><td></td><td></td><td></td></tr>
+<tr><td>...</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>...</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Twelve</td><td>12, then 11, etc</td><td>??</td><td></td><td></td><td></td></tr>
 </table>
 
 Once you have your list,
@@ -99,17 +101,7 @@ To make running all the tests a little faster, we've provided a script that comp
 
 malloc is only involved with allocation and return of memory, and generally can't find problems with the actual memory references themselves. valgrind, on the other hand, can check every memory reference if told to. We'll try that next.
 
-First, turn off the malloc checking so it doesn't get in the way:
-```
-   export MALLOC_CHECK_=0
-```
-(the underscores are important), or if you're using a C-style shell do:
-```
-   setenv MALLOC_CHECK_ 0
-```
-(The setup scripts have already copied the necessary settings to your ~/.valgrindrc file)
-
-Next, rerun each program under the scrutiny of valgrind:
+Rerun each program under the scrutiny of valgrind:
 
  ```
    g++ -g2 one.cpp
