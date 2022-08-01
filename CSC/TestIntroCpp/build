@@ -1,2 +1,2 @@
-g++ -std=c++11 -lcppunit -lc++  *.cpp
+g++ -std=c++11 -lcppunit  *.cpp
 

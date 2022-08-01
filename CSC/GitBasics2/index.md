@@ -45,7 +45,7 @@ Open another window in which to check things, and in that do:
     gitg &
 ```
 
-To get the best display on gitg, select "Branches" on the left-hand side.
+The `gitg` tool  might not be installed on your machine, as it's an optional component. To get the best display on gitg, select "Branches" on the left-hand side.
 
 Now hit "enter" or "return" to step through the script one section at a time.  At each pause,
 

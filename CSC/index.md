@@ -21,7 +21,7 @@ a copy of the exercise files:
 cd ~
 git clone https://github.com/bobjacobsen/csc-exercises.git
 ```
-Do a bit of setup (this only has to be done once):
+Do a bit of setup (this has to be done every time you login or open a new terminal window):
 ```
 cd csc-exercises/CSC
 source setup

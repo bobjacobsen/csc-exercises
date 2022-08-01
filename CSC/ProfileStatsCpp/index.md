@@ -15,7 +15,7 @@ First, do some setup:
 ```
 
 This is the equivalent of
-<a href="ProfileIntroCpp.md">ProfileIntroCpp</a>,
+<a href="ProfileIntroJava.md">ProfileIntroJava</a>,
 except using a basic C++ program and gprof for profiling.
 
 The directory contains a Stats class, which computes various statistical quantities from an array of integers.

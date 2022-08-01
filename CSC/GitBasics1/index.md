@@ -16,9 +16,7 @@ Some resources you may want to refer to later on:
  - Lots of <a href="http://gitready.com">questions and answers</a> on Git usage.
 
 See also the
-<a href="index.html#biblio">Bibliography</a>
-linked from the
-<a href="index.html">index page</a>.
+<a href="ihttps://docs.google.com/document/d/1Jvb1zYRibzOw74VKnGsmTVfWkQcOxb_yc8JboebFDpA/edit#heading=h.dwvcizbspysp">Bibliography</a>
 
 ### Basic Operations
 
@@ -466,7 +464,7 @@ error, select "Reload", which is more reliable but slower
 on big repositories)
 
 <a href="images/gitg_021.png"><img src="images/gitg_021.png" align="right" height="20%" width="20%"/></a>
-Some people prefer the gitg tool's graphical display:
+Some people prefer the gitg tool's graphical display (if it's installed on your machine):
 
 ```
     gitg
