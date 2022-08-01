@@ -6,12 +6,21 @@ Please read this all the way through first to get a idea of the overall plan of 
 
 We use the CERN SWAN service for these exercises.  You should already have an account.
 
-To access SWAN
-(URL)
-(Login)
-(...)
-(git clone --depth 2 https://github.com/bobjacobsen/csc-exercises.git)
-Exercises are in Data Science directory
+To access SWAN, go to
+[https://swan.cern.ch](https://swan.cern.ch)
+and login using your CERN account.
+
+Leave the default configuration options and click "Start my Session" at the bottom right.
+Wait for your session to start.
+When you get to the "My Projects" screen, click the "Download project from git" link (a small cloud&arrow at the upper right) and enter
+```
+  https://github.com/bobjacobsen/csc-exercises.git
+```
+Click download _once_, then wait for the download to complete.  It might take a couple minutes. Please feel free to read ahead in the instructions!
+
+Once the download is complete, you'll see a "csc-exercises" directory.  Click that to open it and then click the "setup.ipynb" notebook to open it. That makes sure that a consistent set of necessary packages is installed so that you can do these exercises.  Click "> Run" until you get to the end (the first block will likely produce a lot of output; let it run until the cursor moves to the 2nd block) Once that's successfully done the imports in block two, you can close that window and go back to the directory listing.
+
+These exercises are in DataScience directory within the csc-exercises directory you just checked out.
 
 ## About the Exercises
 
@@ -57,17 +66,14 @@ _Textual Analysis_
 Searching and counting in a text data set.
 
 
-
 ### Intermediate
 
-These are meant to give you more experience with analysis. Please feel free to spend as much as or as little time as you'd like on these.  If you think of other questions you'd like to answer from the data, go ahead and do that! If you get stuck, look in the `solutions` directory.
+These are meant to give you more experience with analysis. Please feel free to spend as much as or as little time as you'd like on these.  If you think of other questions you'd like to answer from the data, go ahead and do that!
 
 _Movies_
 
 
-
 _Census 1 and Census 2_
-
 
 
 ### Advanced/Optional
@@ -80,15 +86,13 @@ In the `Projects` directory you will find several project subdirectories. In ord
 
 1) An examination of global demographics
 
-2) An examination of heart health and disease
+2) An examination of heart health and disease (Really Advanced, experience recommended)
 
-3) Building a movie classifier
+3) Building a movie classifier (Really Advanced, experience recommended)
 
 Each of these is a mix of pre-provided computations, explanations, and cells that you have to fill out.  The first one (SCADA) is somewhat self-directed and open-ended; the last three are more step-by-step, but much larger.
 
 Pick one that sounds interesting and get as far as you can on it.  Don't worry about completing them, they're significant projects that are meant to more than fill the exercise period.
-
-
 
 
 ## General Information
@@ -117,6 +121,7 @@ by looking for the
 
  - [`datascience` package](http://data8.org/datascience/index.html)
     - [Manual](https://readthedocs.org/projects/datascience/downloads/pdf/master/)
+    - [Maps]{http://data8.org/datascience/maps.html}
 
  - [`matplotlib` package](https://matplotlib.org/stable/index.html)
 
