@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+	<title>Exercise 3</title>
+</head>
+<body>
+<h1>Exercise 3: Demonstration of profiling tools</h1>
+ 
+Reminder: If there's been a correction to this exercise posted, 
+update your local copy via
+<A HREF="index.html#corrections">these instructions</a>
+before proceeding.
+
+<p> 
+Goal: Get a feel for how profiling tools show you how a program behaves
+<P>
+First, create a local copy of the exercise files.
+ 
+<CODE><PRE>
+   cd
+   ./csc_get exercise3.tar
+   tar xf exercise3.tar
+   cd exercise3
+   source setup.sh
+</PRE></CODE>
+ 
+Take a look at the PerfCheck.java file. Let's say you want to find how
+many prime numbers there are from 900,000 to 1,000,000 for some reason.
+There are a couple ways to do this.  The programmer has come up
+with two of them here:
+<UL>
+<LI>simpleCheck - for each number in the range, it does a divide by
+all possible divisors to see if the number is prime
+<LI>sieveCheck - uses the 
+<a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">Sieve of Erathosenes</a> to check, which involves
+making an array and walking through it, marking off numbers that 
+can be divided.
+</UL>
+It's not obvious which will be faster in this case.  simpleCheck can 
+stop checking as soon as a factor is found, whereas sieveCheck seems to do
+less division, but 
+<a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes#Computational_analysis">has to step through all the numbers below 900,000</a> too.
+<P>
+We'll profile these to see how much of a difference this makes. First, we compile and run it:
+  
+<CODE><PRE>
+   ./build
+   ./run
+</PRE></CODE>
+ 
+The "run" script just runs java with the profiling options.  
+That will take a little while because we run for long enough to get good samples.
+<p>
+(Note that the 'run' script has disabled Java's run-time compilation. 
+We've done this because the Java compiler is smart enough to compile away some of the inefficiencies 
+in this sample program that we want you to track down yourself)
+<p>
+When it completes, you'll have a new "java.hprof.txt" file containing the raw profile information.  
+Take a look at its structure using your favorite editor.
+In particular note the measurements at the end of the file.
+<P>
+To browse this information in a more usable form, we run PerfAnal:
+ 
+<CODE><PRE>
+   ./analysis
+</PRE></CODE>
+ 
+The "analysis" script just invokes the PerfAnal class with java. 
+The four windows shown in lecture will appear on your screen.  
+The upper left one, "Method Times by Caller", 
+shows that almost all of the time is used in PerfCheck.main, our testing program; 
+the rest is spent in loading java classes, etc. 
+If you click on the folder by PerfCheck to look inside, you'll see how it is spending its time.
+<p>
+Using this you can already tell that the "sieveCheck" is 
+faster by maybe a factor of two.
+Examine the slower routines carefully to see where the time goes.
+<P>
+Question: Where is the time really being spent?  
+<P>
+Look at the line number
+display in the lower-right corner. 
+Click on the PerfCheck.checkOne box to expand it.
+It shows that (almost) all of the time is being spent on lines 23 and 26.
+Those lines are in checkOne():
+
+<CODE><PRE>
+21:    static boolean checkOne(int test) {
+22:        for (int factor = 2; 
+23:             factor < (int) Math.sqrt(test); 
+24:             factor++) {
+25:             
+26:          if (test % factor == 0) 
+27:                return false;
+28:        }
+29:        return true;
+30:    }
+</PRE></CODE>
+
+(We wrote the "for" statement on three lines so you can see which clauses are taking time)
+<P>
+Is the time being spent where you expect? Is this code wasting time?
+Can you fix it?
+(Don't forget to recompile with ./build after changing the program!)
+
+<P>
+When you run the program, it prints both the time spent in each of the
+two algorithms, and also the number found.  Note that the two algorithms
+are not finding the same answer!  At least one, and perhaps both
+are not working correctly.  It doesn't matter if code is fast if it's 
+giving the wrong answer.  We've provided a few JUnit tests in the
+TestPerfCheck.java file.  To run them,
+
+<CODE><PRE>
+   java TestPerfCheck g
+</PRE></CODE>
+
+(the "g" argument runs with the GUI; omit that if you just want to run
+from the command line)
+<P>
+Please use the tests to get both methods in PerfCheck giving the
+right answer before comparing speeds again. 
+
+<P>
+Finally, go back to the performance display again to see if there are any obvious optimizations that can be made.
+
+<p>
+Which is the right algorithm to use here? 
+
+<p>
+Which would be the right one if you were checking between 9 000 000 000 and 10 000 000 000?
+
+<p>
+Which would be the right one if you were checking between 9 999 999 000 and 10 000 000 000?
+
+<P>
+Hint: When checking
+factors, should you check <u>up to</u> the square root of the
+number, or <u>up to and including</u> the square root?
+
+<p>
+Hint: The modulo operator "%" can be surprisingly slow in Java when Just-In-Time (JIT)
+compilation is not in use.  The hardware has support for doing it quickly, which the JIT compiler 
+will use, but the Java compiler starts by generating divide/multiply/subtract/test 
+high-level code.
+
+<P>
+Note:  You can't go too far with using sampling tools and small samples; those can really 
+mislead you.  See the article on "How Profilers Lie" in the 
+<a href="https://docs.google.com/document/d/1Jvb1zYRibzOw74VKnGsmTVfWkQcOxb_yc8JboebFDpA/edit#heading=h.so1co78qtmfd">Bilbiography</a> for more on this.
+</body>
+</html>
