@@ -32,6 +32,10 @@ Next, we create a clean place to work:
 
 ```
     cd GitBasics1
+    source setup.sh
+    rm -rf exerciseG1
+    mkdir exerciseG1
+    cd exerciseG1
 ```
 
 Now we create a new Git repository with nothing in it:

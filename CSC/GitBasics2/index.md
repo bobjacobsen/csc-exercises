@@ -20,12 +20,13 @@ If you haven't done it already, you have to tell Git who you are:
     git config --global user.email "you@example.com"
     git config --global user.name "Your Name"
 ```
+There's no default for this, but you only need to do it once.
 
 Next, create a work area:
 
-
 ```
     cd GitBasics2
+    source setup.sh
     mkdir exerciseG2
     cd exerciseG2/
 ```
@@ -51,7 +52,7 @@ Now hit "enter" or "return" to step through the script one section at a time.  A
  - Look at what commands the script has executed
  - Look at the contents.txt file
  - Refresh the gitk and gitg displays by hitting F5 or selecting "Refresh" from the menu
- - Look at the gitk and gitg displays  to see how the repository structure changes
+ - Look at the gitk and gitg displays to see how the repository structure changes
  - and maybe do some `git log` or other commands to see the details.
 
 Some brief summary information is below.
