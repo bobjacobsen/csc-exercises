@@ -26,7 +26,7 @@ These exercises are in DataScience directory within the csc-exercises directory 
 
 There are three categories: Introductory, Intermediate and Advanced.
 
-To do each exercise, navigate SWAN to the folder for the exercise, then launch the .ipynb file found there.  Instructions are embedded in each file. For some exercises, there are also data files that you can browse by opening them in SWAN.
+To do each exercise, navigate SWAN to the folder for the exercise, then launch the .ipynb file found there.  Instructions are embedded in each file. For some exercises, there are also data files that you can browse by opening them in SWAN. The Introductory and Intermediate exercises have "Solution" notebooks you can open if you get stuck.
 
 If there are any problems or updates to the exercises, we'll post announcements to a [Google doc](https://docs.google.com/document/d/1g3b2e7wf3mWaIZ4U6MkNR5B4fQuO71y6Q341LGs45HQ/edit) and display them on a screen in the exercise room for your reference.
 
@@ -61,7 +61,7 @@ More joining and multi-dimensional statistics, followed by mapping of geographic
 
 (The second half of this might have been better in the Intermediate category)
 
-_Textual Analysis_
+_LittleWomen_
 
 Searching and counting in a text data set.
 
@@ -97,18 +97,21 @@ Pick one that sounds interesting and get as far as you can on it.  Don't worry a
 
 ## General Information
 
-If you want to run these on your own machine, first install Jupyter Notebooks.  There are several ways to do this, but perhaps the most straight-forward is to [use PIP](https://jupyter.org/install).
-
-Then checkout the exercise material to your machine. During the CERN School, please use the head of the `master` branch.  After the School is over, you can checkout the `CSC2022` tag to get exactly these exercises.
+If you want to run these on your own machine, first install Jupyter Notebooks.  There are several ways to do this, but perhaps the most straight-forward is to [use PIP](https://jupyter.org/install).  Then checkout the exercise material to your machine. During the CERN School, please use the head of the `master` branch.  After the School is over, you can checkout the `CSC2022` tag to get exactly these exercises. Finally, run the setup notebook to make sure you have the right libraries installed.
 
 ### Files
 
-An updated PDF file is available for the
-<a href="https://indico.cern.ch/event/1125271/contributions/4975770/">lectures</a> in Indico.
+An updated PDF file is available for
+[lecture 1]() and
+[lecture 2]()
 
-We continually update the exercises in GitHub.
-After the School is complete, you can get the specific version we used
-by looking for the
+
+
+<a href="https://indico.cern.ch/event/1125271/contributions/4975770/">lecture 1</a> and
+<a href="https://indico.cern.ch/event/1125271/contributions/4975771/">lecture 2</a>
+in Indico.
+
+We continually update the exercises in GitHub. After the School is complete, you can get the specific version we used by looking for the
 <a href="https://github.com/bobjacobsen/csc-exercises/releases/CSC-2002">CSC-2022</a> release tag.
 
 
