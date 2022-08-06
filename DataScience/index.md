@@ -101,15 +101,7 @@ If you want to run these on your own machine, first install Jupyter Notebooks.  
 
 ### Files
 
-An updated PDF file is available for
-[lecture 1]() and
-[lecture 2]()
-
-
-
-<a href="https://indico.cern.ch/event/1125271/contributions/4975770/">lecture 1</a> and
-<a href="https://indico.cern.ch/event/1125271/contributions/4975771/">lecture 2</a>
-in Indico.
+An updated PDF file is available for [lecture 1](https://indico.cern.ch/event/1125271/contributions/4975770/) and [lecture 2](https://indico.cern.ch/event/1125271/contributions/4975771/)in Indico.
 
 We continually update the exercises in GitHub. After the School is complete, you can get the specific version we used by looking for the
 <a href="https://github.com/bobjacobsen/csc-exercises/releases/CSC-2002">CSC-2022</a> release tag.

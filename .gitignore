@@ -11,7 +11,7 @@ gmon.out
 .DS_Store
 __pycache__
 
-# Jupyter caches
+# Jupyter caches - need to git rm -r --cached those already committed
 .ipynb_checkpoints
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml

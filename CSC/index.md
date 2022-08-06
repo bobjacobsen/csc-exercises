@@ -94,11 +94,9 @@ Depending on your level of experience, these are all optional.  People who just 
 
 11: [GitBasics2](GitBasics2/index.md) - Demonstration of Git branching - also basic. Good introduction for people who haven't done much branching and merging on their own, but optional for people who have.
 
-12: <A HREF="GitBisect/index.md">GitBisect</a> - Introduction to the use of `git bisect` to track down where an error was introduced, `git blame` to know who to consult about a fix, and your options for handling the error.
+12: [GitBisect](GitBisect/index.md) - Introduction to the use of `git bisect` to track down where an error was introduced, and your options for handling the error.
 
-13: <A HREF="GitHeadBanging/index.md">GitHeadBanging</a> - You've committed something that maybe you shouldn't.  What are your options now, beyond the XKCD "delete and download a new one"?
-
-<--- (`git rebase` needs to be here somewhere; from G3 - can it rebase away the error in Bisect?) --->
+13: [GitHeadBanging](GitHeadBanging/index.md) - Managing the head of your repository. For example, you've committed something that maybe you shouldn't have.  What are your options now, beyond the XKCD "delete and download a new one"? Also covers creation of a linear history.
 
 ## Corrections
 
