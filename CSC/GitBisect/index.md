@@ -2,7 +2,7 @@
 
 Reminder: If there's been a correction to this exercise posted, update your local copy via [these instructions](https://docs.google.com/document/d/1g3b2e7wf3mWaIZ4U6MkNR5B4fQuO71y6Q341LGs45HQ/edit?usp=sharing) before proceeding.
 
-Goal: Gain familiarity with a typical test framework
+Goal: Gain familiarity with error-finding using bisect, and methods for fixing them.
 
 First, set up the local environment:
 ```
@@ -20,7 +20,7 @@ It's very difficult to store a git repository inside a git repository, so we hid
 
 target.cpp is a small package for handling fixed size buffers of ints.
 For reasons that don't concern us here, each int is held in a separately allocated location:
-    It's an array of int* pointer to ints, not an array of ints.
+It's an array of int* pointer to ints, not an array of ints.
 
 There have been a number of changes to this.  Use gitk or gitg to look at the series of commits.
 
