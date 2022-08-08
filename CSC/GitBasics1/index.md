@@ -38,6 +38,8 @@ Next, we create a clean place to work:
     cd exerciseG1
 ```
 
+#### Creating a repository
+
 Now we create a new Git repository with nothing in it:
 
 ```
@@ -52,6 +54,8 @@ More usefully, you can ask Git about the status:
 ```
     git status
 ```
+
+#### Committing
 
 Now we create a first file and look to see what
 Git thinks about it:
@@ -131,6 +135,7 @@ top (so there's a change to commit) and then
     git commit -m"Added more lines"
 ```
 
+#### Tracing authors: git blame
 
 The git blame command can be used to see when each line
 in a file was changed and by whom:
@@ -202,6 +207,8 @@ however there is nothing special about the name -
 you don't actually have to have a 'master' branch
 but since it's the default that is created, most projects do.
 
+#### Creating branches
+
 To create a new branch, use the command `git branch (branchname)`
 
 So let's start by creating a new branch called "testing" and switching to it.
@@ -245,6 +252,8 @@ $ ls
 hello.txt more.txt test.txt
 ```
 
+#### Navigating branches
+
 Now, if we switch to the "testing" branch, it changes both what Git is referring
 to in the repository, and what we have in our working directory:
 
@@ -262,6 +271,8 @@ We can switch back to the 'master' branch and see them re-appear.
     git checkout master
     ls
 ```
+
+#### Examining branches
 
 "`git branch`" with no arguments shows the branches:
 
@@ -329,6 +340,8 @@ and then merge it in and delete the branch when you're done.
 That way if what you're working on doesn't work out you can easily discard it
 and if you're forced to switch back to a more stable context your work in progress
 is easy to put aside and then come back to.
+
+#### Deleting branches
 
 To delete a branch (such as the 'testing' branch in the previous example, since there is no unique work on it),
 we can run `git branch -d (branch)` to remove it.
@@ -438,6 +451,8 @@ where the previous merge was just merging which files are included.)
 Look at the hello.txt file.  Both sets of edits are now present, so
 both developments have been (syntactically) merged.
 
+#### Examining merges with git log --graph and gitk
+
 As merges get more complicated, the "--graph" option to `git log`
 can make it easier to understand how the code has evolved.
 It shows branches and changes in a simple ASCII graph:
@@ -446,7 +461,7 @@ It shows branches and changes in a simple ASCII graph:
     git log --oneline --graph
 ```
 
-<a href="images/gitk_010.png"><img src="images/gitk_010.png" align="right" height="20%" width="20%"/></a>
+<a href="images/gitk_010.png"><img src="images/gitk_010.png" align="right" height="25%" width="25%"/></a>
 The gitk tool also does a good job of showing this information
 graphically:
 
@@ -467,7 +482,7 @@ them.  Select "Update" from the "File" menu.  (If that causes an
 error, select "Reload", which is more reliable but slower
 on big repositories)
 
-<a href="images/gitg_021.png"><img src="images/gitg_021.png" align="right" height="20%" width="20%"/></a>
+<a href="images/gitg_021.png"><img src="images/gitg_021.png" align="right" height="25%" width="25%"/></a>
 Some people prefer the gitg tool's graphical display (if it's installed on your machine):
 
 ```
@@ -475,7 +490,7 @@ Some people prefer the gitg tool's graphical display (if it's installed on your 
 ```
 
 Open it now and explore a little bit. If you make changes to the repository
-while it's running, select "Refresh" from the "View" menu or hit ctrl-R.
+while it's running, select "Refresh" from the "View" menu.
 
 As development proceeds,
 a branch name can refer to different contents.
@@ -651,6 +666,8 @@ EOF
 
 The `git diff` command will show you the changes.
 
+#### Commiting partial changes:  git add --patch
+
 To control in detail what's being staged, use the "--patch" option on the `git add`
 command (without --patch, it includes all the changes in the file).
 
@@ -681,6 +698,7 @@ git commit -am"just bottom of file"
 git diff
 ```
 
+#### Unstaged changes
 
 It's important to remember that `git commit` moves whatever has been
 staged into the repository, and doesn't do anything to changes that haven't been staged.
@@ -732,3 +750,4 @@ git log --oneline --decorate --graph
 ```
 
 
+And that concludes this basic introduction to git.  It should be enough to make you a productive user in most environments!

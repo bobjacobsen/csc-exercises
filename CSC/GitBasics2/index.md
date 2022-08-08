@@ -75,3 +75,4 @@ you move back and forth between them, and how the merging process works.
 
 We would definitely be interested in hearing whether this follow-along method works better or worse than the cut&amp;paste in other exercises! Please send an
 <a href="mailto:jacobsen@berkeley.edu?subject=CSC-GitBasics2">email to jacobsen@berkeley.edu</a> with your comments and suggestions.
+

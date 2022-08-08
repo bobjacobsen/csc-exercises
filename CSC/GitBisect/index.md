@@ -2,7 +2,7 @@
 
 Reminder: If there's been a correction to this exercise posted, update your local copy via [these instructions](https://docs.google.com/document/d/1g3b2e7wf3mWaIZ4U6MkNR5B4fQuO71y6Q341LGs45HQ/edit?usp=sharing) before proceeding.
 
-Goal: Gain familiarity with error-finding using bisect, and methods for fixing them.
+Goal: Gain familiarity with error-finding using bisect, and methods for fixing the bad commit.
 
 First, set up the local environment:
 ```
@@ -22,7 +22,7 @@ target.cpp is a small package for handling fixed size buffers of ints.
 For reasons that don't concern us here, each int is held in a separately allocated location:
 It's an array of int* pointer to ints, not an array of ints.
 
-There have been a number of changes to this.  Use gitk or gitg to look at the series of commits.
+There have been a number of changes to this.  Use `gitk --all` to look at the series of commits.
 
 It's worked all along with small buffers. To run it and see some output:
 
@@ -124,7 +124,7 @@ mkdir rebase-test
 cd rebase-test
 tar xf ../GitBisect.tgz
 ```
-We do that because you've modified the original one with the git revert you did above, and we want the problem to still be present.  Check that:
+We do that because you've modified the original one with the git revert you did above, and we want the problem to still be present for this part of the exercise.  Check that:
 
 ```
 g++ target.cpp && ./a.out 100
@@ -138,7 +138,7 @@ The form of the rebase command that we'll use is:
 git rebase --onto "last good" "first good" "branch name"
 ```
 
-The "-onto" says to rebase "first good" directly onto "last good", losing commits in between. Use gitk or git log to look at the history and find the last SHA before the problem and the one immediately after. Your command should look something like
+The "-onto" says to rebase "first good" directly onto "last good", loosing commits in between. Use gitk or git log to look at the history and find the last SHA before the problem and the one immediately after. Your command should look something like
 
 ```
 git rebase --onto f8ffe2a 5f9c17a main
@@ -174,7 +174,10 @@ g++ target.cpp && ./a.out 100
 
 The problem is fixed not only in the head of the main branch, but also back in the past!
 
+There are pluses and minuses to this technique.
+ - If you're doing it locally to your own branches (not on master, as we did in this exercise), and you haven't pushed or pulled that to another repository, it's quite safe.
+ - But if you've pushed this content elsewhere, you can get in trouble.  People might be counting on that commit for their own work. Pushing the _changed_ structure might end up requiring some special handling.
 
+ Bottom line:  Revert is always safe, and usually recommended.  But if you're still working on some feature and haven't yet pushed or pulled it, rebasing an error away can give you a cleaner history when you do eventually push/pull and merge.
 
-
-
+That ends our introduction to bisect for finding the commit that caused an error, and two techniques for correcting that error.
