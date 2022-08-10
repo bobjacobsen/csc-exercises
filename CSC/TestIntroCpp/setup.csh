@@ -1,1 +1,1 @@
-../csc_log TestIntroCpp
+../csc_log file TestIntroCpp

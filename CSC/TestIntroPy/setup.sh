@@ -1,1 +1,1 @@
-../csc_log TestIntroPy
+../csc_log file TestIntroPy

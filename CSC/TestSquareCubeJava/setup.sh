@@ -1,4 +1,4 @@
 umask 0022
 export CLASSPATH=.:junit.jar:PerfAnal.jar
 
-../csc_log TestSquareCubeJava
+../csc_log file TestSquareCubeJava

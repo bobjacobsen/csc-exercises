@@ -1,1 +1,1 @@
-../csc_log GitRecovery
+../csc_log file GitRecovery

@@ -1,1 +1,1 @@
-../csc_log GitBisect
+../csc_log file GitBisect

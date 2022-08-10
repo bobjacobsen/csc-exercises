@@ -71,4 +71,5 @@ git checkout Feature1
 #### Simplifying complicated merges
 
 
+#### Git checkout --; git stash  (Move this upward)
 

@@ -1,9 +1,6 @@
 ## ProfileStatsCpp: Practice tuning a small C++ application
 
-Reminder: If there's been a correction to this exercise posted,
-update your local copy via
-<A HREF="../index.html#corrections">these instructions</a>
-before proceeding.
+Reminder: If there's been a correction to this exercise posted, update your local copy via [these instructions](https://docs.google.com/document/d/1g3b2e7wf3mWaIZ4U6MkNR5B4fQuO71y6Q341LGs45HQ/edit?usp=sharing) before proceeding.
 
 Goal: Get some practice improving the performance of a C++ application
 

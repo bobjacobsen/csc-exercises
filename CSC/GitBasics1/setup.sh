@@ -1,1 +1,1 @@
-../csc_log GitBasics1
+../csc_log file GitBasics1

@@ -1,1 +1,1 @@
-../csc_log GitHeadBanging
+../csc_log file GitHistory
