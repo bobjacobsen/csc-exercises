@@ -1,1 +1,3 @@
-curl 174.105.89.157:50080/log.txt | grep file | sort | uniq -c | sort -n
+# get a quick summary by exercise
+
+curl 174.105.89.157:50080/log.txt | grep -A1 '\[item1] => file' | grep item2 | awk '{print $3}'| sort | uniq -c | sort -n

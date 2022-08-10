@@ -1,1 +1,3 @@
-curl 174.105.89.157:50080/log.txt | grep user | sort | uniq -c | sort -n
+# get a quick summary of user names
+
+curl 174.105.89.157:50080/log.txt | grep '\[user]' | awk '{print $3}'| sort | uniq -c | sort -n

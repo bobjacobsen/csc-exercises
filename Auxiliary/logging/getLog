@@ -1,3 +1,5 @@
-curl 174.105.89.157:50080/log.txt > log.`date | awk '{print $3 "-" $4}'`.txt
+# get the log file from the remote, process it to JSON for reading by Jupyter Notebook
+
+curl 174.105.89.157:50080/log.txt > log.`date | awk '{print $6 "." $2 "." $3 "-" $4}' | tr : -`.txt
 cp `ls -t log*.txt | head -1` log.txt
 php transfer.php

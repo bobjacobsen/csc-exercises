@@ -1,4 +1,5 @@
 <?php
+// read the log.txt file in PHP format and convert to JSON for Juptyer notebook use
 
 function print_r_reverse($input) {
         $lines = preg_split('#\r?\n#', trim($input));
@@ -7,7 +8,7 @@ function print_r_reverse($input) {
             if ($input === '') {
                 return null;
             }
-            
+
             return $input;
         } else {
             // this is an array or object, lets parse it
@@ -52,11 +53,11 @@ function print_r_reverse($input) {
                 // recursively see if the parsed out value is an array too
                 $ret[ $key ] = print_r_reverse(substr($input, $where[ 0 ], $where[ 1 ] - $where[ 0 ]));
             }
-            
+
             return $is_object ? (object)$ret : $ret;
         }
     }
-  
+
 
 $lines = file_get_contents("log.txt");
 

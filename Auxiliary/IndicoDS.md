@@ -1,4 +1,4 @@
-Instructions for the 1st Exercise Sessions
+Instructions for the Data Science Exercise Sessions
 
 The very first step is find somebody to work with and sit down together. The two of you will be working together on these exercises.  These have been designed to work best two two people (or occasionally three), not with one!
 
