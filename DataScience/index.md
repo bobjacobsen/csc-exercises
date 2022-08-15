@@ -18,22 +18,22 @@ When you get to the "My Projects" screen, click the "Download project from git" 
 ```
 Click download _once_, then wait for the download to complete.  It might take a couple minutes. Please feel free to read ahead in the instructions!
 
-Once the download is complete, you'll see a "csc-exercises" directory.  Click that to open it and then click the "setup.ipynb" notebook to open it. That makes sure that a consistent set of necessary packages is installed so that you can do these exercises.  Click "> Run" until you get to the end (the first block will likely produce a lot of output; let it run until the cursor moves to the 2nd block) Once that's successfully done the imports in block two, you can close that window and go back to the directory listing.
-
-These exercises are in DataScience directory within the csc-exercises directory you just checked out.
+Once the download is complete, you'll see a "csc-exercises" directory.  Click that to open it. These exercises are in the DataScience directory within the csc-exercises directory you just checked out. Click that to open it and then click the "setup.ipynb" notebook to open it. That makes sure that a consistent set of necessary packages is installed so that you can do these exercises.  Click the ">" run button until you get to the end (the first block will likely produce a lot of output; let it run until the cursor moves to the 2nd block) Once that's successfully completed the imports in block two, you can close that window and go back to the directory listing.
 
 ## About the Exercises
 
 There are three categories: Introductory, Intermediate and Advanced.
 
-To do each exercise, navigate SWAN to the folder for the exercise, then launch the .ipynb file found there.  Instructions are embedded in each file. For some exercises, there are also data files that you can browse by opening them in SWAN. The Introductory and Intermediate exercises have "Solution" notebooks you can open if you get stuck.
+To do each exercise, navigate SWAN to the folder for the exercise, then launch the .ipynb file found there.  For example, click on the "OldFaithful" folder, then on the "OldFaithful.ipynb" file.
+
+Instructions are embedded in each file. For some exercises, there are also data files that you can browse by opening them in SWAN. The Introductory and Intermediate exercises have "*Solution" notebooks you can open if you get stuck.
 
 If there are any problems or updates to the exercises, we'll post announcements to a [Google doc](https://docs.google.com/document/d/1g3b2e7wf3mWaIZ4U6MkNR5B4fQuO71y6Q341LGs45HQ/edit) and display them on a screen in the exercise room for your reference.
 
 
 ### Introductory
 
-These are meant to be an good starting point to make sure that your technical setup is working and to give you familiarity with Jupyter notebooks and analysis packages. Be sure to do the first one ("Old Faithful") to make sure everything is working, then do one or two of the following ones that you find interesting.
+These are meant to be an good starting point to make sure that your technical setup is working and to give you familiarity with Jupyter notebooks and analysis packages. Be sure to do the first one ("Old Faithful") to make sure everything is working, then do at least  two or three of the following ones that you find interesting.
 
 Each has some additional calculations and questions at the end, beyond what we did in lecture, for your exploration and enjoyment.
 
@@ -49,7 +49,7 @@ Introduction to simulating a distribution.
 
 _Juries_
 
-Simulating multi-dimensional distribution.
+Simulating multi-dimensional distributions.
 
 _Drinks_
 
@@ -72,9 +72,11 @@ These are meant to give you more experience with analysis. Please feel free to s
 
 _Movies_
 
+Examining some categorical/numerical information about actors and movies.
 
 _Census 1 and Census 2_
 
+Analysis of tax information, first numerically, then with added GIS information.
 
 ### Advanced/Optional
 
@@ -92,12 +94,11 @@ In the `Projects` directory you will find several project subdirectories. In ord
 
 Each of these is a mix of pre-provided computations, explanations, and cells that you have to fill out.  The first one (SCADA) is somewhat self-directed and open-ended; the last three are more step-by-step, but much larger.
 
-Pick one that sounds interesting and get as far as you can on it.  Don't worry about completing them, they're significant projects that are meant to more than fill the exercise period.
-
+Pick one that sounds interesting and get as far as you can on it.  Don't worry about completing them, they're significant projects that are likely to more than fill the exercise period.
 
 ## General Information
 
-If you want to run these on your own machine, first install Jupyter Notebooks.  There are several ways to do this, but perhaps the most straight-forward is to [use PIP](https://jupyter.org/install).  Then checkout the exercise material to your machine. During the CERN School, please use the head of the `master` branch.  After the School is over, you can checkout the `CSC2022` tag to get exactly these exercises. Finally, run the setup notebook to make sure you have the right libraries installed.
+If you want to run these on your own machine, first install Jupyter Notebooks.  There are several ways to do this, but perhaps the most straight-forward is to [use PIP](https://jupyter.org/install).  Then checkout the exercise material to your machine. During the CERN School, please use the head of the `master` branch.  After the School is over, you can checkout the `CSC2022` tag to get exactly these exercises. Finally, run the top-level `setup` notebook to make sure you have the right libraries installed.
 
 ### Files
 
