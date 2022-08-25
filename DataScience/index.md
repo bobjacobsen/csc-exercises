@@ -76,7 +76,7 @@ Examining some categorical/numerical information about actors and movies.
 
 _Census 1 and Census 2_
 
-Analysis of tax information, first numerically, then with added GIS information.
+Analysis of census and tax information, first numerically, then with added GIS information.
 
 ### Advanced/Optional
 
@@ -98,14 +98,14 @@ Pick one that sounds interesting and get as far as you can on it.  Don't worry a
 
 ## General Information
 
-If you want to run these on your own machine, first install Jupyter Notebooks.  There are several ways to do this, but perhaps the most straight-forward is to [use PIP](https://jupyter.org/install).  Then checkout the exercise material to your machine. During the CERN School, please use the head of the `master` branch.  After the School is over, you can checkout the `CSC2022` tag to get exactly these exercises. Finally, run the top-level `setup` notebook to make sure you have the right libraries installed.
+If you want to run these on your own machine, first install Jupyter Notebooks.  There are several ways to do this, but perhaps the most straight-forward is to [use PIP](https://jupyter.org/install).  Then checkout the exercise material to your machine. During the CERN School, please use the head of the `master` branch.  After the School is over, you can checkout the `CSC-2022` tag to get exactly these exercises. Finally, run the top-level `setup` notebook to make sure you have the right libraries installed.
 
 ### Files
 
-An updated PDF file is available for [lecture 1](https://indico.cern.ch/event/1125271/contributions/4975770/) and [lecture 2](https://indico.cern.ch/event/1125271/contributions/4975771/)in Indico.
+An updated PDF file is available for [lecture 1](https://indico.cern.ch/event/1125271/contributions/4975770/) and [lecture 2](https://indico.cern.ch/event/1125271/contributions/4975771/) in Indico.
 
 We continually update the exercises in GitHub. After the School is complete, you can get the specific version we used by looking for the
-<a href="https://github.com/bobjacobsen/csc-exercises/releases/CSC-2002">CSC-2022</a> release tag.
+<a href="https://github.com/bobjacobsen/csc-exercises/releases/CSC-2022">CSC-2022</a> release tag.
 
 
 ### Documentation
