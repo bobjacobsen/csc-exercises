@@ -63,7 +63,7 @@ using namespace std;
 
     // add a main() routine to this class to use as
     // a small test program.  It takes two arguments:
-    //  java Stats 1000 200
+    //  ./Stats 1000 200
     // will create loop for 1000 times, each time
     // calculating the statistics of 201 randomly-chosen numbers.
     int
