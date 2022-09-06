@@ -26,32 +26,42 @@ There have been a number of changes to this.  Use `gitk --all` to look at the se
 
 It's worked all along with small buffers. To run it and see some output:
 
+```
 g++ target.cpp && ./a.out && ./a.out 5
+```
 
 (Yes, it would have been better to have real tests!  But this is typically written one-off code for our demo purposes.  You'll see similar things in real code...)
 
 Large buffers originally worked:
 
+```
 git checkout Initial
 g++ target.cpp && ./a.out 100
+```
 
 ("Initial" is a tag we put at the first working version of the code)
 
 Unfortunately, a bug was introduced into target.cpp at some point.
 That test now segfaults with the most recent contents:
 
+```
 git checkout main
 g++ target.cpp && ./a.out 100
+```
 
 You could debug this. You've learned about tools that will help find a memory access problem. But since we know that this was an introduced problem, we can use git bisect to find exactly the issue:
 
+```
 git bisect start
 git bisect bad
+```
 
 That starts the process and tells git that the current content is a bad one.
 
+```
 git checkout Initial
 git bisect good
+```
 
 This tells git that the "Initial" tag points to good contents.  Git will consider the commmits and merges between those two and create a plan for finding the issue, then check out some candidate commit for you to check
 
@@ -65,7 +75,9 @@ Bisecting: 5 revisions left to test after this (roughly 3 steps)
 
 Test this new commit with both short and long buffers:
 
+```
 g++ target.cpp && ./a.out && ./a.out 5 && ./a.out 100
+```
 
 If all that works OK, then do "git bisect good". If it fails, "git bisect bad".
 
@@ -73,14 +85,18 @@ Git will check out another commit and ask you to check that.
 After just a few (i.e. about log_2(N_commits) ) attempts, it'll identify the tag where the
 problem was introduced:
 
+```
 % git bisect bad
+```
 (hidden SHA so you do the exercise) is the first bad commit
 
 followed by the log entry that shows who made the commit, the log message, and which files were changed.
 
 You can look at exactly those changes with the log command.
 
+```
 git log -n 1 SHA
+```
 
 where "SHA" is the commit SHA you're currently working on.
 
@@ -89,26 +105,36 @@ See what happens when you do "git log" without it.
 
 If you want to see the detailed changes, add the -p option
 
+```
 git log -p -n 1 SHA
+```
 
 or do a specific diff between that commit and its predecessor:
 
+```
 git diff SHA~ SHA
+```
 
 Now you know what broke it.
 You can end the bisect and can return to the front of the branch with
 
+```
 git bisect reset
+```
 
 Now, you have to fix it.  You can do that by coding a fix.  Or, as in this case,
 if the commit is just a bad one, you can revert it.  Look up the "git revert" command.
 
+```
 git help revert
+```
 
 Then put together a revert command and try it. Look at the file contents to see how
 they're changed, and test the result:
 
+```
 g++ target.cpp && ./a.out && ./a.out 5 && ./a.out 100
+```
 
 Use gitk to look at that file at some different versions to see where the change was applied.
 
