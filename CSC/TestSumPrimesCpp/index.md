@@ -32,7 +32,7 @@ In its initial form, the test just makes sure that you can create a SumPrimes ob
 There are commented-out tests that will check specific test cases, and therefore fail in the manner we discussed in lecture. Remove the leading // that comments out those lines, and watch the test fail when you run it:
 
 ```
-  (edit the TestSumPrimes.java file)
+  (edit the TestSumPrimes.cpp file)
   ./build
   ./TestSumPrimes
 ```
