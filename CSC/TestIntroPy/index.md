@@ -9,7 +9,7 @@ PyUnit is a unit test framework for Python code. PyUnit is the familiar name for
 Start by doing some set up:
 
 ```
-    cd TestIntoPy
+    cd TestIntroPy
     source setup.sh
 ```
 

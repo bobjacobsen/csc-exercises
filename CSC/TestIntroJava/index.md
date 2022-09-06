@@ -7,7 +7,7 @@ Goal: Get a feel for how tests can help you develop better code faster
 First, do some setup:
 
 ```
-    cd TestIntoJava
+    cd TestIntroJava
     source setup.sh
 ```
 
