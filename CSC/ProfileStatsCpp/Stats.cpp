@@ -99,8 +99,8 @@ using namespace std;
         }
 
         cout << "Results: mean median = " << mean(medians, nRuns) << " stddev median = " << stddev(medians, nRuns) << endl;
-        cout << "Results: mean stddev = " << mean(stddevs, nRuns) << " stddev median = " << stddev(stddevs, nRuns) << endl;
-        cout << "Results: mean mean   = " << mean(means,   nRuns) << " stddev median = " << stddev(means,   nRuns) << endl;
+        cout << "Results: mean stddev = " << mean(stddevs, nRuns) << " stddev stddev = " << stddev(stddevs, nRuns) << endl;
+        cout << "Results: mean mean   = " << mean(means,   nRuns) << " stddev mean = " << stddev(means,   nRuns) << endl;
 
     }
 
