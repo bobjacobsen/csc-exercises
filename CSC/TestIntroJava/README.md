@@ -7,18 +7,18 @@ Goal: Get a feel for how tests can help you develop better code faster
 First, do some setup:
 
 ```
-    cd TestIntroJava
-    source setup.sh
+cd TestIntroJava
+source setup.sh
 ```
 
 Then look at the TestExample.java file.  You'll see a series of tests that are structured like:
 
 ```
-    public void testEquals() {
-        Assert.assertEquals( 1, 1 );
-        Assert.assertEquals( 2, 2 );
-        Assert.assertEquals( 1, 2 );
-    }
+public void testEquals() {
+    Assert.assertEquals( 1, 1 );
+    Assert.assertEquals( 2, 2 );
+    Assert.assertEquals( 1, 2 );
+}
 ```
 
 By inspection, some of those assertions are expected to pass, some to fail.
