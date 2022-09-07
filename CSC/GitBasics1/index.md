@@ -61,7 +61,7 @@ Now we create a first file and look to see what
 Git thinks about it:
 
 ```
-    echo 'Initial file: Hello World!' < hello.txt
+    echo 'Initial file: Hello World!' > hello.txt
     git status
 ```
 
@@ -239,8 +239,8 @@ To see that in action, let's add some files on the master branch so that it
 differs from the testing branch:
 
 ```
-    echo 'test content' < test.txt
-    echo 'more content' < more.txt
+    echo 'test content' > test.txt
+    echo 'more content' > more.txt
     git add *.txt
     git commit -m 'added two files'
 ```
@@ -391,7 +391,7 @@ To demonstrate that we can work independently in the two
 branches, let's add another file to the master branch.
 
 ```
-    echo 'third file' < third.txt
+    echo 'third file' > third.txt
     git add third.txt
     git commit -m"add a third file"
 ```
@@ -511,7 +511,7 @@ rm -rf exerciseG1
 mkdir exerciseG1
 cd exerciseG1
 git init
-cat >>EOF <content.txt
+cat >>EOF >content.txt
 material at
 the top
 of the
@@ -633,7 +633,7 @@ rm -rf exerciseG1
 mkdir exerciseG1
 cd exerciseG1
 git init
-cat >>EOF <content.txt
+cat >>EOF >content.txt
 material at
 the top
 of the
@@ -653,7 +653,7 @@ git commit -m"initial contents"
 Now create a new version of the file changed at the top and bottom:
 
 ```
-cat >>EOF <content.txt
+cat >>EOF >content.txt
 Changed material at
 the top
 
@@ -705,9 +705,9 @@ staged into the repository, and doesn't do anything to changes that haven't been
 Try this sequence:
 
 ```
-echo '1st new line' << hello.txt
+echo '1st new line' >> hello.txt
 git add hello.txt
-echo '2nd new line' << hello.txt
+echo '2nd new line' >> hello.txt
 ```
 
 If we now do a `git commit`, what will be put in the repository?

@@ -156,12 +156,12 @@ Now, on with the show.
 
 There's also a Feature2 branch that we'll use for this part. Check it out, and take a look at its contents.
 
-Notice that Feature2 branched from the Initial tag a while back, not from the HEAD of the main branch.  This is what we want to change.  The basic approach is "take the commits on the Feature2 branch and make equivalent ones starting at the end of the master branch"
+Notice that Feature2 branched from the Initial tag a while back, not from the HEAD of the main branch.  This is what we want to change.  The basic approach is "take the commits on the Feature2 branch and make equivalent ones starting at the end of the main branch"
 
 The syntax for this is
 
 ```
-git rebase master Feature2
+git rebase main Feature2
 ```
 
 this starts with main and adds the relevant parts of Feature2.  Git will say something like:
@@ -198,7 +198,7 @@ Why is it like that?
 
 What will happen when the Feature1 and Feature2 branches are submitted as PRs and merged?
 
-Go ahead and merge Feature1 into master (special for this exercise), then look at the structure.  If Feature2 ready to fast-forward merge?  If not, what can you do about it?
+Go ahead and merge Feature1 into main (special for this exercise), then look at the structure.  If Feature2 ready to fast-forward merge?  If not, what can you do about it?
 
 And that's it for our quick tour of simple squashing and rebasing to make a more understandable commit history. There's more to it, of course. For example, you might have to handle conflicts. That ends up being very similar to handling conflicts in regular merges.
 
