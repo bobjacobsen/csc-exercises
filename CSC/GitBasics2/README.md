@@ -16,33 +16,33 @@ separate window.
 
 If you haven't done it already, you have to tell Git who you are:
 
-```
-    git config --global user.email "you@example.com"
-    git config --global user.name "Your Name"
+```shell
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
 ```
 There's no default for this, but you only need to do it once.
 
 Next, create a work area:
 
-```
-    cd GitBasics2
-    source setup.sh
-    mkdir exerciseG2
-    cd exerciseG2/
+```shell
+cd GitBasics2
+source setup.sh
+mkdir exerciseG2
+cd exerciseG2/
 ```
 Then run the script:
 
-```
-    ../ex_script.sh
+```shell
+../ex_script.sh
 ```
 It will create a new repository for you, then stop.
 
 Open another window in which to check things, and in that (after navigating to the CSC directory and doing `setup`) do:
 
-```
-    cd GitBasics2/exerciseG2
-    gitk --all &
-    gitg &
+```shell
+cd GitBasics2/exerciseG2
+gitk --all &
+gitg &
 ```
 
 The `gitg` tool  might not be installed on your machine, as it's an optional component. If it is available, select "Branches" to get the best display.
