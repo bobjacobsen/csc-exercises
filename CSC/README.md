@@ -55,50 +55,50 @@ You should do all three of the these first exercises to work with test framework
 and make sure that your exercise environment is working correctly.
 Each is a little bit different. Please do
 
-1: [TestIntroJava](TestIntroJava/index.md) - brief demo of using JUnit for Java code testing. We put this first because JUnit is perhaps the simplest of the unit testing frameworks.
+1: [TestIntroJava](TestIntroJava/README.md) - brief demo of using JUnit for Java code testing. We put this first because JUnit is perhaps the simplest of the unit testing frameworks.
 
-2: [TestIntroPy](TestIntroPy/index.md) - brief demo of using PyUnit for Python code testing.
+2: [TestIntroPy](TestIntroPy/README.md) - brief demo of using PyUnit for Python code testing.
 
-3: [TestIntroCpp](TestIntroCpp/index.md) - brief demo of using CppUnit for C++ code testing. Will benefit from a bit of C++ experience with header files, etc, but can be done without it.
+3: [TestIntroCpp](TestIntroCpp/README.md) - brief demo of using CppUnit for C++ code testing. Will benefit from a bit of C++ experience with header files, etc, but can be done without it.
 
 We then move forward to a more significant example, the SumPrimes code from lecture.  Do two of the following. (If your team speaks all three languages, you could do all three, but that's optional)
 
-4: [TestSumPrimesJava](TestSumPrimesJava/index.md) - SumPrimes in Java
+4: [TestSumPrimesJava](TestSumPrimesJava/README.md) - SumPrimes in Java
 
-5: [TestSumPrimesPy](TestSumPrimesPy/index.md) - SumPrimes in Python
+5: [TestSumPrimesPy](TestSumPrimesPy/README.md) - SumPrimes in Python
 
-6: [TestSumPrimesCpp](TestSumPrimesCpp/index.md) - SumPrimes in C++
+6: [TestSumPrimesCpp](TestSumPrimesCpp/README.md) - SumPrimes in C++
 
 ## Performance Profiling
 
 These demonstrate how tools, even simple ones, can help you focus on in where time is really being spent.
 We recommend you do at least one of these. Doing both is optional; the second one you do will go pretty quickly as you'll know where the problems are.
 
-7: [ProfileStatsJava](ProfileStatsJava/index.md) Practice tuning a small Java program
+7: [ProfileStatsJava](ProfileStatsJava/README.md) Practice tuning a small Java program
 
-8: [ProfileStatsCpp](ProfileStatsCpp/index.md) Practice tuning a small C++ program
+8: [ProfileStatsCpp](ProfileStatsCpp/README.md) Practice tuning a small C++ program
 
 
 ## Memory Issues
 
 People with experience programming C and C++ close to the hardware might find this a little basic (though the valgrind tool can be  useful even for experts). Everybody else should definitely do this one to learn more about how memory really works.
 
-9: [MemIntroCpp](MemIntroCpp/index.md) - Testing for C++ memory faults
+9: [MemIntroCpp](MemIntroCpp/README.md) - Testing for C++ memory faults
 
 
 ## Git Practice
 
 Depending on your level of experience, these are all optional.  People who just use `git` by recipe or want a better understanding of the basics, including how to use it locally for your own individual work, would probably benefit most from the first two.  People with more experience might find the more advanced topics in the last three interesting. None of these are required.
 
-10: [GitBasics1](GitBasics1/index.md) - Simple use of git - basic introduction, so if you have git experience you might want to quickly scan through this for things you haven't seen (do you know what `git add --patch` does?)
+10: [GitBasics1](GitBasics1/README.md) - Simple use of git - basic introduction, so if you have git experience you might want to quickly scan through this for things you haven't seen (do you know what `git add --patch` does?)
 
-11: [GitBasics2](GitBasics2/index.md) - Demonstration of Git branching - also basic. Good introduction for people who haven't done much branching and merging on their own, but optional for people who have.
+11: [GitBasics2](GitBasics2/README.md) - Demonstration of Git branching - also basic. Good introduction for people who haven't done much branching and merging on their own, but optional for people who have.
 
-12: [GitBisect](GitBisect/index.md) - Introduction to the use of `git bisect` to track down where an error was introduced, and your options for handling the error.
+12: [GitBisect](GitBisect/README.md) - Introduction to the use of `git bisect` to track down where an error was introduced, and your options for handling the error.
 
-13: [GitRecovery](GitRecovery/index.md) - Managing the head of your branches. For example, you've committed something that maybe you shouldn't have.  What are your options now, beyond the XKCD "delete and download a new one"?
+13: [GitRecovery](GitRecovery/README.md) - Managing the head of your branches. For example, you've committed something that maybe you shouldn't have.  What are your options now, beyond the XKCD "delete and download a new one"?
 
-14: [GitHistory](GitHistory/index.md) - Covers the tools for creating a linear history in Git:  squashing and rebasing.
+14: [GitHistory](GitHistory/README.md) - Covers the tools for creating a linear history in Git:  squashing and rebasing.
 
 ## Corrections
 
