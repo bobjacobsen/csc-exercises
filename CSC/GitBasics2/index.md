@@ -5,7 +5,7 @@ Reminder: If there's been a correction to this exercise posted, update your loca
 Goal: Gain familiarity branches and merges
 
 This exercise works in a slightly different way than the
-<a href="../GitBasics1/index.md">previous one</a>,
+<a href="../GitBasics1/README.md">previous one</a>,
 which you should have completed first if you're not already familiar with
 Git. To reduce the amount of typing involved, we've got a
 <a href="ex_script.sh">shell script</a>
