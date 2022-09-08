@@ -8,14 +8,14 @@ Reminder: If there's been a correction to this exercise posted, update your loca
 
 First, do some setup:
 
-```
-    cd TestIntroCpp
-    source setup.sh
+```shell
+cd TestIntroCpp
+source setup.sh
 ```
 
 Then look at the ExampleTestCase.cpp file.  You'll see a series of tests that are structured like:
 
-```
+```cpp
 void ExampleTestCase::example()
 {
   CPPUNIT_ASSERT_DOUBLES_EQUAL( 1.0, 1.1, 0.05 );
@@ -28,7 +28,7 @@ By inspection, some of those assertions are expected to pass, some to fail.
 
 To run the tests:
 
-```
+```shell
 ./build
 ./a.out
 ```
