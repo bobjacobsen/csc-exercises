@@ -88,7 +88,7 @@ People with experience programming C and C++ close to the hardware might find th
 
 ## Git Practice
 
-Depending on your level of experience, these are all optional.  People who just use `git` by recipe or want a better understanding of the basics, including how to use it locally for your own individual work, would probably benefit most from the first two.  People with more experience might find the more advanced topics in the last three interesting. None of these are required.
+Depending on your level of experience, these are all optional.  People who just use `git` by recipe or want a better understanding of the basics, including how to use it locally for your own individual work, would probably benefit most from the first two.  People with more experience might find the more advanced topics in the last three interesting. Doing the GitBisect exercise is recommended for everyone.
 
 10: [GitBasics1](GitBasics1/README.md) - Simple use of git - basic introduction, so if you have git experience you might want to quickly scan through this for things you haven't seen (do you know what `git add --patch` does?)
 
@@ -103,7 +103,7 @@ Depending on your level of experience, these are all optional.  People who just 
 ## Corrections
 
 If there are any last-minute corrections to the instructions,
-we will post them in the exercise room and on this [Google Doc](https://docs.google.com/document/d/1g3b2e7wf3mWaIZ4U6MkNR5B4fQuO71y6Q341LGs45HQ/edit?usp=sharing). To update your local copy, do
+we will post them in the exercise room and on this [Google Doc](https://docs.google.com/document/d/1g3b2e7wf3mWaIZ4U6MkNR5B4fQuO71y6Q341LGs45HQ/edit?usp=sharing). To update your local copy of these exercises, do
 ```
     cd ~/csc-exercises
     git pull
@@ -120,7 +120,7 @@ Updated PDF files are available for
 We continually update the exercises in GitHub.
 After the School is complete, you can get the specific version we used
 by looking for the
-<a href="https://github.com/bobjacobsen/csc-exercises/releases/CSC-2022">CSC-2022</a> release tag.
+<a href="https://github.com/bobjacobsen/csc-exercises/releases/CSC-2023">CSC-2023</a> release tag.
 
 ## General notes:
 
@@ -169,9 +169,6 @@ Information on Git:
 
  - The <a href="https://www.kernel.org/pub/software/scm/git/docs/">detailed Git documentation</a>.
  - Lots of <a href="http://gitready.com">questions and answers</a> on Git usage.
- - A writeup on how to <a href="https://git.wiki.kernel.org/index.php/GitSvnCrashCourse">convert your SVN thinking</a> to Git;
-see also a
-<a href="http://git.or.cz/course/svn.html">slightly older but more readable version</a>.
 
 The web has lots of talks and tutorials on more advanced Git topics.
 
