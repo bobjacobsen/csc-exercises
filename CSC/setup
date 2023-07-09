@@ -1,6 +1,9 @@
 ./csc_log setup
 
 # for CSC 2022 on lxplus8 - drop these two lines if running on your own machine
-source /cvmfs/sft.cern.ch/lcg/views/LCG_100/x86_64-centos8-gcc10-opt/setup.sh
-export LIBRARY_PATH=/cvmfs/sft.cern.ch/lcg/views/LCG_100/x86_64-centos8-gcc10-opt/lib/
+#source /cvmfs/sft.cern.ch/lcg/views/LCG_100/x86_64-centos7-gcc9-opt/setup.sh
+#export LIBRARY_PATH=/cvmfs/sft.cern.ch/lcg/views/LCG_100/x86_64-centos7-gcc9-opt/lib/
 
+# for CSC 2023 on csc-2023 - drop these two lines if running on your own machine
+source /cvmfs/sft.cern.ch/lcg/views/LCG_100/x86_64-centos7-gcc10-dbg/setup.sh
+export LIBRARY_PATH=/cvmfs/sft.cern.ch/lcg/views/LCG_100/x86_64-centos7-gcc10-dbg/lib/

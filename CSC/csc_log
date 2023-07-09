@@ -6,4 +6,5 @@
 # For example:
 #  ./csc_log team Audrey Ben
 
-wget --timeout=1 --tries=1 -O /dev/null -q "http://174.105.89.157:50080/log.php?user=${USER}&item1=${1}&item2=${2}&item3=${3}&item4=${4}&host=${HOSTNAME}"
+# wget --timeout=1 --tries=1 -O /dev/null -q "http://174.105.89.157:50080/log.php?user=${USER}&item1=${1}&item2=${2}&item3=${3}&item4=${4}&host=${HOSTNAME}"
+curl -o /dev/null "http://174.105.89.157:50080/log.php?user=${USER}&item1=${1}&item2=${2}&item3=${3}&item4=${4}&host=${HOSTNAME}" >&/dev/null
