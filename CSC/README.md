@@ -13,7 +13,7 @@ These exercises involve some minimal Java, Python and/or C++ programming. We rec
 Next sign into the CERN LXPlus8 cluster:
 
 ```
-ssh -X youraccountname@lxplus8.cern.ch
+ssh -X youraccountname@csc-2023-XX.cern.ch
 ```
 
 The -X option should forward X11 windows back to your machine.  (We use LXPlus8 because we know that environment would work.  In theory, you could also work on your own machine, but you'll probably need to do some configuration and installations)
