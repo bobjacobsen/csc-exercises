@@ -5,5 +5,9 @@
 #export LIBRARY_PATH=/cvmfs/sft.cern.ch/lcg/views/LCG_100/x86_64-centos7-gcc9-opt/lib/
 
 # for CSC 2023 on csc-2023 - drop these two lines if running on your own machine
-source /cvmfs/sft.cern.ch/lcg/views/LCG_100/x86_64-centos7-gcc10-dbg/setup.sh
-export LIBRARY_PATH=/cvmfs/sft.cern.ch/lcg/views/LCG_100/x86_64-centos7-gcc10-dbg/lib/
+#source /cvmfs/sft.cern.ch/lcg/views/LCG_100/x86_64-centos7-gcc10-dbg/setup.sh
+#export LIBRARY_PATH=/cvmfs/sft.cern.ch/lcg/views/LCG_100/x86_64-centos7-gcc10-dbg/lib/
+
+# for CSC 2024 on lxplus - drop these two lines if running on your own machine
+source /cvmfs/sft.cern.ch/lcg/views/LCG_106/x86_64-ubuntu2004-gcc9-opt/setup.sh
+export LIBRARY_PATH=/cvmfs/sft.cern.ch/lcg/views/LCG_106/x86_64-ubuntu2004-gcc9-opt/lib/

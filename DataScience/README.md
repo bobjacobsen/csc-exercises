@@ -8,10 +8,12 @@ We use the CERN SWAN service for these exercises.  You should already have an ac
 
 To access SWAN, go to
 [https://swan.cern.ch](https://swan.cern.ch)
-and login using your CERN account.
+and login using your CERN account. Note:  If you don't already have a CERNbox account, you'll need to create one.  If needed, the SWAN logon process will give you a link to do this.
 
-Leave the default configuration options and click "Start my Session" at the bottom right.
-Wait for your session to start.
+Select 103 in the "Software stack" selector.
+Make sure the "Use Python packages installed on CERNBOX" box is checked.
+Click "Start my Session" at the bottom right.
+Wait for your session to start. This might take a minute or so.
 When you get to the "My Projects" screen, click the "Download project from git" link (a small cloud&arrow at the upper right) and enter
 ```
   https://github.com/bobjacobsen/csc-exercises.git
@@ -42,6 +44,7 @@ A lot of analysis code is written by copy-and-paste from prior notebooks (and so
 _Old Faithful_
 
 This is the Jupyter Notebook that started the lectures. To start, just work through each cell:  Look at it, decide what it will do, then run it.  Once you get toward the bottom, you're prompted to use the same ideas to answer a few more questions from the data.
+Note there's also a version that uses Pandas so you can compare them if you want.
 
 _Toast_
 
@@ -98,14 +101,14 @@ Pick one that sounds interesting and get as far as you can on it.  Don't worry a
 
 ## General Information
 
-If you want to run these on your own machine, first install Jupyter Notebooks.  There are several ways to do this, but perhaps the most straight-forward is to [use PIP](https://jupyter.org/install).  Then checkout the exercise material to your machine. During the CERN School, please use the head of the `master` branch.  After the School is over, you can checkout the `CSC-2022` tag to get exactly these exercises. Finally, run the top-level `setup` notebook to make sure you have the right libraries installed.
+If you want to run these on your own machine, first install Jupyter Notebooks.  There are several ways to do this, but perhaps the most straight-forward is to [use PIP](https://jupyter.org/install).  Then checkout the exercise material to your machine. During the CERN School, please use the head of the `master` branch.  After the School is over, you can checkout the `CSC-2024` tag to get exactly these exercises. Finally, run the top-level `setup` notebook to make sure you have the right libraries installed.
 
 ### Files
 
-An updated PDF file is available for [lecture 1](https://indico.cern.ch/event/1125271/contributions/4975770/) and [lecture 2](https://indico.cern.ch/event/1125271/contributions/4975771/) in Indico.
+An updated PDF file is available for the [lecture](https://indico.cern.ch/event/1376644/contributions/5945384/) in Indico.
 
 We continually update the exercises in GitHub. After the School is complete, you can get the specific version we used by looking for the
-<a href="https://github.com/bobjacobsen/csc-exercises/releases/CSC-2022">CSC-2022</a> release tag.
+<a href="https://github.com/bobjacobsen/csc-exercises/releases/CSC-2024">CSC-2024</a> release tag.
 
 
 ### Documentation

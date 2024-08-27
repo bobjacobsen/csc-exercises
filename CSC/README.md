@@ -10,20 +10,22 @@ The very first step is get a partner to work with.  You can change, and teams of
 
 These exercises involve some minimal Java, Python and/or C++ programming. We recommend that you arrange yourself in groups so that somebody in each group has at least a little experience with Java, Python and/or C++.
 
-Next sign into the CERN LXPlus8 cluster:
+Next sign into the CERN LXPlus cluster:
 
 ```
-ssh -X youraccountname@csc-2023-XX.cern.ch
+ssh -X youraccountname@lxplus.cern.ch
 ```
 
-The -X option should forward X11 windows back to your machine.  (We use LXPlus8 because we know that environment would work.  In theory, you could also work on your own machine, but you'll probably need to do some configuration and installations)
+The -X option should forward X11 windows back to your machine.  (We use LXPlus because we know that environment would work.  In theory, you could also work on your own machine, but you'll probably need to do some configuration and installations)
 
 Then get a copy of the exercise files:
 ```
 cd ~
-git clone https://github.com/bobjacobsen/csc-exercises.git
+git clone --filter=blob:none https://github.com/bobjacobsen/csc-exercises.git
 
 ```
+The `--filter=blob:none` option improves the speed of the download by bypassing older blobs of data. The history is still there, it'll just be downloaded only if you ask for it later.
+
 Do a bit of setup (this has to be done every time you login or open a new terminal window):
 ```
 cd csc-exercises/CSC
@@ -37,7 +39,7 @@ Finally, tell us who makes up your team, so we can find you later with updates (
 
 ## About the Exercises
 
-There is no particular time expected for these exercises. You should do them in order, but it's OK to spend more time on the ones that interest you and go quickly through others.  It's completely fine to skip the ones marked "optional".
+There is no particular time expected for these exercises. You should do them in order, but it's OK to spend more time on the ones that interest you and go quickly through others.  It's completely fine to skip any of them, particularly the ones marked "optional".
 
 Nobody does every bit of every exercise, and that's OK.
 
@@ -45,7 +47,7 @@ If you run out of time and want to do more on particular topics, you can come ba
 
 If there are any problems or updates to the exercises, we'll post announcements to a [Google doc](https://docs.google.com/document/d/1g3b2e7wf3mWaIZ4U6MkNR5B4fQuO71y6Q341LGs45HQ/edit) and display them on a screen in the exercise room for your reference.
 
-A short comment on structure: Some of these exercises start by asking you to create a directory by unpacking a .tar file.  We do this so that because putting a Git repository inside another Git repository can get very complicated.
+A short comment on structure: Some of these exercises start by asking you to create a directory by unpacking a .tar file.  We do this so that because putting a Git repository inside another Git repository can get complicated.
 
 You can't break anything, so please feel free to experiment!
 
@@ -61,23 +63,13 @@ Each is a little bit different. Please do
 
 3: [TestIntroCpp](TestIntroCpp/README.md) - brief demo of using CppUnit for C++ code testing. Will benefit from a bit of C++ experience with header files, etc, but can be done without it.
 
-We then move forward to a more significant example, the SumPrimes code from lecture.  Do two of the following. (If your team speaks all three languages, you could do all three, but that's optional)
+We then move forward to a more significant example, the SumPrimes code from lecture.  Do one or more of the following. (If your team speaks all three languages, you could do all three, but that's definitely optional)
 
 4: [TestSumPrimesJava](TestSumPrimesJava/README.md) - SumPrimes in Java
 
 5: [TestSumPrimesPy](TestSumPrimesPy/README.md) - SumPrimes in Python
 
 6: [TestSumPrimesCpp](TestSumPrimesCpp/README.md) - SumPrimes in C++
-
-## Performance Profiling
-
-These demonstrate how tools, even simple ones, can help you focus on in where time is really being spent.
-We recommend you do at least one of these. Doing both is optional; the second one you do will go pretty quickly as you'll know where the problems are.
-
-7: [ProfileStatsJava](ProfileStatsJava/README.md) Practice tuning a small Java program
-
-8: [ProfileStatsCpp](ProfileStatsCpp/README.md) Practice tuning a small C++ program
-
 
 ## Memory Issues
 
@@ -114,13 +106,13 @@ and then refresh your web browser windows to pick up the new instructions.
 ## Files
 
 Updated PDF files are available for
-<a href="https://indico.cern.ch/event/1125271/contributions/4723302/">lecture 1</a> and
-<a href="https://indico.cern.ch/event/1125271/contributions/4723247/">lecture 2</a> in Indico.
+<a href="https://indico.cern.ch/event/1376644/contributions/5785536/">lecture 1</a> and
+<a href="https://indico.cern.ch/event/1376644/contributions/5785592/">lecture 2</a> in Indico.
 
 We continually update the exercises in GitHub.
 After the School is complete, you can get the specific version we used
 by looking for the
-<a href="https://github.com/bobjacobsen/csc-exercises/releases/CSC-2023">CSC-2023</a> release tag.
+<a href="https://github.com/bobjacobsen/csc-exercises/releases/CSC-2024">CSC-2024</a> release tag.
 
 ## General notes:
 
