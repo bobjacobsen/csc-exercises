@@ -1,7 +1,0 @@
-base referer
-rect $_test_suite_builder_context_8h.html 163,59 344,88
-rect $_xml_outputter_8h.html 195,112 312,141
-rect $_test_factory_registry_8cpp.html 167,165 340,195
-rect $_helper_macros_8h.html 431,5 551,35
-rect $_test_suite_builder_context_8cpp.html 392,59 589,88
-rect $_xml_outputter_8cpp.html 424,112 557,141

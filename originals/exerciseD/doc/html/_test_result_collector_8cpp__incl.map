@@ -1,6 +1,0 @@
-base referer
-rect $_test_failure_8h.html 252,35 401,65
-rect $_test_result_collector_8h.html 225,114 428,143
-rect $_portability_8h.html 769,87 911,117
-rect $_test_success_listener_8h.html 492,139 705,169
-rect $_cpp_unit_deque_8h.html 477,193 720,222

@@ -1,7 +1,0 @@
-base referer
-rect $_test_assert_8h.html 208,145 357,174
-rect $_floating_point_8h.html 168,304 397,333
-rect $_portability_8h.html 692,92 833,121
-rect $_exception_8h.html 471,38 617,68
-rect $_asserter_8h.html 476,92 612,121
-rect $_stream_8h.html 447,145 641,174

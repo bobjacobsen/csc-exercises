@@ -1,6 +1,0 @@
-base referer
-rect $_test_failure_8h.html 304,32 453,61
-rect $_text_test_progress_listener_8h.html 260,85 497,115
-rect $_stream_8h.html 281,139 476,168
-rect $_portability_8h.html 756,85 897,115
-rect $_test_listener_8h.html 548,85 705,115

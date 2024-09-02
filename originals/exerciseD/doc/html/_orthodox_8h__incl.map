@@ -1,6 +1,0 @@
-base referer
-rect $_test_case_8h.html 148,85 289,115
-rect $_portability_8h.html 540,85 681,115
-rect $_test_leaf_8h.html 347,32 483,61
-rect $_test_assert_8h.html 340,85 489,115
-rect $_test_fixture_8h.html 340,139 489,168

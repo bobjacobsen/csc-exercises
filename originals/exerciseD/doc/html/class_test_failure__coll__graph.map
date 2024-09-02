@@ -1,5 +1,0 @@
-base referer
-rect $class_test.html 5,101 51,131
-rect $class_exception.html 97,101 180,131
-rect $class_source_line.html 33,5 124,35
-rect $class_message.html 160,5 237,35

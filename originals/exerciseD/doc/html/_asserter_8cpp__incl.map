@@ -1,7 +1,0 @@
-base referer
-rect $_asserter_8h.html 155,140 291,169
-rect $_message_8h.html 597,88 736,117
-rect $_exception_8h.html 367,10 513,40
-rect $_additional_message_8h.html 339,114 541,144
-rect $_source_line_8h.html 589,141 744,170
-rect $_portability_8h.html 793,88 935,117

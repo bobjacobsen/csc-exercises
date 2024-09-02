@@ -1,6 +1,0 @@
-base referer
-rect $class_functor.html 23,165 89,195
-rect $class_test_case.html 113,165 191,195
-rect $class_test_leaf.html 47,85 119,115
-rect $class_test.html 60,5 105,35
-rect $class_test_fixture.html 143,85 231,115

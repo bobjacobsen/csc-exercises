@@ -1,7 +1,0 @@
-base referer
-rect $_test_composite_8h.html 197,26 376,55
-rect $_test_result_8h.html 213,130 360,159
-rect $_test_8h.html 491,26 600,55
-rect $_portability_8h.html 716,155 857,184
-rect $_synchronized_object_8h.html 439,130 652,159
-rect $_cpp_unit_deque_8h.html 424,234 667,263

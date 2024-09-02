@@ -1,9 +1,0 @@
-base referer
-rect $_source_prefix_8h.html 175,26 383,55
-rect $cppunit_2_test_runner_8h.html 201,104 356,134
-rect $_test_path_8h.html 211,158 347,187
-rect $_test_result_8h.html 205,211 352,240
-rect $_portability_8h.html 724,184 865,214
-rect $_test_suite_8h.html 484,52 623,82
-rect $_cpp_unit_deque_8h.html 432,210 675,239
-rect $_synchronized_object_8h.html 447,314 660,343

@@ -1,8 +1,0 @@
-base referer
-rect $_source_prefix_8h.html 223,5 431,35
-rect $_exception_8h.html 253,59 400,88
-rect $_source_line_8h.html 480,85 635,115
-rect $_test_failure_8h.html 252,163 401,192
-rect $_test_result_collector_8h.html 225,216 428,245
-rect $_compiler_outputter_8h.html 227,269 427,299
-rect $_string_tools_8h.html 233,376 420,405
