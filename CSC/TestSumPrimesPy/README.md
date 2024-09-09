@@ -36,7 +36,7 @@ In its initial form, the test just invokes sumPrimes(1) and makes sure it return
 There are commented-out tests that will check specific test cases, and therefore fail in the manner we discussed in lecture. Remove the leading # that comments out those lines, and watch the test fail when you run it:
 
 ```
-  (edit the TestSumPrimes.java file)
+  (edit the TestSumPrimes.py file)
   python3 TestSumPrimes.py
 ```
 
