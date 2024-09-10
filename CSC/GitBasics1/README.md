@@ -606,7 +606,7 @@ There are graphical tools that can help with merging, particularly complex ones.
 
 ### Selective Staging
 
-To use Git well, you should think about how your work test a story
+To use Git well, you should think about how your work tells a story
 to developers who follow you.  Because it's easy to see the entire commit
 structure that led to the current state of the code, people tend to look at it.
 
