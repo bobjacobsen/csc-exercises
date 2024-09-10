@@ -1,6 +1,8 @@
 ## GitBasics1: Simple uses of Git
 
-Reminder: If there's been a correction to this exercise posted, update your local copy via [these instructions](https://docs.google.com/document/d/1g3b2e7wf3mWaIZ4U6MkNR5B4fQuO71y6Q341LGs45HQ/edit?usp=sharing) before proceeding.
+Reminder: If there's been a correction to this exercise posted, 
+update your local copy via [these instructions](https://docs.google.com/document/d/1g3b2e7wf3mWaIZ4U6MkNR5B4fQuO71y6Q341LGs45HQ/edit?usp=sharing) 
+before proceeding.
 
 Goal: Gain familiarity with basic Git use
 
@@ -47,7 +49,9 @@ Now we create a new Git repository with nothing in it:
     git config --global color.ui true
 ```
 
-The first line creates the repository in a `.git` subdirectory. Take a moment and look at that. The second line turns on coloring in the output from Git.  Some people like colored output, some hate it; if you don't want it, omit that line or repeat is with false instead of true.
+The first line creates the repository in a `.git` subdirectory. Take a moment and look at that. 
+The second line turns on coloring in the output from Git.  Some people like colored output, 
+some hate it; if you don't want it, omit that line or repeat is with false instead of true.
 
 More usefully, you can ask Git about the status:
 
@@ -119,7 +123,8 @@ the files you want to commit on the command line, although that can get complica
 ```
 
 Finally, you
-can use the `git add` command to manually select the specific files to be included. "git add" means "this file has interesting contents right now".
+can use the `git add` command to manually select the specific files to be included. 
+"git add" means "this file has interesting contents right now".
 
 Add some lines at the top of the hello.txt file, and commit that single file:
 
@@ -343,8 +348,8 @@ is easy to put aside and then come back to.
 
 #### Deleting branches
 
-To delete a branch (such as the 'testing' branch in the previous example, since there is no unique work on it),
-we can run `git branch -d (branch)` to remove it.
+To delete a branch (such as the 'testing' branch in the previous example, since there is 
+no unique work on it), we can run `git branch -d (branch)` to remove it.
 
 ```
 $ git branch
@@ -374,7 +379,14 @@ do:
     git branch --merged
 ```
 
-Second, if you decide that your changes on a particular branch were a mistake, and don't want to merge them back, what should you do?  The simplest answer is "Nothing:  Just leave it there".  That might be the right answer if you're not certain the changes are valueless.  After all, you might come back and want them later.  But if you're sure you don't want them, it's a Git convention to delete them.  Git repositories tell stories about code development, and truly dead-end branches aren't an interesting part of the story.
+Second, if you decide that your changes on a particular branch were a mistake, 
+and don't want to merge them back, what should you do?  
+The simplest answer is "Nothing:  Just leave it there".  
+That might be the right answer if you're not certain the changes are valueless.  
+After all, you might come back and want them later.  But if you're sure you don't want them, 
+it's a Git convention to delete them.  
+Git repositories tell stories about code development, and truly dead-end branches aren't 
+an interesting part of the story.
 
 To find un-merged branches, so you can decide what to do with them, do:
 ```
@@ -483,7 +495,8 @@ error, select "Reload", which is more reliable but slower
 on big repositories)
 
 <a href="images/gitg_021.png"><img src="images/gitg_021.png" align="right" height="25%" width="25%"/></a>
-Some people prefer the gitg tool's graphical display (if it's installed on your machine):
+Some people prefer the gitg tool's graphical display (if it's installed on your machine; 
+the CERN LXPLUS machines don't usually have it installed):
 
 ```
     gitg
@@ -506,7 +519,7 @@ this section, we explore how to handle that.
 First, let's get a clean starting point:
 
 ```
-cd
+cd ..
 rm -rf exerciseG1
 mkdir exerciseG1
 cd exerciseG1
@@ -619,16 +632,18 @@ right, commit everything, and move to the next thing.
 But what if you're working on multiple things at once, and want to commit just part of the
 changes in your working directory?
 
-Often you want to control what's committed at the level of whole files. Git can do that either directly on a `git commit -a` command, or via the use of `git add`.
+Often you want to control what's committed at the level of whole files. Git can do that 
+either directly on a `git commit -a` command, or via the use of `git add`.
 
 But what if you have changes within a single file, some of which are to be included
-and some not?  With older systems, that's usually a pain to manage, but Git's staging metaphor makes it simple:  Only stage the changes you want to.
+and some not?  With older systems, that's usually a pain to manage, but Git's staging 
+metaphor makes it simple:  Only stage the changes you want to.
 
 To see how that works, copy, paste and execute the following to get a clean repository with
 one file in it:
 
 ```
-cd
+cd ..
 rm -rf exerciseG1
 mkdir exerciseG1
 cd exerciseG1
@@ -750,4 +765,5 @@ git log --oneline --decorate --graph
 ```
 
 
-And that concludes this basic introduction to git.  It should be enough to make you a productive user in most environments!
+And that concludes this basic introduction to git.  It should be enough to make you a 
+productive user in most environments!
