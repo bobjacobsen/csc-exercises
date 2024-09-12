@@ -10,7 +10,7 @@ To access SWAN, go to
 [https://swan.cern.ch](https://swan.cern.ch)
 and login using your CERN account. Note:  If you don't already have a CERNbox account, you'll need to create one.  If needed, the SWAN logon process will give you a link to do this.
 
-Select 103 in the "Software stack" selector.
+Select 105a in the "Software stack" selector.
 Make sure the "Use Python packages installed on CERNBOX" box is checked.
 Click "Start my Session" at the bottom right.
 Wait for your session to start. This might take a minute or so.
