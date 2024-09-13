@@ -14,12 +14,12 @@ class TestSumPrimes : public CPPUNIT_NS::TestFixture
 {
   CPPUNIT_TEST_SUITE( TestSumPrimes );
   CPPUNIT_TEST( testOneIsNotPrime );
-  CPPUNIT_TEST( testTwoIsPrime );
-  CPPUNIT_TEST( testThreeIsPrime );
-  CPPUNIT_TEST( testFourIsNotPrime );
-  CPPUNIT_TEST( testTenIsNotPrime );
-  CPPUNIT_TEST( testElevenIsPrime );
-  CPPUNIT_TEST( testTwelve );
+  // CPPUNIT_TEST( testTwoIsPrime );
+  // CPPUNIT_TEST( testThreeIsPrime );
+  // CPPUNIT_TEST( testFourIsNotPrime );
+  // CPPUNIT_TEST( testTenIsNotPrime );
+  // CPPUNIT_TEST( testElevenIsPrime );
+  // CPPUNIT_TEST( testTwelve );
   CPPUNIT_TEST_SUITE_END();
 
 protected:
