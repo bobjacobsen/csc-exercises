@@ -14,6 +14,9 @@ Select 105a in the "Software stack" selector.
 Make sure the "Use Python packages installed on CERNBOX" box is checked.
 Click "Start my Session" at the bottom right.
 Wait for your session to start. This might take a minute or so.
+
+If the sign-on fails, a possible cause is that your CERNbox account is not initialized.  Check the error message.  If it provides a link to follow to CERNbox, please do that and start your CERNbox account before retrying SWAN again.
+
 When you get to the "My Projects" screen, click the "Download project from git" link (a small cloud&arrow at the upper right) and enter
 ```
   https://github.com/bobjacobsen/csc-exercises.git
