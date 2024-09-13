@@ -33,6 +33,7 @@ There are commented-out tests that will check specific test cases, and therefore
 
 ```
   (edit the TestSumPrimes.cpp file)
+  (edit the TestSumPrimes.h file)
   ./build
   ./TestSumPrimes
 ```
